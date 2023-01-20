@@ -44,8 +44,12 @@
 
 @layer base {
 
-    * {
+    html {
         background-color: #EAE3CD;
+    }
+
+    * {
+        color: #353C42;
     }
 
     h1,
