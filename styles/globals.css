@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "nova_slim";
+    font-weight: 400;
+    src:
+        url("../fonts/nova_slim/novaslim-regular.woff2") format("woff2"),
+        url("../fonts/nova_slim/novaslim-regular.woff") format("woff"),
+        url("../fonts/nova_slim/novaslim-regular.ttf") format("truetype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "quicksand";
+    font-weight: 300;
+    src:
+        url("../fonts/quicksand/quicksand-light.woff2") format("woff2"),
+        url("../fonts/quicksand/quicksand-light.woff") format("woff"),
+        url("../fonts/quicksand/quicksand-light.ttf") format("truetype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "quicksand";
+    font-weight: 400;
+    src:
+        url("../fonts/quicksand/quicksand-regular.woff2") format("woff2"),
+        url("../fonts/quicksand/quicksand-regular.woff") format("woff"),
+        url("../fonts/quicksand/quicksand-regular.ttf") format("truetype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "quicksand";
+    font-weight: 400;
+    src:
+        url("../fonts/quicksand/quicksand-medium.woff2") format("woff2"),
+        url("../fonts/quicksand/quicksand-medium.woff") format("woff"),
+        url("../fonts/quicksand/quicksand-medium.ttf") format("truetype");
+    font-display: swap
+}
+
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "nova_slim";
+    }
+
+    p {
+        font-family: "quicksand";
+        font-size: 1.125rem;
+    }
+}
