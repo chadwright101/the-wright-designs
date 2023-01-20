@@ -19,6 +19,10 @@ module.exports = {
       novaSlim: "nova_slim",
       quicksand: "quicksand",
     },
+    screens: {
+      tablet: "900px",
+      desktop: "1300px",
+    },
     extend: {},
   },
   plugins: [],
