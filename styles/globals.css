@@ -59,6 +59,7 @@
     h5,
     h6 {
         font-family: "nova_slim";
+        text-transform: lowercase;
     }
 
     p {
