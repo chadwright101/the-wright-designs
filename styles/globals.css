@@ -44,6 +44,10 @@
 
 @layer base {
 
+    * {
+        background-color: #EAE3CD;
+    }
+
     h1,
     h2,
     h3,
@@ -56,5 +60,6 @@
     p {
         font-family: "quicksand";
         font-size: 1.125rem;
+        font-weight: 300;
     }
 }
