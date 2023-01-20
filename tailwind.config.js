@@ -4,6 +4,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      beige: "#EAE3CD",
+      blue: "#353C42",
+      pink: "#C86B7B",
+      grey: "#9F9797",
+    },
+    fontSize: {
+      paragraph: "1.125rem",
+      subheading: "1.375rem",
+      heading: "2.25rem",
+    },
+    fontFamily: {
+      novaSlim: "nova_slim",
+      quicksand: "quicksand",
+    },
     extend: {},
   },
   plugins: [],
