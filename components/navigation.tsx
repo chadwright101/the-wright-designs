@@ -1,15 +1,21 @@
-import menuList from "../data/menu-list.json";
+import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/router";
+
+import menuList from "../data/menu-list.json";
+
 import logo from "../public/the-wright-designs-logo.png";
 import arrow from "../public/icons/double-arrow-pink.svg";
-import Link from "next/link";
 import menuIcon from "../public/icons/menu-icon.svg";
 import closeIcon from "../public/icons/close-icon.svg";
-import { useState } from "react";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+
+  const router = useRouter();
+  const currentRoute = router.pathname;
 
   return (
     <div className="desktop:max-w-[1300px] desktop:m-auto tablet:flex tablet:justify-between">
@@ -56,9 +62,20 @@ const Navigation = () => {
                 <>
                   <li
                     key={index}
-                    className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px]"
+                    className={`text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] flex items-center ${
+                      currentRoute === item.url ? "font-normal" : null
+                    }`}
                   >
-                    <Link href={item.url}>{item.title}</Link>
+                    <Link href={item.url} className="py-2 px-3 -my-2 -mx-3">
+                      {item.title}
+                    </Link>
+                    {currentRoute === item.url && (
+                      <Image
+                        src={arrow}
+                        alt="Double arrow icon"
+                        className="rotate-180 h-[30px] w-[40px] mt-[3px] ml-4 object-cover"
+                      />
+                    )}
                   </li>
                   {index < menuList.length - 1 && (
                     <div className="h-px bg-beige"></div>
@@ -79,7 +96,7 @@ const Navigation = () => {
               <li
                 key={index}
                 className={`text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px] hover:cursor-pointer ${
-                  index === 1 && "hover:no-underline"
+                  index === 1 && "hover:no-underline px-3 -mx-3"
                 }`}
                 onMouseEnter={
                   item.submenu && (() => setSubmenuOpen(!submenuOpen))
@@ -88,7 +105,14 @@ const Navigation = () => {
                   item.submenu && (() => setSubmenuOpen(!submenuOpen))
                 }
               >
-                <Link href={item.url}>{item.title}</Link>
+                <Link
+                  href={item.url}
+                  className={`${
+                    currentRoute === item.url ? "font-light" : null
+                  }`}
+                >
+                  {item.title}
+                </Link>
 
                 {/* portfolio submenu */}
 

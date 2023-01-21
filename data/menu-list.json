@@ -5,7 +5,7 @@
   },
   {
     "title": "portfolio",
-    "url": "/",
+    "url": "/portfolio",
     "submenu": [
       {
         "title": "Sileta Engineers",
@@ -23,14 +23,14 @@
   },
   {
     "title": "services",
-    "url": "/"
+    "url": "/#services"
   },
   {
     "title": "about",
-    "url": "/"
+    "url": "/#about"
   },
   {
     "title": "contact",
-    "url": "/"
+    "url": "/#contact"
   }
 ]
