@@ -66,7 +66,11 @@ const Navigation = () => {
                       currentRoute === item.url ? "font-normal" : null
                     }`}
                   >
-                    <Link href={item.url} className="py-2 px-3 -my-2 -mx-3">
+                    <Link
+                      href={item.url}
+                      className="py-2 px-3 -my-2 -mx-3"
+                      onClick={() => setMenuOpen(!menuOpen)}
+                    >
                       {item.title}
                     </Link>
                     {currentRoute === item.url && (
