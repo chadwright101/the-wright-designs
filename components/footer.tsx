@@ -37,7 +37,7 @@ const Footer = ({ cssClasses }: Props) => {
         <Image
           src={logo}
           alt="The Wright Designs logo"
-          className="hidden w-[249px] h-[48px] tablet:block tablet:self-end"
+          className="hidden w-[249px] h-[48px] tablet:block tablet:self-end rotate-1"
         />
       </div>
     </footer>
