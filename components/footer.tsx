@@ -26,7 +26,7 @@ const Footer = ({ cssClasses }: Props) => {
             </ul>
           </nav>
 
-          <h4 className="max-w-[300px] text-center font-quicksand font-light text-subheading normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
+          <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
             © The Wright Designs |{" "}
             <Link href="/" className="tablet:hover:text-pink">
               www.thewrightdesigns.co.za

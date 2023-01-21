@@ -116,7 +116,7 @@ const Navigation = () => {
 
                 {/* portfolio submenu */}
 
-                {item.submenu && !submenuOpen && (
+                {item.submenu && submenuOpen && (
                   <div className="absolute -translate-x-[68px]">
                     <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
                       <Image
