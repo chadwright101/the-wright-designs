@@ -5,7 +5,21 @@
   },
   {
     "title": "portfolio",
-    "url": "/"
+    "url": "/",
+    "submenu": [
+      {
+        "title": "Sileta Engineers",
+        "url": "http://www.sileta.co.za/"
+      },
+      {
+        "title": "Neon Productions",
+        "url": "https://www.neonproductions.co.za/"
+      },
+      {
+        "title": "Garden Route Botox",
+        "url": "https://www.gardenroutebotox.com/"
+      }
+    ]
   },
   {
     "title": "services",
