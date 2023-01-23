@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+import { useSpring, animated } from "@react-spring/web";
+
 import menuList from "../data/menu-list.json";
 
 import logo from "../public/the-wright-designs-logo.png";
@@ -17,16 +19,42 @@ const Navigation = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
 
+  const logoAnimate = useSpring({
+    from: { scale: 0.95, y: -100, opacity: 0 },
+    to: [{ y: 0, opacity: 100 }, { scale: 1 }],
+    config: {
+      mass: 10,
+      tension: 250,
+      bounce: 0.35,
+    },
+  });
+  const menuIconAnimate = useSpring({
+    from: { scale: 0 },
+    to: { scale: 1 },
+    config: {
+      mass: 15,
+      tension: 220,
+      bounce: 0.3,
+    },
+  });
+
+  const menuToggleAnimate = useSpring({
+    from: { x: -500 },
+    to: { x: 0 },
+  });
+
   return (
     <div className="desktop:max-w-[1300px] desktop:m-auto tablet:flex tablet:justify-between">
       <div>
         {!menuOpen && (
           <div className="flex justify-between">
-            <Image
-              src={logo}
-              alt="The Wright Designs logo"
-              className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px]"
-            />
+            <animated.div style={logoAnimate}>
+              <Image
+                src={logo}
+                alt="The Wright Designs logo"
+                className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
+              />
+            </animated.div>
 
             {/* mobile navigation */}
 
@@ -34,11 +62,13 @@ const Navigation = () => {
               onClick={() => setMenuOpen(!menuOpen)}
               className="h-[50px] w-[50px] grid place-items-center"
             >
-              <Image
-                src={menuIcon}
-                alt="Menu icon"
-                className="h-[42px] w-[42px] mt-1 tablet:hidden"
-              />
+              <animated.div style={menuIconAnimate}>
+                <Image
+                  src={menuIcon}
+                  alt="Menu icon"
+                  className="h-[42px] w-[42px] mt-1 tablet:hidden"
+                />
+              </animated.div>
             </div>
           </div>
         )}
@@ -116,7 +146,7 @@ const Navigation = () => {
 
                 {/* portfolio submenu */}
 
-                {item.submenu && !submenuOpen && (
+                {item.submenu && submenuOpen && (
                   <div className="absolute -translate-x-[68px]">
                     <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
                       <Image
