@@ -60,11 +60,15 @@ const Navigation = () => {
     },
   }));
 
+  /* mobile menu toggle */
+
   const [mobileMenuToggle, setMobileMenuToggle] = useSpring(() => ({
     to: { x: -750, opacity: 100 },
     config: {
       loop: { reverse: true },
-      duration: 500,
+      mass: 5,
+      tension: 150,
+      bounce: 0.5,
     },
   }));
 
