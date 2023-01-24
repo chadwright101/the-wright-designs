@@ -3,9 +3,7 @@
     "text": {
       "heading": "This is a heading",
       "subheading": "This is a subheading",
-      "list": {
-        "item": "This is list item 1"
-      }
+      "list": ["This is list item 1", "This is list item 1"]
     },
     "image": {
       "src": "/img/Laptop-2.png",

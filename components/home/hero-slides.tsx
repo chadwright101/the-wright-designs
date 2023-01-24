@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import heroSlidesList from "../../data/home/hero-slides-list.json";
 
 interface Props {
@@ -11,18 +12,41 @@ export enum HeroSlidesVariant {
   Slide4,
 }
 
+interface Slide {
+  text: {
+    heading: string;
+    subheading: string;
+    list: [string];
+  };
+  image: {
+    src: string;
+    alt?: string;
+  };
+  buttonText: string;
+  variant: HeroSlidesVariant;
+}
+
+const allSlides = heroSlidesList as [Slide];
+
 const HeroSlides = ({ variant }: Props) => {
+  const [slides, setSlides] = useState<[Slide]>(allSlides);
+
+  useEffect(() => {
+    const newSlides = allSlides.filter(
+      ({ variant: slideVariant }) => slideVariant === variant
+    );
+    setSlides(newSlides);
+  }, [variant]);
+
   if (variant === HeroSlidesVariant.Slide1) {
     return (
-      <>
-        <ul>
-          {heroSlidesList.map(({ slide }, index) => (
-            <li key={index}>
-              <h1>{slide.text.heading}</h1>
-            </li>
-          ))}
-        </ul>
-      </>
+      <ul>
+        {slides.map(({ text, image, buttonText }, index) => (
+          <li key={index}>
+            <h1>{text.heading}</h1>
+          </li>
+        ))}
+      </ul>
     );
   } else if (variant === HeroSlidesVariant.Slide2) {
     return (
