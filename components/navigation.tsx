@@ -54,9 +54,12 @@ const Navigation = () => {
   /* portfolio submenu image animation */
 
   const [submenuImageMove, setSubmenuImageMove] = useSpring(() => ({
-    to: { y: -10, scale: 1 },
+    to: { y: -8, scale: 1 },
     config: {
       loop: { reverse: true },
+      mass: 5,
+      tension: 225,
+      bounce: 0.75,
     },
   }));
 
@@ -68,7 +71,7 @@ const Navigation = () => {
       loop: { reverse: true },
       mass: 5,
       tension: 150,
-      bounce: 0.5,
+      bounce: 0.3,
     },
   }));
 
@@ -183,14 +186,14 @@ const Navigation = () => {
                   item.submenu &&
                   (() => {
                     setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: 0, scale: 1 });
+                    setSubmenuImageMove({ y: -1, scale: 1 });
                   })
                 }
                 onMouseLeave={
                   item.submenu &&
                   (() => {
                     setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: -7, scale: 0.25 });
+                    setSubmenuImageMove({ y: -8, scale: 0.25 });
                   })
                 }
               >
