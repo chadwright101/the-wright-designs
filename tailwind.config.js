@@ -21,7 +21,7 @@ module.exports = {
     },
     screens: {
       tablet: "900px",
-      desktop: "1300px",
+      desktop: "1400px",
     },
     extend: {},
   },
