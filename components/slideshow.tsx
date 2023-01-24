@@ -24,7 +24,7 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
           pauseOnHover: true,
           interval: 4500,
           breakpoints: {
-            900: {
+            1000: {
               arrows: false,
               pagination: false,
             },

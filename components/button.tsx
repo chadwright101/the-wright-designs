@@ -36,7 +36,7 @@ const Button = ({
   if (variant === ButtonVariant.Pink) {
     return (
       <button
-        className={`bg-pink/75 w-auto flex gap-1 items-center px-5 py-0.5 rounded-3xl border border-blue drop-shadow-md min-w-[270px] tablet:hover:bg-pink ${cssClasses}`}
+        className={`bg-pink/75 w-auto flex gap-1 items-center px-5 py-0.5 rounded-2xl border border-blue drop-shadow-md tablet:hover:bg-pink ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
       >
@@ -55,7 +55,7 @@ const Button = ({
   } else if (variant === ButtonVariant.Blue) {
     return (
       <button
-        className={`bg-blue/80 w-auto flex gap-1 items-center px-5 py-0.5 rounded-3xl border border-grey drop-shadow-md min-w-[270px] tablet:hover:bg-blue ${cssClasses}`}
+        className={`bg-blue/80 w-auto flex gap-1 items-center px-5 py-0.5 rounded-2xl border border-grey drop-shadow-md tablet:hover:bg-blue ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
       >
