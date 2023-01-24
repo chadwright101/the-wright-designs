@@ -16,7 +16,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
 
   return (
     <div
-      className={`flex flex-col gap-6 items-center tablet:flex-row tablet:justify-between px-[30px] tablet:px-[50px] desktop:px-0 desktop:max-w-[1300px] desktop:m-auto ${cssClasses}`}
+      className={`flex flex-col gap-6 items-center tablet:flex-row tablet:justify-between tablet:px-[100px] tablet:mb-[10px] ${cssClasses}`}
     >
       <div className="tablet:flex flex-col items-start gap-6">
         <h2 className="text-heading text-center tablet:text-[2.75rem] tablet:text-left">
