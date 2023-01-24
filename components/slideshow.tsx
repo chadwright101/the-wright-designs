@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import HeroSlide1 from "./home/hero-slides/hero-slide-1";
+import HeroSlide2 from "./home/hero-slides/hero-slide-2";
 
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import HeroSlides, { HeroSlidesVariant } from "./home/hero-slides";
 
 interface Props {
   containerClasses?: string;
@@ -14,18 +15,30 @@ interface Props {
 const Slideshow = ({ containerClasses, slideClasses }: Props) => {
   return (
     <>
-      {/* <Splide
+      <Splide
         options={{
-          rewind: true,
-          type: "fade",
-          pagination: false,
+          pagination: true,
           autoplay: true,
+          type: "loop",
+          speed: 1500,
+          pauseOnHover: true,
+          interval: 4500,
+          breakpoints: {
+            900: {
+              arrows: false,
+              pagination: false,
+            },
+          },
         }}
-        className={`${containerClasses}`}
+        className={`py-10 ${containerClasses}`}
       >
-        <SplideSlide className={`${slideClasses}`}></SplideSlide>
-      </Splide> */}
-      <HeroSlides variant={HeroSlidesVariant.slide1} />
+        <SplideSlide className={`${slideClasses}`}>
+          <HeroSlide1 />
+        </SplideSlide>
+        <SplideSlide className={`${slideClasses}`}>
+          <HeroSlide2 />
+        </SplideSlide>
+      </Splide>
     </>
   );
 };
