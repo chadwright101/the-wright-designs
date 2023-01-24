@@ -8,7 +8,7 @@ interface Props {
 const Layout = ({ children, cssClasses }: Props) => {
   return (
     <div
-      className={`px-[30px] tablet:px-[50px] desktop:max-w-[1300px] desktop:m-auto ${cssClasses}`}
+      className={`px-[30px] tablet:px-[50px] desktop:px-0 desktop:max-w-[1300px] desktop:m-auto ${cssClasses}`}
     >
       {children}
     </div>
