@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import "@splidejs/react-splide/css";
+import HeroSlides, { HeroSlidesVariant } from "./home/hero-slides";
 
 interface Props {
   containerClasses?: string;
@@ -13,7 +14,7 @@ interface Props {
 const Slideshow = ({ containerClasses, slideClasses }: Props) => {
   return (
     <>
-      <Splide
+      {/* <Splide
         options={{
           rewind: true,
           type: "fade",
@@ -23,7 +24,8 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
         className={`${containerClasses}`}
       >
         <SplideSlide className={`${slideClasses}`}></SplideSlide>
-      </Splide>
+      </Splide> */}
+      <HeroSlides variant={HeroSlidesVariant.slide1} />
     </>
   );
 };
