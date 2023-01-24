@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Button from "@/components/button";
+
 import slideImage from "../../../public/img/Laptop-2.png";
 
 import heroSlide1 from "../../../data/home/hero-slides/hero-slide1.json";
@@ -35,6 +37,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
       <h3 className="text-subheading text-center font-quicksand tablet:hidden">
         {subheading}
       </h3>
+      <Button url="/portfolio">View our portfolio</Button>
     </div>
   );
 };

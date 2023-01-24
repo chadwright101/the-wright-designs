@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Button, { ButtonVariant } from "@/components/button";
+
 import slideImage from "../../../public/img/Laptop-2.png";
 
 import heroSlide2 from "../../../data/home/hero-slides/hero-slide2.json";
@@ -39,6 +41,9 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      <Button url="/portfolio" variant={ButtonVariant.Blue}>
+        View our portfolio
+      </Button>
     </div>
   );
 };
