@@ -1,10 +1,8 @@
-import Header from "@/components/header";
-import Layout from "@/components/layout";
 import HeroComponent from "../components/home/hero-component";
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <HeroComponent />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
@@ -62,6 +60,6 @@ export default function Home() {
         qui ullam voluptate deserunt commodi asperiores itaque ea corporis,
         totam cum iste sunt, perferendis accusantium quisquam.
       </p>
-    </Layout>
+    </>
   );
 }
