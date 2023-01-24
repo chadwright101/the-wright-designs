@@ -1,7 +1,9 @@
+import HeroComponent from "../components/home/hero-component";
+
 export default function Home() {
   return (
     <>
-      <p className="text-2xl">Home page</p>
+      <HeroComponent />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet a sed
         beatae perspiciatis quisquam? Dolor voluptas laudantium aliquam,
