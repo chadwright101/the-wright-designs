@@ -54,7 +54,7 @@ const Navigation = () => {
   /* portfolio submenu image animation */
 
   const [submenuImageMove, setSubmenuImageMove] = useSpring(() => ({
-    to: { y: -8, scale: 1 },
+    to: { y: -15, scale: 1.65 },
     config: {
       loop: { reverse: true },
       mass: 5,
@@ -123,7 +123,6 @@ const Navigation = () => {
             <div
               onClick={() => {
                 setMenuOpen(!menuOpen);
-                setMobileMenuToggle({ x: -750, opacity: 0 });
               }}
               className="fixed right-[30px] h-[50px] w-[50px] grid place-items-center -mt-1.5"
             >
@@ -186,14 +185,14 @@ const Navigation = () => {
                   item.submenu &&
                   (() => {
                     setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: -1, scale: 1 });
+                    setSubmenuImageMove({ y: -5, scale: 1 });
                   })
                 }
                 onMouseLeave={
                   item.submenu &&
                   (() => {
                     setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: -8, scale: 0.25 });
+                    setSubmenuImageMove({ y: -15, scale: 1.65 });
                   })
                 }
               >
