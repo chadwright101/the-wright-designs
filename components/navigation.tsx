@@ -20,12 +20,12 @@ const Navigation = () => {
   const currentRoute = router.pathname;
 
   const logoLoadAnimate = useSpring({
-    from: { scale: 0.95, y: -100, opacity: 0 },
-    to: [{ y: 0, opacity: 100 }, { scale: 1 }],
+    from: { y: -100, opacity: 0 },
+    to: { y: 0, opacity: 100 },
     config: {
       mass: 10,
       tension: 250,
-      bounce: 0.35,
+      bounce: 0.25,
     },
   });
 
