@@ -20,8 +20,8 @@ const About = ({ cssClasses }: Props) => {
         <p>
           Our services are tailor-made. This allows our clients to be a part of
           the design process as much as they would like to and makes it possible
-          for us to quote according to our clients' particular needs- allowing
-          them a personalised package that suits their pocket.
+          for us to quote according to our clients&apos; particular needs-
+          allowing them a personalised package that suits their pocket.
         </p>
         <p>
           We pride ourselves on our hands-on approach and personal touch. We
