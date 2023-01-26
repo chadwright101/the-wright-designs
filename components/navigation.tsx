@@ -19,15 +19,16 @@ const Navigation = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
 
-  const logoAnimate = useSpring({
-    from: { scale: 0.95, y: -100, opacity: 0 },
-    to: [{ y: 0, opacity: 100 }, { scale: 1 }],
+  const logoLoadAnimate = useSpring({
+    from: { y: -100, opacity: 0 },
+    to: { y: 0, opacity: 100 },
     config: {
       mass: 10,
       tension: 250,
-      bounce: 0.35,
+      bounce: 0.25,
     },
   });
+
   const menuIconAnimate = useSpring({
     from: { scale: 0 },
     to: { scale: 1 },
@@ -38,28 +39,70 @@ const Navigation = () => {
     },
   });
 
-  const menuToggleAnimate = useSpring({
-    from: { x: -500 },
-    to: { x: 0 },
-  });
+  /* logo hover animation */
+
+  const [logoHoverMove, setLogoHoverMove] = useSpring(() => ({
+    to: { scale: 1, rotate: 0 },
+    config: {
+      loop: { reverse: true },
+      bounce: 0.5,
+      mass: 10,
+      tension: 300,
+    },
+  }));
+
+  /* portfolio submenu image animation */
+
+  const [submenuImageMove, setSubmenuImageMove] = useSpring(() => ({
+    to: { y: -15, scale: 1.65 },
+    config: {
+      loop: { reverse: true },
+      mass: 5,
+      tension: 225,
+      bounce: 0.75,
+    },
+  }));
+
+  /* mobile menu toggle */
+
+  const [mobileMenuToggle, setMobileMenuToggle] = useSpring(() => ({
+    to: { x: -750, opacity: 100 },
+    config: {
+      loop: { reverse: true },
+      mass: 5,
+      tension: 150,
+      bounce: 0.3,
+    },
+  }));
 
   return (
     <div className="desktop:max-w-[1300px] desktop:m-auto tablet:flex tablet:justify-between">
       <div>
         {!menuOpen && (
           <div className="flex justify-between">
-            <animated.div style={logoAnimate}>
-              <Image
-                src={logo}
-                alt="The Wright Designs logo"
-                className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
-              />
+            <animated.div style={logoLoadAnimate}>
+              <animated.div
+                onMouseEnter={() =>
+                  setLogoHoverMove({ scale: 1.04, rotate: 0.5 })
+                }
+                onMouseLeave={() => setLogoHoverMove({ scale: 1, rotate: 0 })}
+                style={logoHoverMove}
+              >
+                <Image
+                  src={logo}
+                  alt="The Wright Designs logo"
+                  className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
+                />
+              </animated.div>
             </animated.div>
 
             {/* mobile navigation */}
 
             <div
-              onClick={() => setMenuOpen(!menuOpen)}
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+                setMobileMenuToggle({ x: 0, opacity: 100 });
+              }}
               className="h-[50px] w-[50px] grid place-items-center"
             >
               <animated.div style={menuIconAnimate}>
@@ -78,7 +121,9 @@ const Navigation = () => {
         {menuOpen && (
           <nav className="bg-blue w-full pt-2 pb-4 tablet:hidden">
             <div
-              onClick={() => setMenuOpen(!menuOpen)}
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
               className="fixed right-[30px] h-[50px] w-[50px] grid place-items-center -mt-1.5"
             >
               <Image
@@ -87,7 +132,11 @@ const Navigation = () => {
                 className="h-[42px] w-[42px] tablet:hidden"
               />
             </div>
-            <ul className="flex flex-col gap-3.5 font-thin text-subheading text mt-8">
+
+            <animated.ul
+              style={mobileMenuToggle}
+              className="flex flex-col gap-3.5 font-thin text-subheading text mt-8"
+            >
               {menuList.map((item, index) => (
                 <>
                   <li
@@ -116,7 +165,7 @@ const Navigation = () => {
                   )}
                 </>
               ))}
-            </ul>
+            </animated.ul>
           </nav>
         )}
       </div>
@@ -133,10 +182,18 @@ const Navigation = () => {
                   index === 1 && "hover:no-underline px-3 -mx-3"
                 }`}
                 onMouseEnter={
-                  item.submenu && (() => setSubmenuOpen(!submenuOpen))
+                  item.submenu &&
+                  (() => {
+                    setSubmenuOpen(!submenuOpen);
+                    setSubmenuImageMove({ y: -5, scale: 1 });
+                  })
                 }
                 onMouseLeave={
-                  item.submenu && (() => setSubmenuOpen(!submenuOpen))
+                  item.submenu &&
+                  (() => {
+                    setSubmenuOpen(!submenuOpen);
+                    setSubmenuImageMove({ y: -15, scale: 1.65 });
+                  })
                 }
               >
                 <Link
@@ -153,11 +210,13 @@ const Navigation = () => {
                 {item.submenu && submenuOpen && (
                   <div className="absolute -translate-x-[68px]">
                     <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
-                      <Image
-                        src={arrow}
-                        alt="Double arrow icon"
-                        className=" rotate-90 w-8 h-8 mt-1.5"
-                      />
+                      <animated.div style={submenuImageMove}>
+                        <Image
+                          src={arrow}
+                          alt="Double arrow icon"
+                          className=" rotate-90 w-8 h-8 mt-1.5"
+                        />
+                      </animated.div>
                     </div>
                     <ul className="bg-blue px-5 pt-10 pb-4 rounded-b-xl border-[3px] border-beige flex flex-col items-center gap-2 lowercase drop-shadow-md">
                       {item.submenu.map((item, index) => (

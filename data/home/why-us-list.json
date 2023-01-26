@@ -1,0 +1,41 @@
+[
+  {
+    "heading": "Tailor-made designs",
+    "paragraph": {
+      "first": "Being able to design your website the way you always envisioned is very rewarding.",
+      "second": "Outdated template options may be extremely cheap, but they are just as limiting, only allowing changes to fonts and colours with an option of a few different layouts.",
+      "third": "A simple, stylish and affordable tailor-made design will ensure your business stands out from competitors."
+    },
+    "image": {
+      "src": "/graphics/pink-dot.png",
+      "alt": "Hand drawn pink dot"
+    },
+    "delay": 200
+  },
+  {
+    "heading": "Quick turnaround time",
+    "paragraph": {
+      "first": "Mauris ultricies leo arcu, at gravida neque lobortis ac. Suspendisse potenti.",
+      "second": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur mauris lectus, fermentum ut sollicitudin ut, laoreet facilisis odio.",
+      "third": "Nullam eget rutrum massa, vel dapibus tortor. Maecenas lobortis sit amet felis vel blandit."
+    },
+    "image": {
+      "src": "/graphics/yellow-dot.png",
+      "alt": "Hand drawn yellow dot"
+    },
+    "delay": 300
+  },
+  {
+    "heading": "Search Engine Optimisation (SEO)",
+    "paragraph": {
+      "first": "Having a beautifully designed website to direct your customers to is just the first step to improving your company's online presence.",
+      "second": "One of the most important steps when investing in a website is making sure it can be found on popular search engines by your target market.",
+      "third": "SEO plays a vital role in today's business world, which is why we have included this service in our advanced monthly maintenance package."
+    },
+    "image": {
+      "src": "/graphics/grey-dot.png",
+      "alt": "Hand drawn grey dot"
+    },
+    "delay": 425
+  }
+]
