@@ -9,7 +9,8 @@
     "image": {
       "src": "/graphics/pink-dot.png",
       "alt": "Hand drawn pink dot"
-    }
+    },
+    "delay": 200
   },
   {
     "heading": "Quick turnaround time",
@@ -21,7 +22,8 @@
     "image": {
       "src": "/graphics/yellow-dot.png",
       "alt": "Hand drawn yellow dot"
-    }
+    },
+    "delay": 300
   },
   {
     "heading": "Search Engine Optimisation (SEO)",
@@ -33,6 +35,7 @@
     "image": {
       "src": "/graphics/grey-dot.png",
       "alt": "Hand drawn grey dot"
-    }
+    },
+    "delay": 425
   }
 ]
