@@ -12,6 +12,8 @@ interface Props {
   children: ReactNode;
   cssClasses?: string;
   variant?: ButtonVariant;
+  type: "button" | "submit";
+  form?: boolean;
 }
 
 export enum ButtonVariant {
@@ -24,6 +26,8 @@ const Button = ({
   children,
   cssClasses,
   variant = ButtonVariant.Pink,
+  type,
+  form,
 }: Props) => {
   const [arrowMove, setArrowMove] = useSpring(() => ({
     to: { x: 0, scale: 1 },
@@ -36,16 +40,23 @@ const Button = ({
   if (variant === ButtonVariant.Pink) {
     return (
       <button
+        type={type}
         className={`bg-pink/75 w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border border-blue drop-shadow-md tablet:hover:bg-pink ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
       >
-        <Link href={url} className="lowercase font-novaSlim text-subheading">
-          {children}
-        </Link>
+        {!form ? (
+          <Link href={url} className="lowercase font-novaSlim text-subheading">
+            {children}
+          </Link>
+        ) : (
+          <p className="lowercase font-novaSlim text-subheading text-beige">
+            {children}
+          </p>
+        )}
         <animated.div style={arrowMove}>
           <Image
-            src={blueArrows}
+            src={form ? beigeArrows : blueArrows}
             alt="Double arrow icon"
             className="w-9"
           ></Image>
@@ -55,16 +66,21 @@ const Button = ({
   } else if (variant === ButtonVariant.Blue) {
     return (
       <button
+        type={type}
         className={`bg-blue/80 w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border border-grey drop-shadow-md tablet:hover:bg-blue ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
       >
-        <Link
-          href={url}
-          className="text-beige lowercase font-novaSlim text-subheading"
-        >
-          {children}
-        </Link>
+        {!form ? (
+          <Link
+            href={url}
+            className="text-beige lowercase font-novaSlim text-subheading"
+          >
+            {children}
+          </Link>
+        ) : (
+          <p className="lowercase font-novaSlim text-subheading">{children}</p>
+        )}
         <animated.div style={arrowMove}>
           <Image
             src={beigeArrows}
