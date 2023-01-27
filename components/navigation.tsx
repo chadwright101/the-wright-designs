@@ -163,7 +163,7 @@ const Navigation = () => {
                     )}
                   </li>
                   {index < menuList.length - 1 && (
-                    <div className="h-px bg-beige"></div>
+                    <div key={index} className="h-px bg-beige"></div>
                   )}
                 </>
               ))}
