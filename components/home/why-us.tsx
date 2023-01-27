@@ -28,13 +28,13 @@ const WhyUs = ({ cssClasses }: Props) => {
                 </FadeIn>
                 <h3 className="text-subheading">{heading}</h3>
               </li>
-              <li key={index}>
+              <li>
                 <p>{paragraph.first}</p>
               </li>
-              <li key={index}>
+              <li>
                 <p>{paragraph.second}</p>
               </li>
-              <li key={index}>
+              <li>
                 <p>{paragraph.third}</p>
               </li>
             </ul>
