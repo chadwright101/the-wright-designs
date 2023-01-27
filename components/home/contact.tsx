@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import ContactForm from "../contact-form";
 
 interface Props {
   cssClasses?: string;
@@ -50,6 +51,7 @@ const Contact = ({ cssClasses }: Props) => {
           )}
         </div>
       </div>
+      <ContactForm cssClasses="mt-8" />
     </section>
   );
 };
