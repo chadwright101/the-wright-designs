@@ -1,4 +1,5 @@
 import About from "@/components/home/about";
+import Contact from "@/components/home/contact";
 import WhyUs from "@/components/home/why-us";
 import HeroComponent from "../components/home/hero-component";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroComponent />
       <WhyUs cssClasses="my-20 tablet:my-16" />
       <About />
+      <Contact cssClasses="my-20 tablet:my-16" />
     </>
   );
 }
