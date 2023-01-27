@@ -88,11 +88,13 @@ const Navigation = () => {
                 onMouseLeave={() => setLogoHoverMove({ scale: 1, rotate: 0 })}
                 style={logoHoverMove}
               >
-                <Image
-                  src={logo}
-                  alt="The Wright Designs logo"
-                  className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
-                />
+                <Link href="/">
+                  <Image
+                    src={logo}
+                    alt="The Wright Designs logo"
+                    className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
+                  />
+                </Link>
               </animated.div>
             </animated.div>
 
@@ -161,7 +163,7 @@ const Navigation = () => {
                     )}
                   </li>
                   {index < menuList.length - 1 && (
-                    <div className="h-px bg-beige"></div>
+                    <div key={index} className="h-px bg-beige"></div>
                   )}
                 </>
               ))}

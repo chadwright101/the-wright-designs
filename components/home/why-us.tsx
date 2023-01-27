@@ -42,7 +42,11 @@ const WhyUs = ({ cssClasses }: Props) => {
         ))}
       </ul>
       <FadeIn basic delay={250}>
-        <Button url="/portfolio" cssClasses="mx-auto mt-14 tablet:mt-10">
+        <Button
+          type="button"
+          url="/portfolio"
+          cssClasses="mx-auto mt-14 tablet:mt-10"
+        >
           View our portfolio
         </Button>
       </FadeIn>
