@@ -10,7 +10,7 @@ const ContactForm = ({ cssClasses }: Props) => {
       className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
     >
       <p className="text-beige mb-6">
-        Please fill out the form below and we&apos;ll get back to you ASAP...
+        Please fill out the form below and we'll get back to you ASAP...
       </p>
       <form
         action="https://formsubmit.co/info@thewrightdesigns.co.za"
