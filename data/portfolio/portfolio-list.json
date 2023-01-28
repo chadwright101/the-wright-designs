@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Sileta Engineers",
+    "image": {
+      "mobile": {
+        "src": "/img/screenshots/sileta-engineers-mobile.png",
+        "alt": "Sileta Engineers mobile website"
+      },
+      "desktop": {
+        "src": "/img/screenshots/sileta-engineers-desktop.png",
+        "alt": "Sileta Engineers desktop website"
+      }
+    },
+    "buttonUrl": "http://www.sileta.co.za/"
+  },
+  {
+    "title": "Neon Productions",
+    "image": {
+      "mobile": {
+        "src": "/img/screenshots/neon-productions-mobile.png",
+        "alt": "Neon Productions mobile website"
+      },
+      "desktop": {
+        "src": "/img/screenshots/neon-productions-desktop.png",
+        "alt": "Neon Productions desktop website"
+      }
+    },
+    "buttonUrl": "https://www.neonproductions.co.za/"
+  },
+  {
+    "title": "Garden Route Botox",
+    "image": {
+      "mobile": {
+        "src": "/img/screenshots/garden-route-botox-mobile.png",
+        "alt": "Garden Route Botox mobile website"
+      },
+      "desktop": {
+        "src": "/img/screenshots/garden-route-botox-desktop.png",
+        "alt": "Garden Route Botox desktop website"
+      }
+    },
+    "buttonUrl": "https://www.gardenroutebotox.com/"
+  }
+]

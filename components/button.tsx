@@ -15,6 +15,7 @@ interface Props {
   type: "button" | "submit";
   form?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  target?: string;
 }
 
 export enum ButtonVariant {
@@ -30,6 +31,7 @@ const Button = ({
   type,
   form,
   onClick,
+  target,
 }: Props) => {
   const [arrowMove, setArrowMove] = useSpring(() => ({
     to: { x: 0, scale: 1 },
@@ -49,7 +51,11 @@ const Button = ({
         onClick={onClick}
       >
         {!form ? (
-          <Link href={url} className="lowercase font-novaSlim text-subheading">
+          <Link
+            href={url}
+            className="lowercase font-novaSlim text-subheading"
+            target={target}
+          >
             {children}
           </Link>
         ) : (
