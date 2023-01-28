@@ -1,8 +1,11 @@
+import Link from "next/link";
+import Image from "next/image";
+
 const Portfolio = () => {
   return (
-    <>
-      <h1>Portfolio page</h1>
-    </>
+    <main>
+      <h1 className="text-heading text-center my-10">Portfolio</h1>
+    </main>
   );
 };
 
