@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import classnames from "classnames";
 
 import Button from "../button";
 
@@ -62,9 +63,12 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   alt={image.mobile.alt}
                   width={350}
                   height={800}
-                  className={`object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform  duration-[550ms] ease-in-out ${
-                    isHovered && "scale-[1.11]"
-                  }`}
+                  className={classnames(
+                    "object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform  duration-[550ms] ease-in-out",
+                    {
+                      "scale-[1.11]": isHovered,
+                    }
+                  )}
                 />
               </div>
               <div>
@@ -73,9 +77,12 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   alt={image.desktop.alt}
                   width={950}
                   height={400}
-                  className={`object-contain -translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[600ms] ease-in-out ${
-                    isHovered && "scale-[1.04]"
-                  }`}
+                  className={classnames(
+                    "object-contain -translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[600ms] ease-in-out",
+                    {
+                      "scale-[1.04]": isHovered,
+                    }
+                  )}
                 />
               </div>
             </Link>
