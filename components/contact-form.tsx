@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./button";
 
 interface Props {
@@ -5,6 +6,9 @@ interface Props {
 }
 
 const ContactForm = ({ cssClasses }: Props) => {
+  const [showName, setShowName] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+
   return (
     <div
       className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
@@ -17,7 +21,7 @@ const ContactForm = ({ cssClasses }: Props) => {
         method="POST"
         className="flex flex-col gap-8"
       >
-        <div className="flex flex-col gap-8 tablet:grid  tablet:grid-cols-2">
+        <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
@@ -34,48 +38,75 @@ const ContactForm = ({ cssClasses }: Props) => {
               className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
             />
           </div>
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="name"
-              className="text-paragraph lowercase text-beige"
+          {!showMessage && !showName ? (
+            <Button
+              url=""
+              form
+              onClick={() => setShowName(true)}
+              type="button"
+              cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
             >
-              Name:
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="full name"
-              className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
-            />
-          </div>
+              Next
+            </Button>
+          ) : (
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="name"
+                className="text-paragraph lowercase text-beige"
+              >
+                Name:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="full name"
+                className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
+              />
+            </div>
+          )}
         </div>
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor="message"
-            className="text-paragraph lowercase text-beige"
+        {!showMessage && showName && (
+          <Button
+            url=""
+            form
+            onClick={() => setShowMessage(true)}
+            type="button"
+            cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
           >
-            Message:
-          </label>
-          <textarea
-            id="message"
-            required
-            rows={10}
-            name="message"
-            placeholder="type your message
+            Next
+          </Button>
+        )}
+        {showMessage && (
+          <>
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="message"
+                className="text-paragraph lowercase text-beige"
+              >
+                Message:
+              </label>
+              <textarea
+                id="message"
+                required
+                rows={5}
+                name="message"
+                placeholder="type your message
         here..."
-            className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
-          ></textarea>
-        </div>
-        <Button
-          url=""
-          form
-          type="submit"
-          cssClasses="w-[155px] mx-auto tablet:mx-0"
-        >
-          Submit
-        </Button>
+                className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
+              ></textarea>
+            </div>
+            <Button
+              url=""
+              form
+              type="submit"
+              cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+            >
+              Submit
+            </Button>
+          </>
+        )}
       </form>
     </div>
   );

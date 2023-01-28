@@ -14,6 +14,7 @@ interface Props {
   variant?: ButtonVariant;
   type: "button" | "submit";
   form?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export enum ButtonVariant {
@@ -28,6 +29,7 @@ const Button = ({
   variant = ButtonVariant.Pink,
   type,
   form,
+  onClick,
 }: Props) => {
   const [arrowMove, setArrowMove] = useSpring(() => ({
     to: { x: 0, scale: 1 },
@@ -44,6 +46,7 @@ const Button = ({
         className={`bg-pink/75 w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border border-blue drop-shadow-md tablet:hover:bg-pink ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
+        onClick={onClick}
       >
         {!form ? (
           <Link href={url} className="lowercase font-novaSlim text-subheading">
@@ -70,6 +73,7 @@ const Button = ({
         className={`bg-blue/80 w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border border-grey drop-shadow-md tablet:hover:bg-blue ${cssClasses}`}
         onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
+        onClick={onClick}
       >
         {!form ? (
           <Link
