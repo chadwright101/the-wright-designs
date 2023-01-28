@@ -18,7 +18,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
       {/* mobile viewport */}
 
       {portfolioList.map(({ title, image, buttonUrl }, index) => (
-        <div className="flex flex-col gap-10 slides:hidden">
+        <div key={index} className="flex flex-col gap-10 slides:hidden">
           <h2 key={index} className="text-subheading text-center">
             {title}
           </h2>
@@ -47,10 +47,8 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
         const isHovered = hoveredIndex === index;
 
         return (
-          <div className="hidden flex-col gap-10 slides:flex">
-            <h2 key={index} className="text-subheading text-center">
-              {title}
-            </h2>
+          <div key={index} className="hidden flex-col gap-10 slides:flex">
+            <h2 className="text-subheading text-center">{title}</h2>
             <Link
               href={buttonUrl}
               target="_blank"
