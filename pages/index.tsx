@@ -7,9 +7,12 @@ export default function Home() {
   return (
     <>
       <HeroComponent />
+      <div id="whyus" className=" -translate-y-[5.5rem]"></div>
       <WhyUs cssClasses="my-20 tablet:my-16" />
+      <div id="about" className=" -translate-y-32"></div>
       <About />
-      <Contact cssClasses="my-20 tablet:my-16" />
+      <div id="contact" className=" -translate-y-16"></div>
+      <Contact cssClasses="mt-20 tablet:mt-16 tablet:mb-10" />
     </>
   );
 }

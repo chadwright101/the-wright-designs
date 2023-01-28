@@ -11,7 +11,7 @@ const Contact = ({ cssClasses }: Props) => {
   const [showPhone, setShowPhone] = useState(false);
 
   return (
-    <section className={`${cssClasses}`}>
+    <section className={` drop-shadow-md ${cssClasses}`}>
       <h2 className="text-heading text-center mb-10">Contact</h2>
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 items-center">
