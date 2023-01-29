@@ -29,6 +29,7 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
               pagination: false,
             },
           },
+          noDrag: "div",
         }}
         className={`py-10 ${containerClasses}`}
       >
