@@ -9,10 +9,9 @@ import arrowsBlue from "../public/icons/double-arrow.svg";
 import arrowsBeige from "../public/icons/double-arrow-beige.svg";
 
 interface Props {
-  url: string;
+  url?: string;
   children: ReactNode;
   cssClasses?: string;
-  type: "button" | "submit";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   target?: string;
   pinkBackground?: boolean;
@@ -29,7 +28,6 @@ const Button = ({
   url,
   children,
   cssClasses,
-  type,
   form,
   onClick,
   target,
@@ -53,7 +51,7 @@ const Button = ({
   if (form) {
     return (
       <button
-        type={type}
+        type="submit"
         className={classNames(
           `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
           {
@@ -85,9 +83,8 @@ const Button = ({
     );
   } else {
     return (
-      <Link href={url} target={target}>
+      <Link href={url!} target={target}>
         <button
-          type={type}
           className={classNames(
             `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
             {

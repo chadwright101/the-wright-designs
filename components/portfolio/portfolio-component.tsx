@@ -34,7 +34,6 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           {index % 2 ? (
             <Button
               url={buttonUrl}
-              type="button"
               cssClasses="mx-auto"
               target="_blank"
               blueBackground
@@ -46,7 +45,6 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           ) : (
             <Button
               url={buttonUrl}
-              type="button"
               cssClasses="mx-auto"
               target="_blank"
               pinkBackground
@@ -104,7 +102,6 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index % 2 ? (
               <Button
                 url={buttonUrl}
-                type="button"
                 cssClasses="mx-auto"
                 target="_blank"
                 blueBackground
@@ -116,7 +113,6 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             ) : (
               <Button
                 url={buttonUrl}
-                type="button"
                 cssClasses="mx-auto"
                 target="_blank"
                 pinkBackground

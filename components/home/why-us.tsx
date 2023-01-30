@@ -42,7 +42,6 @@ const WhyUs = ({ cssClasses }: Props) => {
         ))}
       </ul>
       <Button
-        type="button"
         url="/portfolio"
         cssClasses="mx-auto mt-14 tablet:mt-10"
         pinkBackground

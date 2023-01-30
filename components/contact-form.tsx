@@ -42,9 +42,7 @@ const ContactForm = ({
           </div>
           {!showMessage && !showName ? (
             <Button
-              url=""
               onClick={() => setShowName(true)}
-              type="button"
               cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
               form
               pinkBackground
@@ -74,9 +72,7 @@ const ContactForm = ({
         </div>
         {!showMessage && showName && (
           <Button
-            url=""
             onClick={() => setShowMessage(true)}
-            type="button"
             cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
             form
             pinkBackground
@@ -107,7 +103,6 @@ const ContactForm = ({
             </div>
             <Button
               url=""
-              type="submit"
               cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
               form
               pinkBackground

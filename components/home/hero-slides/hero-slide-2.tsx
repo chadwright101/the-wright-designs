@@ -31,7 +31,6 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           ))}
         </ul>
         <Button
-          type="button"
           url="/portfolio"
           cssClasses="hidden slides:flex"
           blueBackground
@@ -52,7 +51,6 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         ))}
       </ul>
       <Button
-        type="button"
         url="/portfolio"
         cssClasses="slides:hidden"
         blueBackground
