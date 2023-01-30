@@ -13,7 +13,6 @@ interface Props {
   children: ReactNode;
   cssClasses?: string;
   type: "button" | "submit";
-  form?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   target?: string;
   pinkBackground?: boolean;
@@ -23,6 +22,7 @@ interface Props {
   pinkText?: boolean;
   blueArrows?: boolean;
   beigeArrows?: boolean;
+  form?: boolean;
 }
 
 const Button = ({
@@ -49,46 +49,76 @@ const Button = ({
       bounce: 1.5,
     },
   }));
-  return (
-    <button
-      type={type}
-      className={classNames(
-        `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
-        {
-          "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
-          "bg-blue/75 tablet:hover:bg-blue border-grey": blueBackground,
-        }
-      )}
-      onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
-      onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
-      onClick={onClick}
-    >
-      {!form ? (
-        <Link
-          href={url}
+
+  if (form) {
+    return (
+      <button
+        type={type}
+        className={classNames(
+          `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+          {
+            "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
+            "bg-blue/75 tablet:hover:bg-blue border-grey": blueBackground,
+          }
+        )}
+        onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
+        onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
+        onClick={onClick}
+      >
+        <p
           className={classNames("lowercase font-novaSlim text-subheading", {
             "text-blue": blueText,
             "text-beige": beigeText,
             "text-pink": pinkText,
           })}
-          target={target}
         >
           {children}
-        </Link>
-      ) : (
-        <p className="lowercase font-novaSlim text-subheading text-beige">
-          {children}
         </p>
-      )}
-      <animated.div style={arrowMove}>
-        <Image
-          src={(beigeArrows && arrowsBeige) || (blueArrows && arrowsBlue)}
-          alt="Double arrow icon"
-          className="w-9"
-        ></Image>
-      </animated.div>
-    </button>
-  );
+        <animated.div style={arrowMove}>
+          <Image
+            src={(beigeArrows && arrowsBeige) || (blueArrows && arrowsBlue)}
+            alt="Double arrow icon"
+            className="w-9"
+          ></Image>
+        </animated.div>
+      </button>
+    );
+  } else {
+    return (
+      <Link href={url} target={target}>
+        <button
+          type={type}
+          className={classNames(
+            `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+            {
+              "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
+              "bg-blue/75 tablet:hover:bg-blue border-grey": blueBackground,
+            }
+          )}
+          onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
+          onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
+          onClick={onClick}
+        >
+          <p
+            className={classNames("lowercase font-novaSlim text-subheading", {
+              "text-blue": blueText,
+              "text-beige": beigeText,
+              "text-pink": pinkText,
+            })}
+          >
+            {children}
+          </p>
+          <animated.div style={arrowMove}>
+            <Image
+              src={(beigeArrows && arrowsBeige) || (blueArrows && arrowsBlue)}
+              alt="Double arrow icon"
+              className="w-9"
+            ></Image>
+          </animated.div>
+        </button>
+      </Link>
+    );
+  }
 };
 
 export default Button;
