@@ -47,6 +47,8 @@ const ContactForm = ({
               onClick={() => setShowName(true)}
               type="button"
               cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+              pinkBackground
+              beigeArrows
             >
               Next
             </Button>
@@ -76,6 +78,8 @@ const ContactForm = ({
             onClick={() => setShowMessage(true)}
             type="button"
             cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+            pinkBackground
+            beigeArrows
           >
             Next
           </Button>
@@ -104,6 +108,8 @@ const ContactForm = ({
               form
               type="submit"
               cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+              pinkBackground
+              beigeArrows
             >
               Submit
             </Button>

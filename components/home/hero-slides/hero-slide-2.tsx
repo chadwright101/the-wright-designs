@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Button, { ButtonVariant } from "@/components/button";
+import Button from "@/components/button";
 
 import slideImage from "../../../public/img/Laptop-2.png";
 
@@ -33,8 +33,10 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         <Button
           type="button"
           url="/portfolio"
-          variant={ButtonVariant.Blue}
           cssClasses="hidden slides:flex"
+          blueBackground
+          beigeArrows
+          beigeText
         >
           View our portfolio
         </Button>
@@ -52,8 +54,10 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
       <Button
         type="button"
         url="/portfolio"
-        variant={ButtonVariant.Blue}
         cssClasses="slides:hidden"
+        blueBackground
+        beigeArrows
+        beigeText
       >
         View our portfolio
       </Button>
