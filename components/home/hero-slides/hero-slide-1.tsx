@@ -28,7 +28,12 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         <h3 className="hidden text-[2rem] font-quicksand slides:block">
           {subheading}
         </h3>
-        <Button type="button" url="/portfolio" cssClasses="hidden slides:flex">
+        <Button
+          type="button"
+          url="/portfolio"
+          cssClasses="hidden slides:flex"
+          pinkBackground
+        >
           View our portfolio
         </Button>
       </div>
@@ -40,7 +45,12 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
       <h3 className="text-subheading text-center font-quicksand slides:hidden">
         {subheading}
       </h3>
-      <Button type="button" url="/portfolio" cssClasses="slides:hidden">
+      <Button
+        type="button"
+        url="/portfolio"
+        cssClasses="slides:hidden"
+        pinkBackground
+      >
         View our portfolio
       </Button>
     </div>

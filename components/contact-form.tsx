@@ -3,9 +3,13 @@ import Button from "./button";
 
 interface Props {
   cssClasses?: string;
+  formTitle?: string;
 }
 
-const ContactForm = ({ cssClasses }: Props) => {
+const ContactForm = ({
+  cssClasses,
+  formTitle = "Please fill out the form below and we&apos;ll get back to you ASAP...",
+}: Props) => {
   const [showName, setShowName] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -13,9 +17,7 @@ const ContactForm = ({ cssClasses }: Props) => {
     <div
       className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
     >
-      <p className="text-beige mb-6">
-        Please fill out the form below and we&apos;ll get back to you ASAP...
-      </p>
+      <p className="text-beige mb-6">{formTitle}</p>
       <form
         action="https://formsubmit.co/info@thewrightdesigns.co.za"
         method="POST"
@@ -45,6 +47,8 @@ const ContactForm = ({ cssClasses }: Props) => {
               onClick={() => setShowName(true)}
               type="button"
               cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+              pinkBackground
+              beigeArrows
             >
               Next
             </Button>
@@ -74,6 +78,8 @@ const ContactForm = ({ cssClasses }: Props) => {
             onClick={() => setShowMessage(true)}
             type="button"
             cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+            pinkBackground
+            beigeArrows
           >
             Next
           </Button>
@@ -102,6 +108,8 @@ const ContactForm = ({ cssClasses }: Props) => {
               form
               type="submit"
               cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+              pinkBackground
+              beigeArrows
             >
               Submit
             </Button>

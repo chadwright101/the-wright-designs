@@ -31,14 +31,29 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
               height={900}
             />
           </Link>
-          <Button
-            url={buttonUrl}
-            type="button"
-            cssClasses="mx-auto"
-            target="_blank"
-          >
-            View Website
-          </Button>
+          {index % 2 ? (
+            <Button
+              url={buttonUrl}
+              type="button"
+              cssClasses="mx-auto"
+              target="_blank"
+              blueBackground
+              beigeArrows
+              beigeText
+            >
+              View Website
+            </Button>
+          ) : (
+            <Button
+              url={buttonUrl}
+              type="button"
+              cssClasses="mx-auto"
+              target="_blank"
+              pinkBackground
+            >
+              View Website
+            </Button>
+          )}
         </div>
       ))}
 
@@ -86,14 +101,31 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 />
               </div>
             </Link>
-            <Button
-              url={buttonUrl}
-              type="button"
-              cssClasses="mx-auto"
-              target="_blank"
-            >
-              View Website
-            </Button>
+            {index % 2 ? (
+              <Button
+                url={buttonUrl}
+                type="button"
+                cssClasses="mx-auto"
+                target="_blank"
+                blueBackground
+                beigeText
+                beigeArrows
+              >
+                View Website
+              </Button>
+            ) : (
+              <Button
+                url={buttonUrl}
+                type="button"
+                cssClasses="mx-auto"
+                target="_blank"
+                pinkBackground
+                blueText
+                blueArrows
+              >
+                View Website
+              </Button>
+            )}
           </div>
         );
       })}

@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import HeroSlide1 from "./home/hero-slides/hero-slide-1";
 import HeroSlide2 from "./home/hero-slides/hero-slide-2";
 
