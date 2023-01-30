@@ -43,11 +43,12 @@ const ContactForm = ({
           {!showMessage && !showName ? (
             <Button
               url=""
-              form
               onClick={() => setShowName(true)}
               type="button"
               cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+              form
               pinkBackground
+              beigeText
               beigeArrows
             >
               Next
@@ -74,11 +75,12 @@ const ContactForm = ({
         {!showMessage && showName && (
           <Button
             url=""
-            form
             onClick={() => setShowMessage(true)}
             type="button"
             cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+            form
             pinkBackground
+            beigeText
             beigeArrows
           >
             Next
@@ -105,10 +107,11 @@ const ContactForm = ({
             </div>
             <Button
               url=""
-              form
               type="submit"
               cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+              form
               pinkBackground
+              beigeText
               beigeArrows
             >
               Submit
