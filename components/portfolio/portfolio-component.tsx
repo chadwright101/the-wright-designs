@@ -22,7 +22,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
       className={`flex flex-wrap gap-[70px] items-center justify-center overflow-hidden ${cssClasses}`}
     >
       {/* mobile viewport */}
-
+      
       {portfolioList.map(
         ({ title, image, buttonUrl, fromLeft, loading }, index) => (
           <div key={index} className="flex flex-col gap-10 slides:hidden">
@@ -122,7 +122,9 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
+
                       loading={loading ? "eager" : "lazy"}
+
                     />
                   </SwipeRightToLeft>
                 </>
@@ -140,7 +142,9 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
+
                       loading={loading ? "eager" : "lazy"}
+
                     />
                   </SwipeLeftToRight>
                   <Image
