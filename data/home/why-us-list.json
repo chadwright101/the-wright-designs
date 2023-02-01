@@ -23,7 +23,7 @@
       "src": "/graphics/yellow-dot.png",
       "alt": "Hand drawn yellow dot"
     },
-    "delay": 300
+    "delay": 350
   },
   {
     "heading": "Search Engine Optimisation (SEO)",
@@ -36,6 +36,6 @@
       "src": "/graphics/grey-dot.png",
       "alt": "Hand drawn grey dot"
     },
-    "delay": 425
+    "delay": 475
   }
 ]

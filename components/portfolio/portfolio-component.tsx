@@ -34,7 +34,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 <Image
                   src={image.mobile.src}
                   alt={image.mobile.alt}
-                  width={325}
+                  width={280}
                   height={900}
                   className="drop-shadow-md"
                 />
@@ -44,7 +44,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 <Image
                   src={image.mobile.src}
                   alt={image.mobile.alt}
-                  width={325}
+                  width={280}
                   height={900}
                   className="drop-shadow-md"
                 />
@@ -83,6 +83,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
         return (
           <div key={index} className="hidden flex-col gap-10 slides:flex">
             <h2 className="text-subheading text-center">{title}</h2>
+
             <Link
               href={buttonUrl}
               target="_blank"
@@ -104,33 +105,37 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       }
                     )}
                   />
-                  <Image
-                    src={image.mobile.src}
-                    alt={image.mobile.alt}
-                    width={350}
-                    height={800}
-                    className={classnames(
-                      "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out",
-                      {
-                        "scale-[1.075] desktop:scale-[1.155]": isHovered,
-                      }
-                    )}
-                  />
+                  <SwipeRightToLeft delay={125}>
+                    <Image
+                      src={image.mobile.src}
+                      alt={image.mobile.alt}
+                      width={350}
+                      height={800}
+                      className={classnames(
+                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
+                        {
+                          "scale-[1.075] desktop:scale-[1.155]": isHovered,
+                        }
+                      )}
+                    />
+                  </SwipeRightToLeft>
                 </>
               ) : (
                 <>
-                  <Image
-                    src={image.mobile.src}
-                    alt={image.mobile.alt}
-                    width={350}
-                    height={800}
-                    className={classnames(
-                      "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out",
-                      {
-                        "scale-[1.075] desktop:scale-[1.155]": isHovered,
-                      }
-                    )}
-                  />
+                  <SwipeLeftToRight>
+                    <Image
+                      src={image.mobile.src}
+                      alt={image.mobile.alt}
+                      width={350}
+                      height={800}
+                      className={classnames(
+                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
+                        {
+                          "scale-[1.075] desktop:scale-[1.155]": isHovered,
+                        }
+                      )}
+                    />
+                  </SwipeLeftToRight>
                   <Image
                     src={image.desktop.src}
                     alt={image.desktop.alt}
@@ -146,6 +151,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 </>
               )}
             </Link>
+
             {index % 2 ? (
               <Button
                 url={buttonUrl}

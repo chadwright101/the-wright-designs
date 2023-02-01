@@ -7,20 +7,16 @@ import { useSpring, animated } from "@react-spring/web";
 
 interface Props {
   children: ReactNode;
+  delay?: number;
 }
 
-const SwipeRightToLeft = ({ children }: Props) => {
+const SwipeRightToLeft = ({ children, delay }: Props) => {
   const [inView, setInView] = useState(false);
 
   const transition = useSpring({
-    delay: 125,
-    config: {
-      mass: 2.55,
-      tension: 130,
-      bounce: 0.75,
-    },
+    delay: delay,
     to: {
-      x: !inView ? 500 : 0,
+      x: !inView ? 2000 : 0,
     },
   });
   return (
