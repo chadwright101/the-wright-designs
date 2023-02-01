@@ -69,9 +69,9 @@ const Navigation = () => {
     to: { x: -750, opacity: 100 },
     config: {
       loop: { reverse: true },
-      mass: 5,
-      tension: 150,
-      bounce: 0.3,
+      mass: 3,
+      tension: 140,
+      bounce: 0.28,
     },
   }));
 

@@ -11,7 +11,8 @@
         "alt": "Sileta Engineers desktop website"
       }
     },
-    "buttonUrl": "http://www.sileta.co.za/"
+    "buttonUrl": "http://www.sileta.co.za/",
+    "loading": true
   },
   {
     "title": "Neon Productions",
