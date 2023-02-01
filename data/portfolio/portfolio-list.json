@@ -25,7 +25,8 @@
         "alt": "Neon Productions desktop website"
       }
     },
-    "buttonUrl": "https://www.neonproductions.co.za/"
+    "buttonUrl": "https://www.neonproductions.co.za/",
+    "fromLeft": true
   },
   {
     "title": "Garden Route Botox",
