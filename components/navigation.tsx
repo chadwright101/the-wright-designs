@@ -217,6 +217,7 @@ const Navigation = () => {
                           src={arrow}
                           alt="Double arrow icon"
                           className=" rotate-90 w-8 h-8 mt-1.5"
+                          priority
                         />
                       </animated.div>
                     </div>
