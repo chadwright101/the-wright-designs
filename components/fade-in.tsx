@@ -20,7 +20,7 @@ const FadeIn = ({ children, delay, bounce, basic }: Props) => {
     config: {
       mass: bounce ? 7.5 : 1,
       tension: bounce ? 175 : 125,
-      bounce: bounce ? 0.75 : 0,
+      bounce: bounce ? 0.85 : 0,
     },
     to: {
       scale: !inView && !basic ? 0 : 1,
