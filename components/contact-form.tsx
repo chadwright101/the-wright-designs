@@ -8,7 +8,7 @@ interface Props {
 
 const ContactForm = ({
   cssClasses,
-  formTitle = "Please fill out the form below and we&apos;ll get back to you ASAP...",
+  formTitle = "Please fill out the form below and we will get back to you ASAP...",
 }: Props) => {
   const [showName, setShowName] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
