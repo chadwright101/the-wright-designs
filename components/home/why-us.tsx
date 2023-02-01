@@ -16,8 +16,8 @@ const WhyUs = ({ cssClasses }: Props) => {
       <h2 className="text-heading text-center mb-10">Why us?</h2>
       <ul className="flex flex-wrap gap-12 justify-center tablet:justify-around tablet:gap-8">
         {whyUsList.map(({ heading, paragraph, image, delay }, index) => (
-          <SwipeLeftToRight delay={delay}>
-            <li className="max-w-[550px] tablet:max-w-[330px]" key={index}>
+          <SwipeLeftToRight delay={delay} key={index}>
+            <li className="max-w-[550px] tablet:max-w-[330px]">
               <ul className="flex flex-col gap-4 items-center text-center">
                 <li key={index} className="flex flex-col items-center gap-4">
                   <FadeIn delay={delay} bounce>
