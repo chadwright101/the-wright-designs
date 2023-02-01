@@ -9,6 +9,7 @@ module.exports = {
       blue: "#353C42",
       pink: "#C86B7B",
       grey: "#9F9797",
+      white: "#fff",
     },
     fontSize: {
       paragraph: "1.125rem",
