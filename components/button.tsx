@@ -89,7 +89,8 @@ const Button = ({
             `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
             {
               "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
-              "bg-blue/75 tablet:hover:bg-blue border-grey": blueBackground,
+              "bg-blue/75 tablet:hover:bg-blue border-pink border-x-2":
+                blueBackground,
             }
           )}
           onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
