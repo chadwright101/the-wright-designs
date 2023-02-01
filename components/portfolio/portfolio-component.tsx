@@ -23,61 +23,65 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
     >
       {/* mobile viewport */}
 
-      {portfolioList.map(({ title, image, buttonUrl, fromLeft }, index) => (
-        <div key={index} className="flex flex-col gap-10 slides:hidden">
-          <h2 key={index} className="text-subheading text-center">
-            {title}
-          </h2>
-          <Link href={buttonUrl} target="_blank">
-            {fromLeft ? (
-              <SwipeRightToLeft>
-                <Image
-                  src={image.mobile.src}
-                  alt={image.mobile.alt}
-                  width={280}
-                  height={900}
-                  className="drop-shadow-md"
-                />
-              </SwipeRightToLeft>
+      {portfolioList.map(
+        ({ title, image, buttonUrl, fromLeft, loading }, index) => (
+          <div key={index} className="flex flex-col gap-10 slides:hidden">
+            <h2 key={index} className="text-subheading text-center">
+              {title}
+            </h2>
+            <Link href={buttonUrl} target="_blank">
+              {fromLeft ? (
+                <SwipeRightToLeft>
+                  <Image
+                    src={image.mobile.src}
+                    alt={image.mobile.alt}
+                    width={280}
+                    height={900}
+                    className="drop-shadow-md"
+                    loading={loading ? "eager" : "lazy"}
+                  />
+                </SwipeRightToLeft>
+              ) : (
+                <SwipeLeftToRight>
+                  <Image
+                    src={image.mobile.src}
+                    alt={image.mobile.alt}
+                    width={280}
+                    height={900}
+                    className="drop-shadow-md"
+                    loading={loading ? "eager" : "lazy"}
+                  />
+                </SwipeLeftToRight>
+              )}
+            </Link>
+            {index % 2 ? (
+              <Button
+                url={buttonUrl}
+                cssClasses="mx-auto"
+                target="_blank"
+                blueBackground
+                beigeArrows
+                beigeText
+              >
+                View Website
+              </Button>
             ) : (
-              <SwipeLeftToRight>
-                <Image
-                  src={image.mobile.src}
-                  alt={image.mobile.alt}
-                  width={280}
-                  height={900}
-                  className="drop-shadow-md"
-                />
-              </SwipeLeftToRight>
+              <Button
+                url={buttonUrl}
+                cssClasses="mx-auto"
+                target="_blank"
+                pinkBackground
+              >
+                View Website
+              </Button>
             )}
-          </Link>
-          {index % 2 ? (
-            <Button
-              url={buttonUrl}
-              cssClasses="mx-auto"
-              target="_blank"
-              blueBackground
-              beigeArrows
-              beigeText
-            >
-              View Website
-            </Button>
-          ) : (
-            <Button
-              url={buttonUrl}
-              cssClasses="mx-auto"
-              target="_blank"
-              pinkBackground
-            >
-              View Website
-            </Button>
-          )}
-        </div>
-      ))}
+          </div>
+        )
+      )}
 
       {/* desktop viewport */}
 
-      {portfolioList.map(({ title, image, buttonUrl }, index) => {
+      {portfolioList.map(({ title, image, buttonUrl, loading }, index) => {
         const isHovered = hoveredIndex === index;
 
         return (
@@ -104,6 +108,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         "scale-[1.04]": isHovered,
                       }
                     )}
+                    loading={loading ? "eager" : "lazy"}
                   />
                   <SwipeRightToLeft delay={125}>
                     <Image
@@ -117,6 +122,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
+                      loading={loading ? "eager" : "lazy"}
                     />
                   </SwipeRightToLeft>
                 </>
@@ -134,6 +140,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
+                      loading={loading ? "eager" : "lazy"}
                     />
                   </SwipeLeftToRight>
                   <Image
@@ -147,6 +154,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         "scale-[1.04]": isHovered,
                       }
                     )}
+                    loading={loading ? "eager" : "lazy"}
                   />
                 </>
               )}
