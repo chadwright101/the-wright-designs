@@ -44,7 +44,15 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
 
       {portfolioList.map(
         (
-          { title, image, buttonUrl, fromLeft, loading, swipeMeAnimation },
+          {
+            title,
+            image,
+            buttonUrl,
+            fromLeft,
+            loading,
+            swipeMeAnimation,
+            blankPhone,
+          },
           index
         ) => (
           <div key={index} className="flex flex-col gap-10 slides:hidden">
@@ -60,7 +68,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     alt={image.mobile.alt}
                   />
                   <Image
-                    src={image.blankPhone}
+                    src={blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
@@ -88,7 +96,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     loading={loading ? "eager" : "lazy"}
                   />
                   <Image
-                    src={image.blankPhone}
+                    src={blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
