@@ -23,7 +23,8 @@
       "src": "/graphics/yellow-dot.png",
       "alt": "Hand drawn yellow dot"
     },
-    "delay": 300
+    "delay": 300,
+    "fromRight": true
   },
   {
     "heading": "Search Engine Optimisation (SEO)",
