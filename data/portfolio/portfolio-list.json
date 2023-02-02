@@ -9,10 +9,15 @@
       "desktop": {
         "src": "/img/screenshots/sileta-engineers-desktop.png",
         "alt": "Sileta Engineers desktop website"
+      },
+      "scrollImage": {
+        "src": "/img/screenshots/sileta-engineers-mobile-long.png"
       }
     },
     "buttonUrl": "http://www.sileta.co.za/",
-    "loading": true
+    "loading": true,
+    "autoScroll": true,
+    "swipeMeAnimation": true
   },
   {
     "title": "Neon Productions",
@@ -24,6 +29,9 @@
       "desktop": {
         "src": "/img/screenshots/neon-productions-desktop.png",
         "alt": "Neon Productions desktop website"
+      },
+      "scrollImage": {
+        "src": "/img/screenshots/neon-productions-mobile-long.png"
       }
     },
     "buttonUrl": "https://www.neonproductions.co.za/",
@@ -39,6 +47,9 @@
       "desktop": {
         "src": "/img/screenshots/garden-route-botox-desktop.png",
         "alt": "Garden Route Botox desktop website"
+      },
+      "scrollImage": {
+        "src": "/img/screenshots/garden-route-botox-mobile-long.png"
       }
     },
     "buttonUrl": "https://www.gardenroutebotox.com/"

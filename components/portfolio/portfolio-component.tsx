@@ -3,12 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 import classnames from "classnames";
+import { useSpring, animated, easings } from "@react-spring/web";
 
 import Button from "../button";
-
-import portfolioList from "../../data/portfolio/portfolio-list.json";
 import SwipeRightToLeft from "../swipe-right-left";
 import SwipeLeftToRight from "../swipe-left-right";
+import PortfolioScroller from "./portfolio-scroller";
+
+import portfolioList from "../../data/portfolio/portfolio-list.json";
+
+import swipeMeIcon from "public/icons/swipe-me.svg";
 
 interface Props {
   cssClasses?: string;
@@ -17,21 +21,54 @@ interface Props {
 const PortfolioComponent = ({ cssClasses }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const swipeMe = useSpring({
+    from: { y: -75, opacity: 0.65 },
+    to: { y: 75, opacity: 0 },
+    delay: 1500,
+    loop: true,
+    reset: true,
+    config: { duration: 1250, easing: easings.easeInSine },
+  });
+
+  const swipeMeFadeAway = useSpring({
+    from: { opacity: 1, zIndex: 100 },
+    to: { opacity: 0 },
+    delay: 8500,
+  });
+
   return (
     <section
       className={`flex flex-wrap gap-[70px] items-center justify-center overflow-hidden ${cssClasses}`}
     >
       {/* mobile viewport */}
-      
+
+
       {portfolioList.map(
-        ({ title, image, buttonUrl, fromLeft, loading }, index) => (
+        (
+          {
+            title,
+            image,
+            buttonUrl,
+            fromLeft,
+            loading,
+            autoScroll,
+            swipeMeAnimation,
+          },
+          index
+        ) => (
+
           <div key={index} className="flex flex-col gap-10 slides:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
             </h2>
-            <Link href={buttonUrl} target="_blank">
+
+            <div>
               {fromLeft ? (
                 <SwipeRightToLeft>
+                  <PortfolioScroller
+                    src={image.scrollImage.src}
+                    alt={image.mobile.alt}
+                  />
                   <Image
                     src={image.mobile.src}
                     alt={image.mobile.alt}
@@ -43,6 +80,22 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 </SwipeRightToLeft>
               ) : (
                 <SwipeLeftToRight>
+                  {swipeMeAnimation && (
+                    <animated.div style={swipeMeFadeAway} className="absolute">
+                      <animated.div style={swipeMe}>
+                        <Image
+                          src={swipeMeIcon}
+                          alt="Arrow icon"
+                          className="translate-x-[235px] translate-y-[390px]"
+                        />
+                      </animated.div>
+                    </animated.div>
+                  )}
+                  <PortfolioScroller
+                    src={image.scrollImage.src}
+                    alt={image.mobile.alt}
+                    autoScroll={autoScroll}
+                  />
                   <Image
                     src={image.mobile.src}
                     alt={image.mobile.alt}
@@ -53,7 +106,8 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   />
                 </SwipeLeftToRight>
               )}
-            </Link>
+
+            </div>
             {index % 2 ? (
               <Button
                 url={buttonUrl}
@@ -122,9 +176,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
-
                       loading={loading ? "eager" : "lazy"}
-
                     />
                   </SwipeRightToLeft>
                 </>
@@ -142,9 +194,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
-
                       loading={loading ? "eager" : "lazy"}
-
                     />
                   </SwipeLeftToRight>
                   <Image
