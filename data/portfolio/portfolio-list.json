@@ -12,9 +12,12 @@
       },
       "scrollImage": {
         "src": "/img/screenshots/sileta-engineers-mobile-long.png"
-      },
-      "blankPhone": "/img/phone-silver.png"
+      }
     },
+    "scrollImage": {
+      "src": "/img/screenshots/sileta-engineers-mobile-long.png"
+    },
+    "blankPhone": "/img/phone-silver.png",
     "buttonUrl": "http://www.sileta.co.za/",
     "loading": true,
     "swipeMeAnimation": true
@@ -32,9 +35,12 @@
       },
       "scrollImage": {
         "src": "/img/screenshots/neon-productions-mobile-long.png"
-      },
-      "blankPhone": "/img/phone-grey.png"
+      }
     },
+    "scrollImage": {
+      "src": "/img/screenshots/neon-productions-mobile-long.png"
+    },
+    "blankPhone": "/img/phone-grey.png",
     "buttonUrl": "https://www.neonproductions.co.za/",
     "fromLeft": true
   },
@@ -51,9 +57,12 @@
       },
       "scrollImage": {
         "src": "/img/screenshots/garden-route-botox-mobile-long.png"
-      },
-      "blankPhone": "/img/phone-rose-gold.png"
+      }
     },
+    "scrollImage": {
+      "src": "/img/screenshots/garden-route-botox-mobile-long.png"
+    },
+    "blankPhone": "/img/phone-rose-gold.png",
     "buttonUrl": "https://www.gardenroutebotox.com/"
   }
 ]
