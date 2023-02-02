@@ -22,18 +22,18 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const swipeMe = useSpring({
-    from: { y: -75, opacity: 0.65 },
-    to: { y: 75, opacity: 0 },
-    delay: 1500,
+    from: { y: 75, opacity: 0.75 },
+    to: { y: -75, opacity: 0 },
+    delay: 1000,
     loop: true,
     reset: true,
-    config: { duration: 1250, easing: easings.easeInSine },
+    config: { duration: 1350, easing: easings.easeInSine },
   });
 
   const swipeMeFadeAway = useSpring({
     from: { opacity: 1, zIndex: 100 },
     to: { opacity: 0 },
-    delay: 8500,
+    delay: 7500,
   });
 
   return (
@@ -42,21 +42,11 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
     >
       {/* mobile viewport */}
 
-
       {portfolioList.map(
         (
-          {
-            title,
-            image,
-            buttonUrl,
-            fromLeft,
-            loading,
-            autoScroll,
-            swipeMeAnimation,
-          },
+          { title, image, buttonUrl, fromLeft, loading, swipeMeAnimation },
           index
         ) => (
-
           <div key={index} className="flex flex-col gap-10 slides:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
@@ -70,12 +60,13 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     alt={image.mobile.alt}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
+                    quality={50}
                   />
                 </SwipeRightToLeft>
               ) : (
@@ -86,7 +77,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         <Image
                           src={swipeMeIcon}
                           alt="Arrow icon"
-                          className="translate-x-[235px] translate-y-[390px]"
+                          className="translate-x-[235px] translate-y-[320px]"
                         />
                       </animated.div>
                     </animated.div>
@@ -94,20 +85,20 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   <PortfolioScroller
                     src={image.scrollImage.src}
                     alt={image.mobile.alt}
-                    autoScroll={autoScroll}
+                    loading={loading ? "eager" : "lazy"}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
+                    quality={50}
                   />
                 </SwipeLeftToRight>
               )}
-
-            </div>
+            </Link>
             {index % 2 ? (
               <Button
                 url={buttonUrl}
@@ -157,12 +148,13 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     width={950}
                     height={400}
                     className={classnames(
-                      "object-contain translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
+                      "object-contain drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                       {
                         "scale-[1.04]": isHovered,
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}
+                    quality={50}
                   />
                   <SwipeRightToLeft delay={125}>
                     <Image
@@ -171,12 +163,13 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       width={350}
                       height={800}
                       className={classnames(
-                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
+                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] -translate-x-5 ease-in-out desktop:translate-y-[18px]",
                         {
                           "scale-[1.075] desktop:scale-[1.155]": isHovered,
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
+                      quality={50}
                     />
                   </SwipeRightToLeft>
                 </>
@@ -195,6 +188,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
+                      quality={50}
                     />
                   </SwipeLeftToRight>
                   <Image
@@ -209,6 +203,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}
+                    quality={50}
                   />
                 </>
               )}

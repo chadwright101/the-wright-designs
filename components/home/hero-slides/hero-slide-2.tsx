@@ -44,6 +44,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         src={slideImage}
         alt="Computer screen showing a quality website"
         className="h-full max-w-[250px] slides:min-w-[350px]"
+        quality={50}
       ></Image>
       <ul className="text-center text-subheading list-disc list-inside font-light slides:hidden">
         {heroSlide2.text.list.map((item, index) => (

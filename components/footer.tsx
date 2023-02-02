@@ -33,12 +33,13 @@ const Footer = ({ cssClasses }: Props) => {
             </Link>
           </h4>
         </div>
-
-        <Image
-          src={logo}
-          alt="The Wright Designs logo"
-          className="hidden w-[249px] h-[48px] tablet:block tablet:self-end rotate-1"
-        />
+        <Link href="/" className="h-[50px]">
+          <Image
+            src={logo}
+            alt="The Wright Designs logo"
+            className="hidden w-[249px] h-[48px] tablet:block tablet:self-end rotate-1"
+          />
+        </Link>
       </div>
     </footer>
   );
