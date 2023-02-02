@@ -10,6 +10,7 @@ module.exports = {
       pink: "#C86B7B",
       grey: "#9F9797",
       white: "#fff",
+      linkBlue: "#3366CC",
     },
     fontSize: {
       paragraph: "1.125rem",

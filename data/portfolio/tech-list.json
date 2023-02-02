@@ -1,0 +1,17 @@
+{
+  "siletaEngineers": {
+    "repo": "https://github.com/chadwright101/sileta-engineers.git",
+    "languages": ["Pug", "Sass", "Javascript"],
+    "hours": "12 hours"
+  },
+  "neonProductions": {
+    "repo": "https://github.com/chadwright101/neon-productions.git",
+    "languages": ["NextJS", "Tailwindcss", "Typescript"],
+    "hours": "17.5 hours"
+  },
+  "gardenRouteBotox": {
+    "repo": "https://github.com/chadwright101/grace.git",
+    "languages": ["NextJS", "Tailwindcss", "Typescript"],
+    "hours": "8 hours"
+  }
+}
