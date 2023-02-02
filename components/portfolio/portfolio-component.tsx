@@ -44,15 +44,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
 
       {portfolioList.map(
         (
-          {
-            title,
-            image,
-            buttonUrl,
-            fromLeft,
-            loading,
-            autoScroll,
-            swipeMeAnimation,
-          },
+          { title, image, buttonUrl, fromLeft, loading, swipeMeAnimation },
           index
         ) => (
           <div key={index} className="flex flex-col gap-10 slides:hidden">
@@ -68,7 +60,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     alt={image.mobile.alt}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
@@ -92,10 +84,10 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   <PortfolioScroller
                     src={image.scrollImage.src}
                     alt={image.mobile.alt}
-                    autoScroll={autoScroll}
+                    loading={loading ? "eager" : "lazy"}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
