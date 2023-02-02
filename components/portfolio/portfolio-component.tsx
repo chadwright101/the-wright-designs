@@ -25,7 +25,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
       {/* mobile viewport */}
 
       {portfolioList.map(
-        ({ title, image, buttonUrl, fromLeft, loading }, index) => (
+        ({ title, image, buttonUrl, fromLeft, loading, autoScroll }, index) => (
           <div key={index} className="flex flex-col gap-10 slides:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
@@ -51,6 +51,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   <PortfolioScroller
                     src={image.scrollImage.src}
                     alt={image.mobile.alt}
+                    autoScroll={autoScroll}
                   />
                   <Image
                     src={image.mobile.src}

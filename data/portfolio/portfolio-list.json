@@ -15,7 +15,8 @@
       }
     },
     "buttonUrl": "http://www.sileta.co.za/",
-    "loading": true
+    "loading": true,
+    "autoScroll": true
   },
   {
     "title": "Neon Productions",
