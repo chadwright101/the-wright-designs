@@ -42,6 +42,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
     >
       {/* mobile viewport */}
 
+
       {portfolioList.map(
         (
           {
@@ -55,6 +56,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           },
           index
         ) => (
+
           <div key={index} className="flex flex-col gap-10 slides:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
@@ -104,6 +106,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   />
                 </SwipeLeftToRight>
               )}
+
             </div>
             {index % 2 ? (
               <Button
