@@ -42,13 +42,11 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
     >
       {/* mobile viewport */}
 
-
       {portfolioList.map(
         (
           { title, image, buttonUrl, fromLeft, loading, swipeMeAnimation },
           index
         ) => (
-
           <div key={index} className="flex flex-col gap-10 slides:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
@@ -62,7 +60,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     alt={image.mobile.alt}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
@@ -87,9 +85,10 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   <PortfolioScroller
                     src={image.scrollImage.src}
                     alt={image.mobile.alt}
+                    loading={loading ? "eager" : "lazy"}
                   />
                   <Image
-                    src={image.mobile.src}
+                    src={image.blankPhone}
                     alt={image.mobile.alt}
                     width={280}
                     height={900}
@@ -99,7 +98,6 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   />
                 </SwipeLeftToRight>
               )}
-
             </div>
             {index % 2 ? (
               <Button
