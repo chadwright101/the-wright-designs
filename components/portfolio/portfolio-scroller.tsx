@@ -10,13 +10,13 @@ interface Props {
 
 const PortfolioScroller = ({ src, alt, autoScroll }: Props) => {
   const startScroll = useSpring({
-    from: { y: -150 },
+    from: { y: -125 },
     to: { y: 0 },
     delay: 1500,
-    config: { duration: 4000, easing: easings.easeOutSine },
+    config: { duration: 2500, easing: easings.easeOutSine },
   });
   return (
-    <div className="bg-white absolute w-[244px] h-[432.5px] z-10 translate-x-[18px] translate-y-[68.5px] overflow-y-auto scrollbar-hide">
+    <div className="bg-white absolute w-[244px] h-[431.5px] z-10 translate-x-[18px] translate-y-[68.5px] overflow-y-auto scrollbar-hide">
       {autoScroll ? (
         <animated.div style={startScroll}>
           <Image src={src} width={244} height={1000} alt={alt}></Image>
