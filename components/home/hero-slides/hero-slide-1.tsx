@@ -36,6 +36,8 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         src={slideImage}
         alt="Computer screen showing a quality website"
         className="h-full max-w-[250px] slides:min-w-[350px]"
+        priority
+        quality={50}
       ></Image>
       <h3 className="text-subheading text-center font-quicksand slides:hidden">
         {subheading}
