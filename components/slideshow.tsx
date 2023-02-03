@@ -22,11 +22,10 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
           interval: 4500,
           breakpoints: {
             1000: {
-              arrows: false,
               pagination: false,
             },
           },
-          noDrag: "div",
+          drag: false,
         }}
         className={`py-10 ${containerClasses}`}
       >

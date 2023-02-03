@@ -256,29 +256,29 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 list={techList.gardenRouteBotox}
               />
             )}
-            {index % 2 ? (
-              <Button
-                url={buttonUrl}
-                target="_blank"
-                blueBackground
-                beigeText
-                beigeArrows
-                cssClasses="mx-auto"
-              >
-                View Website
-              </Button>
-            ) : (
-              <Button
-                url={buttonUrl}
-                target="_blank"
-                pinkBackground
-                blueText
-                blueArrows
-                cssClasses="mx-auto"
-              >
-                View Website
-              </Button>
-            )}
+            <div className="max-w-[225px] mx-auto">
+              {index % 2 ? (
+                <Button
+                  url={buttonUrl}
+                  target="_blank"
+                  blueBackground
+                  beigeText
+                  beigeArrows
+                >
+                  View Website
+                </Button>
+              ) : (
+                <Button
+                  url={buttonUrl}
+                  target="_blank"
+                  pinkBackground
+                  blueText
+                  blueArrows
+                >
+                  View Website
+                </Button>
+              )}
+            </div>
           </div>
         );
       })}
