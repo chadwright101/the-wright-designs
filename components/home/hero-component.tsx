@@ -1,11 +1,7 @@
 import Slideshow from "../slideshow";
 
 const HeroComponent = () => {
-  return (
-    <div className="tablet: mb-6">
-      <Slideshow />
-    </div>
-  );
+  return <Slideshow />;
 };
 
 export default HeroComponent;

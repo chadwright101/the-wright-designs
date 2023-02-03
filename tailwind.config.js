@@ -24,6 +24,8 @@ module.exports = {
     screens: {
       tablet: "900px",
       slides: "1000px",
+      slides2: "1100px",
+      slides3: "1275px",
       desktop: "1400px",
     },
     extend: {},

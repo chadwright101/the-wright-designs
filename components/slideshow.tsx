@@ -15,13 +15,13 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
       <Splide
         options={{
           pagination: true,
-          autoplay: true,
+          /* autoplay: true, */
           type: "loop",
           speed: 1500,
           pauseOnHover: true,
           interval: 4500,
           breakpoints: {
-            1000: {
+            1100: {
               pagination: false,
             },
           },

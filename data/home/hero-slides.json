@@ -1,0 +1,47 @@
+{
+  "slide1": {
+    "text": {
+      "heading": "Elevate your online presence.",
+      "subheading": "Clean, functional & Custom-made website development at an affordable price point."
+    },
+    "button": {
+      "text": "Get in touch",
+      "url": "/#contact"
+    },
+    "image": {
+      "src": "/img/screenshots/hero-slide-1-devices.png",
+      "alt": "Websites being displayed on a variety of devices"
+    }
+  },
+
+  "slide2": {
+    "text": {
+      "heading": "Our work speaks for itself",
+      "list": [
+        "quality tailor-made designs",
+        "quick turnaround time",
+        "SEO experts"
+      ]
+    },
+    "button": {
+      "text": "view our portfolio",
+      "url": "/portfolio"
+    },
+    "images": {
+      "mobile": {
+        "first": {
+          "src": "/img/screenshots/sileta-engineers-mobile.png",
+          "alt": "Sileta Engineers' website displayed on an iPhone"
+        },
+        "second": {
+          "src": "/img/screenshots/garden-route-botox-mobile.png",
+          "alt": "Garden Route Botox's website displayed on an iPhone"
+        },
+        "third": {
+          "src": "/img/screenshots/neon-productions-mobile.png",
+          "alt": "Neon Productions' website displayed on an iPhone"
+        }
+      }
+    }
+  }
+}
