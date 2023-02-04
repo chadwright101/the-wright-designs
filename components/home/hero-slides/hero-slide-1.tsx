@@ -19,22 +19,22 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
     <>
       {/* mobile view */}
       <div
-        className={`flex flex-col gap-7 items-center slides2:hidden ${cssClasses}`}
+        className={`grid grid-rows-[105px_250px_125px_50px] phoneLarge:grid-rows-[100px_300px_125px_50px] tablet:grid-rows-[100px_350px_125px_50px] gap-4 tablet2:hidden ${cssClasses}`}
       >
-        <h2 className="text-heading text-center">{heading}</h2>
+        <h2 className="text-heading text-center self-center">{heading}</h2>
         <Image
           src={image.src}
           alt={image.alt}
-          width={800}
-          height={600}
-          className="h-full w-[550px] -mt-2 -translate-x-[20px] tablet:w-[750px]"
+          width={650}
+          height={500}
+          className="h-auto w-[400px] -translate-x-[20px] justify-self-center self-center phoneLarge:w-[550px] tablet:w-[650px]"
           priority
           quality={50}
         ></Image>
-        <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[650px]">
+        <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[400px] justify-self-center self-center">
           {subheading}
         </h3>
-        <Button url={button.url} pinkBackground>
+        <Button cssClasses="m-auto" url={button.url} pinkBackground>
           {button.text}
         </Button>
       </div>
@@ -42,14 +42,12 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
       {/* desktop view */}
 
       <div
-        className={`hidden slides2:grid grid-cols-2 gap-7 items-center px-[100px] mb-[10px] ${cssClasses}`}
+        className={`hidden tablet2:grid tablet2:grid-cols-[400px_1fr] tablet3:grid-cols-[450px_1fr] px-[100px] ${cssClasses}`}
       >
-        <div className="flex flex-col items-start gap-6">
-          <h2 className="text-[2.35rem] slide3:text-[2.75rem] w-[500px] ">
-            {heading}
-          </h2>
-          <div className="h-px w-5/6 bg-gradient-to-r from-blue via-blue to-beige"></div>
-          <h3 className="text-[1.75rem] slides3:text-[2rem] font-quicksand">
+        <div className="grid tablet2:grid-rows-[150px_20px_180px_50px]">
+          <h2 className="text-[2.75rem]">{heading}</h2>
+          <div className="h-px bg-gradient-to-r from-blue via-blue to-beige self-center"></div>
+          <h3 className="text-[1.75rem] font-quicksand self-center">
             {subheading}
           </h3>
           <Button url={button.url} pinkBackground>
@@ -61,7 +59,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           alt={image.alt}
           width={650}
           height={400}
-          className="max-w-[450px] h-[269px] slides3:max-w-[550px] slides3:h-[329px] desktop:max-w-[620px] desktop:h-[371px] -mt-2 -translate-x-[20px] slide3:-translate-x-[30px] desktop:-translate-x-[40px] justify-self-center"
+          className="h-auto w-[650px] self-center"
           priority
           quality={50}
         ></Image>

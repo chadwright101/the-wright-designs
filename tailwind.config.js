@@ -22,10 +22,10 @@ module.exports = {
       quicksand: "quicksand",
     },
     screens: {
+      phoneLarge: "650px",
       tablet: "900px",
-      slides: "1000px",
-      slides2: "1100px",
-      slides3: "1275px",
+      tablet2: "1100px",
+      tablet3: "1200px",
       desktop: "1400px",
     },
     extend: {},

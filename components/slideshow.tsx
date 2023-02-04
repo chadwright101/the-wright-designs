@@ -4,18 +4,13 @@ import HeroSlide2 from "./home/hero-slides/hero-slide-2";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-interface Props {
-  containerClasses?: string;
-  slideClasses?: string;
-}
-
-const Slideshow = ({ containerClasses, slideClasses }: Props) => {
+const Slideshow = () => {
   return (
     <>
       <Splide
         options={{
           pagination: true,
-          /* autoplay: true, */
+          autoplay: true,
           type: "loop",
           speed: 1500,
           pauseOnHover: true,
@@ -27,12 +22,12 @@ const Slideshow = ({ containerClasses, slideClasses }: Props) => {
           },
           drag: false,
         }}
-        className={`py-10 ${containerClasses}`}
+        className="mt-8"
       >
-        <SplideSlide className={`${slideClasses}`}>
+        <SplideSlide className="tablet:pb-20">
           <HeroSlide1 />
         </SplideSlide>
-        <SplideSlide className={`${slideClasses}`}>
+        <SplideSlide>
           <HeroSlide2 />
         </SplideSlide>
       </Splide>

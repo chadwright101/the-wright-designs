@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <HeroComponent />
       <div id="whyus" className=" -translate-y-[5.5rem]"></div>
-      <WhyUs cssClasses="mb-20 mt-14 tablet:mb-16 tablet:mt-10 desktop:my-16" />
+      <WhyUs cssClasses="mb-20 tablet:mb-16 tablet2:my-12" />
       <div id="about" className=" -translate-y-32"></div>
       <About />
       <div id="contact" className=" -translate-y-16"></div>
