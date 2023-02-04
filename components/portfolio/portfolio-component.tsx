@@ -59,7 +59,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           },
           index
         ) => (
-          <div key={index} className="flex flex-col gap-10 slides:hidden">
+          <div key={index} className="flex flex-col gap-10 tablet2:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
             </h2>
@@ -160,7 +160,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
         const isHovered = hoveredIndex === index;
 
         return (
-          <div key={index} className="hidden flex-col gap-10 slides:flex">
+          <div key={index} className="hidden flex-col gap-10 tablet2:flex">
             <h2 className="text-subheading text-center">{title}</h2>
 
             <Link
