@@ -28,7 +28,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           alt={image.alt}
           width={550}
           height={700}
-          className="h-auto w-[375px] justify-self-center self-center phoneLarge:w-[450px] tablet:w-[525px]"
+          className="h-auto w-[375px] justify-self-center self-center drop-shadow-md phoneLarge:w-[450px] tablet:w-[525px]"
           quality={50}
         ></Image>
         <ul className="list-disc text-subheading font-quicksand text-center list-inside self-center">

@@ -27,7 +27,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           alt={image.alt}
           width={650}
           height={500}
-          className="h-auto w-[400px] -translate-x-[20px] justify-self-center self-center phoneLarge:w-[550px] tablet:w-[650px]"
+          className="h-auto w-[400px] -translate-x-[10px] tablet2:-translate-x-0 justify-self-center self-center phoneLarge:w-[550px] tablet:w-[650px]"
           priority
           quality={50}
         ></Image>
