@@ -86,7 +86,7 @@ const WhyUs = ({ cssClasses }: Props) => {
       </ul>
       <Button
         url="/portfolio"
-        cssClasses="mx-auto mt-14 tablet:mt-10"
+        cssClasses="mx-auto my-14 tablet:mt-10"
         pinkBackground
       >
         View our portfolio
