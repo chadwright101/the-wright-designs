@@ -8,7 +8,7 @@
       "fourth": "Fast loading"
     },
     "icon": "/icons/development-icon.svg",
-    "delay": 200
+    "delay": 220
   },
   {
     "title": "Design",
@@ -20,7 +20,7 @@
       "fifth": "Eye catching"
     },
     "icon": "/icons/design-icon.svg",
-    "delay": 300
+    "delay": 290
   },
   {
     "title": "Maintenance",
@@ -32,6 +32,6 @@
       "fifth": "Above & beyond"
     },
     "icon": "/icons/maintenance-icon.svg",
-    "delay": 425
+    "delay": 405
   }
 ]
