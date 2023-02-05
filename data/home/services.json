@@ -7,28 +7,31 @@
       "third": "Interactive & animated",
       "fourth": "Fast loading"
     },
-    "icon": "/icons/development-icon.svg"
+    "icon": "/icons/development-icon.svg",
+    "delay": 200
   },
   {
     "title": "Design",
-    "icon": "/icons/design-icon.svg",
     "list": {
       "first": "Clean",
       "second": "Custom-made",
       "third": "Modern",
       "fourth": "Functional",
       "fifth": "Eye catching"
-    }
+    },
+    "icon": "/icons/design-icon.svg",
+    "delay": 300
   },
   {
     "title": "Maintenance",
-    "icon": "/icons/maintenance-icon.svg",
     "list": {
       "first": "Ongoing Updates",
       "second": "Periodic overhauls",
       "third": "Transparent",
       "fourth": "Quality after service",
       "fifth": "Above & beyond"
-    }
+    },
+    "icon": "/icons/maintenance-icon.svg",
+    "delay": 425
   }
 ]
