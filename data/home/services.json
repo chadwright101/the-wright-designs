@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Development",
+    "list": {
+      "first": "Cutting edge",
+      "second": "Responsive",
+      "third": "Interactive & animated",
+      "fourth": "Fast loading"
+    },
+    "icon": "/icons/development-icon.svg"
+  },
+  {
+    "title": "Design",
+    "icon": "/icons/design-icon.svg",
+    "list": {
+      "first": "Clean",
+      "second": "Custom-made",
+      "third": "Modern",
+      "fourth": "Functional",
+      "fifth": "Eye catching"
+    }
+  },
+  {
+    "title": "Maintenance",
+    "icon": "/icons/maintenance-icon.svg",
+    "list": {
+      "first": "Ongoing Updates",
+      "second": "Periodic overhauls",
+      "third": "Transparent",
+      "fourth": "Quality after service",
+      "fifth": "Above & beyond"
+    }
+  }
+]
