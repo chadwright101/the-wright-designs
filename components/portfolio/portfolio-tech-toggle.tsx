@@ -12,7 +12,6 @@ interface Props {
     repo: string;
     hours: string;
     languages: Array<string>;
-    designed: string;
   };
   variant?: TechToggleVariant;
 }
@@ -60,7 +59,6 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 ))}
               </ul>
             </li>
-            <li>Designed by: {list.designed}</li>
             <li>Completed in: {list.hours}</li>
             <li>
               <Link
