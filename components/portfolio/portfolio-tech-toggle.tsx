@@ -12,6 +12,7 @@ interface Props {
     repo: string;
     hours: string;
     languages: Array<string>;
+    designed: string;
   };
   variant?: TechToggleVariant;
 }
@@ -59,6 +60,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 ))}
               </ul>
             </li>
+            <li>Designed by: {list.designed}</li>
             <li>Completed in: {list.hours}</li>
             <li>
               <Link
@@ -87,7 +89,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
               setTechIconHover({ scale: 1, rotate: 0 });
               setTechTextHover(false);
             }}
-            className="flex gap-2 h-6 items-center justify-center"
+            className="flex gap-2 h-6 items-center justify-center -mt-2"
           >
             <animated.div style={techIconHover}>
               <Image src={plusIcon} alt="Plus sign icon" className="h-6 w-6" />
@@ -98,7 +100,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
           </button>
         )}
         {techToggle && (
-          <ul className="text-center font-light -mt-4 border-y-2 border-pink py-4 flex gap-8">
+          <ul className="text-center font-light -mt-2 border-y-2 border-pink py-4 flex gap-8">
             <li>
               <ul className="flex justify-center">
                 {list.languages.map((item, index) => (
@@ -112,6 +114,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
               </ul>
             </li>
             <li>Completed in: {list.hours}</li>
+            <li>Designed by: {list.designed}</li>
             <li>
               <Link
                 href={list.repo}

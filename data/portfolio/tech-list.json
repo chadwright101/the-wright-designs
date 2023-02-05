@@ -2,16 +2,19 @@
   "siletaEngineers": {
     "repo": "https://github.com/chadwright101/sileta-engineers.git",
     "languages": ["Pug", "Sass", "Javascript"],
-    "hours": "12 hours"
+    "hours": "12 hours",
+    "designed": "The Wright Designs"
   },
   "neonProductions": {
     "repo": "https://github.com/chadwright101/neon-productions.git",
     "languages": ["NextJS", "Tailwindcss", "Typescript"],
-    "hours": "17.5 hours"
+    "hours": "17.5 hours",
+    "designed": "The Wright Designs"
   },
   "gardenRouteBotox": {
     "repo": "https://github.com/chadwright101/grace.git",
     "languages": ["NextJS", "Tailwindcss", "Typescript"],
-    "hours": "8 hours"
+    "hours": "8 hours",
+    "designed": "The Wright Designs"
   }
 }
