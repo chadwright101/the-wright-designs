@@ -36,15 +36,6 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <Button
-          cssClasses="mx-auto"
-          url={button.url}
-          blueBackground
-          beigeArrows
-          beigeText
-        >
-          {button.text}
-        </Button>
       </div>
 
       {/* desktop view */}

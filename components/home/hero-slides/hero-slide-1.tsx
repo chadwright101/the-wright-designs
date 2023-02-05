@@ -34,9 +34,6 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[400px] justify-self-center self-center">
           {subheading}
         </h3>
-        <Button cssClasses="m-auto" url={button.url} pinkBackground>
-          {button.text}
-        </Button>
       </div>
 
       {/* desktop view */}
