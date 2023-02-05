@@ -95,7 +95,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
               <Image src={plusIcon} alt="Plus sign icon" className="h-6 w-6" />
             </animated.div>
             <h4 className={`text-[1.1rem] ${techTextHover && "text-pink"}`}>
-              Technical stuff
+              Technical info
             </h4>
           </button>
         )}
@@ -114,7 +114,6 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
               </ul>
             </li>
             <li>Completed in: {list.hours}</li>
-            <li>Designed by: {list.designed}</li>
             <li>
               <Link
                 href={list.repo}
@@ -127,19 +126,13 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
             <li>
               <button
                 onClick={() => setTechToggle(!techToggle)}
-                onMouseEnter={() =>
-                  setTechIconHover({ scale: 1.1, rotate: 180 })
-                }
-                onMouseLeave={() => setTechIconHover({ scale: 1, rotate: 0 })}
                 className="flex gap-2 h-6 items-center justify-center rotate-45"
               >
-                <animated.div style={techIconHover}>
-                  <Image
-                    src={plusIcon}
-                    alt="Plus sign icon"
-                    className="h-6 w-6"
-                  />
-                </animated.div>
+                <Image
+                  src={plusIcon}
+                  alt="Plus sign icon"
+                  className="h-6 w-6 hover:opacity-80"
+                />
               </button>
             </li>
           </ul>
