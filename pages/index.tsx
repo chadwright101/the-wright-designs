@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import About from "@/components/home/about";
 import Contact from "@/components/home/contact";
 import Services from "@/components/home/services";
@@ -7,6 +9,21 @@ import HeroComponent from "../components/home/hero-component";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Home - The Wright Designs</title>
+        <meta
+          name="description"
+          content="Clean, functional & Custom-made website development at an affordable price point - The Wright Designs"
+        />
+        <meta
+          name="keywords"
+          content="website development, website design, website, development, design, portfolio, developer, frontend, frontend developer"
+        />
+        <meta
+          property="og:image"
+          content="/img/screenshots/all-mobile-phones.png"
+        />
+      </Head>
       <HeroComponent />
       <WhyUs cssClasses="mb-20 mt-4 tablet:mt-0 tablet:mb-16 tablet2:my-16" />
       <div id="services" className="-translate-y-32"></div>
