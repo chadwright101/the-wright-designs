@@ -22,6 +22,7 @@ module.exports = {
       quicksand: "quicksand",
     },
     screens: {
+      phoneSmall: "425px",
       phoneLarge: "650px",
       tablet: "900px",
       tablet2: "1100px",

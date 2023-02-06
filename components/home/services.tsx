@@ -8,14 +8,17 @@ const Services = () => {
   return (
     <section>
       <h2 className="text-heading text-center mb-10">Services</h2>
-      <ul className="font-quicksand flex flex-wrap gap-x-16 gap-y-16 justify-center overflow-hidden">
+      <ul className="font-quicksand flex flex-wrap gap-x-16 gap-y-10 justify-center overflow-hidden">
         {services.map(({ icon, title, list, delay }, index) => (
           <>
             {index % 2 ? (
               <SwipeRightToLeft delay={delay} key={index}>
                 <li>
-                  <ul className="grid grid-cols-[138px_175px] grid-rows-[100px_25px_10px] gap-x-12">
-                    <li key={index} className="translate-y-2 w-[90px] h-[80px]">
+                  <ul className="grid grid-cols-[100px_150px] phoneSmall:grid-cols-[138px_175px] grid-rows-[100px_25px] gap-x-12 border-b-2 border-blue pb-6">
+                    <li
+                      key={index}
+                      className="translate-y-2 w-[75px] h-[65px] phoneSmall:w-[90px] phoneSmall:h-[80px]"
+                    >
                       <Image
                         src={icon}
                         alt={`${title} icon`}
@@ -24,7 +27,7 @@ const Services = () => {
                         className="h-full"
                       />
                     </li>
-                    <li className="text-paragraph font-extralight row-span-2">
+                    <li className="text-[1.1rem] smallPhone:text-paragraph font-extralight row-span-2">
                       <ul className="list-disc">
                         <li key={index}>{list?.first}</li>
                         <li>{list?.second}</li>
@@ -33,18 +36,20 @@ const Services = () => {
                         {list.fifth && <li>{list?.fifth}</li>}
                       </ul>
                     </li>
-                    <li className="text-subheading font-medium translate-y-[2.5px]">
+                    <li className="text-[1.175rem] phoneSmall:text-subheading font-medium translate-y-[3.5px] phoneSmall:translate-y-[2.5px]">
                       {title}
                     </li>
-                    <li className="h-0.5 bg-blue w-full my-6 col-span-2"></li>
                   </ul>
                 </li>
               </SwipeRightToLeft>
             ) : (
               <SwipeLeftToRight delay={delay} key={index}>
                 <li>
-                  <ul className="grid grid-cols-[138px_175px] grid-rows-[100px_25px_10px] gap-x-12">
-                    <li key={index} className="translate-y-2 w-[90px] h-[80px]">
+                  <ul className="grid grid-cols-[95px_150px] phoneSmall:grid-cols-[138px_175px] grid-rows-[100px_25px] gap-x-12 border-b-2 border-blue pb-6">
+                    <li
+                      key={index}
+                      className="translate-y-2 w-[75px] h-[65px] phoneSmall:w-[90px] phoneSmall:h-[80px]"
+                    >
                       <Image
                         src={icon}
                         alt={`${title} icon`}
@@ -53,7 +58,7 @@ const Services = () => {
                         className="h-full"
                       />
                     </li>
-                    <li className="text-paragraph font-extralight row-span-2">
+                    <li className="text-[1.1rem] smallPhone:text-paragraph font-extralight row-span-2">
                       <ul className="list-disc">
                         <li key={index}>{list?.first}</li>
                         <li>{list?.second}</li>
@@ -62,10 +67,9 @@ const Services = () => {
                         {list.fifth && <li>{list?.fifth}</li>}
                       </ul>
                     </li>
-                    <li className="text-subheading font-medium translate-y-[2.5px]">
+                    <li className="text-[1.175rem] phoneSmall:text-subheading font-medium translate-y-[3.5px] phoneSmall:translate-y-[2.5px]">
                       {title}
                     </li>
-                    <li className="h-0.5 bg-blue w-full my-6 col-span-2"></li>
                   </ul>
                 </li>
               </SwipeLeftToRight>
