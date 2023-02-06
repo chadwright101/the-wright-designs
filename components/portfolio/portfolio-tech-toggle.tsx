@@ -10,7 +10,8 @@ import { useSpring, animated } from "@react-spring/web";
 interface Props {
   list: {
     repo: string;
-    hours: string;
+    developmentHours: string;
+    designHours: string;
     languages: Array<string>;
   };
   variant?: TechToggleVariant;
@@ -59,7 +60,8 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 ))}
               </ul>
             </li>
-            <li>Completed in: {list.hours}</li>
+            <li>Development: {list.developmentHours}</li>
+            <li>Design: {list.designHours}</li>
             <li>
               <Link
                 href={list.repo}
@@ -111,7 +113,8 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 ))}
               </ul>
             </li>
-            <li>Completed in: {list.hours}</li>
+            <li>Development: {list.developmentHours}</li>
+            <li>Design: {list.designHours}</li>
             <li>
               <Link
                 href={list.repo}

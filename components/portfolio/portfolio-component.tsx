@@ -26,7 +26,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const swipeMe = useSpring({
-    from: { y: 75, opacity: 0.75 },
+    from: { y: 75, opacity: 0.85 },
     to: { y: -75, opacity: 0 },
     delay: 1000,
     loop: true,
@@ -114,13 +114,13 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
+                list={techList.siletaEngineers}
               />
             )}
             {index === 2 && (
@@ -241,13 +241,13 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
+                list={techList.siletaEngineers}
               />
             )}
             {index === 2 && (
