@@ -14,7 +14,7 @@ const ContactForm = ({
   const [showMessage, setShowMessage] = useState(false);
 
   return (
-    <div
+    <section
       className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
     >
       <p className="text-beige mb-6">{formTitle}</p>
@@ -114,7 +114,7 @@ const ContactForm = ({
           </>
         )}
       </form>
-    </div>
+    </section>
   );
 };
 

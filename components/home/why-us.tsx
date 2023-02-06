@@ -13,7 +13,7 @@ interface Props {
 
 const WhyUs = ({ cssClasses }: Props) => {
   return (
-    <section className={`${cssClasses}`}>
+    <main className={`${cssClasses}`}>
       <h2 className="text-heading text-center mb-10">Why us?</h2>
       <ul className="flex flex-wrap gap-12 justify-center overflow-hidden tablet:justify-around tablet:gap-8">
         {whyUsList.map(({ heading, paragraph, image, delay }, index) => (
@@ -89,7 +89,7 @@ const WhyUs = ({ cssClasses }: Props) => {
       >
         View our portfolio
       </Button>
-    </section>
+    </main>
   );
 };
 
