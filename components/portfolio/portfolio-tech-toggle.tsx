@@ -43,7 +43,7 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
           {techToggle && (
             <Image src={minusIcon} alt="Plus sign icon" className="h-6 w-6" />
           )}
-          <h4 className="text-[1.1rem]">Technical stuff</h4>
+          <h4 className="text-[1.1rem]">What&#39;s under the hood</h4>
         </button>
         {techToggle && (
           <ul className="text-center font-light -mt-4 border-y-2 border-pink py-4 flex flex-col gap-2">
@@ -87,18 +87,18 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
               setTechIconHover({ scale: 1, rotate: 0 });
               setTechTextHover(false);
             }}
-            className="flex gap-2 h-6 items-center justify-center -mt-2"
+            className="flex gap-2 h-6 items-center justify-center -mt-4"
           >
             <animated.div style={techIconHover}>
               <Image src={plusIcon} alt="Plus sign icon" className="h-6 w-6" />
             </animated.div>
             <h4 className={`text-[1.1rem] ${techTextHover && "text-pink"}`}>
-              Technical info
+              What&#39;s under the hood
             </h4>
           </button>
         )}
         {techToggle && (
-          <ul className="text-center font-light -mt-2 border-y-2 border-pink py-4 flex gap-8">
+          <ul className="text-center font-light -mt-3 border-y-2 border-pink py-4 flex gap-8">
             <li>
               <ul className="flex justify-center">
                 {list.languages.map((item, index) => (
