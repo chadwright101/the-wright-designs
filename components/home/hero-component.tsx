@@ -1,7 +1,11 @@
 import Slideshow from "../slideshow";
 
 const HeroComponent = () => {
-  return <Slideshow />;
+  return (
+    <section>
+      <Slideshow />
+    </section>
+  );
 };
 
 export default HeroComponent;
