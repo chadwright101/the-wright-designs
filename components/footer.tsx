@@ -23,6 +23,11 @@ const Footer = ({ cssClasses }: Props) => {
                   <Link href={item.url}>{item.title}</Link>
                 </li>
               ))}
+              <li className="text-pink font-extralight hover:text-beige">
+                <Link href="https://github.com/chadwright101/the-wright-designs.git">
+                  view repository
+                </Link>
+              </li>
             </ul>
           </nav>
 
