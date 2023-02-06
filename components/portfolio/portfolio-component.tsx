@@ -9,8 +9,12 @@ import Button from "../button";
 import SwipeRightToLeft from "../swipe-right-left";
 import SwipeLeftToRight from "../swipe-left-right";
 import PortfolioScroller from "./portfolio-scroller";
+import PortfolioTechToggle, {
+  TechToggleVariant,
+} from "./portfolio-tech-toggle";
 
 import portfolioList from "../../data/portfolio/portfolio-list.json";
+import techList from "../../data/portfolio/tech-list.json";
 
 import swipeMeIcon from "public/icons/swipe-me.svg";
 
@@ -38,7 +42,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
 
   return (
     <section
-      className={`flex flex-wrap gap-[70px] items-center justify-center overflow-hidden ${cssClasses}`}
+      className={`flex flex-wrap gap-[70px] items-start justify-center overflow-hidden ${cssClasses}`}
     >
       {/* mobile viewport */}
 
@@ -55,7 +59,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           },
           index
         ) => (
-          <div key={index} className="flex flex-col gap-10 slides:hidden">
+          <div key={index} className="flex flex-col gap-10 tablet2:hidden">
             <h2 key={index} className="text-subheading text-center">
               {title}
             </h2>
@@ -107,6 +111,24 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 </SwipeLeftToRight>
               )}
             </div>
+            {index === 0 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 1 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.neonProductions}
+              />
+            )}
+            {index === 2 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.gardenRouteBotox}
+              />
+            )}
             {index % 2 ? (
               <Button
                 url={buttonUrl}
@@ -138,7 +160,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
         const isHovered = hoveredIndex === index;
 
         return (
-          <div key={index} className="hidden flex-col gap-10 slides:flex">
+          <div key={index} className="hidden flex-col gap-10 tablet2:flex">
             <h2 className="text-subheading text-center">{title}</h2>
 
             <Link
@@ -216,30 +238,47 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 </>
               )}
             </Link>
-
-            {index % 2 ? (
-              <Button
-                url={buttonUrl}
-                cssClasses="mx-auto"
-                target="_blank"
-                blueBackground
-                beigeText
-                beigeArrows
-              >
-                View Website
-              </Button>
-            ) : (
-              <Button
-                url={buttonUrl}
-                cssClasses="mx-auto"
-                target="_blank"
-                pinkBackground
-                blueText
-                blueArrows
-              >
-                View Website
-              </Button>
+            {index === 0 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.siletaEngineers}
+              />
             )}
+            {index === 1 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.neonProductions}
+              />
+            )}
+            {index === 2 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.gardenRouteBotox}
+              />
+            )}
+            <div className="max-w-[225px] mx-auto">
+              {index % 2 ? (
+                <Button
+                  url={buttonUrl}
+                  target="_blank"
+                  blueBackground
+                  beigeText
+                  beigeArrows
+                >
+                  View Website
+                </Button>
+              ) : (
+                <Button
+                  url={buttonUrl}
+                  target="_blank"
+                  pinkBackground
+                  blueText
+                  blueArrows
+                >
+                  View Website
+                </Button>
+              )}
+            </div>
           </div>
         );
       })}

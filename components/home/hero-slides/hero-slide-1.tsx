@@ -2,9 +2,7 @@ import Image from "next/image";
 
 import Button from "@/components/button";
 
-import slideImage from "../../../public/img/Laptop-2.png";
-
-import heroSlide1 from "../../../data/home/hero-slides/hero-slide1.json";
+import heroSlides from "../../../data/home/hero-slides.json";
 
 interface Props {
   cssClasses?: string;
@@ -13,39 +11,57 @@ interface Props {
 const HeroSlide1 = ({ cssClasses }: Props) => {
   const {
     text: { heading, subheading },
-    buttonText,
-  } = heroSlide1;
+    button,
+    image,
+  } = heroSlides.slide1;
 
   return (
-    <div
-      className={`flex flex-col gap-6 items-center slides:flex-row slides:justify-between slides:px-[100px] slides:mb-[10px] ${cssClasses}`}
-    >
-      <div className="slides:flex flex-col items-start gap-6">
-        <h2 className="text-heading text-center slides:text-[2.75rem] slides:text-left">
-          {heading}
-        </h2>
-        <div className="hidden slides:block h-px w-full bg-gradient-to-r from-blue via-blue to-beige"></div>
-        <h3 className="hidden text-[2rem] font-quicksand slides:block">
+    <>
+      {/* mobile view */}
+      <div
+        className={`grid grid-rows-[105px_250px_125px_50px] phoneLarge:grid-rows-[100px_300px_125px_50px] tablet:grid-rows-[100px_350px_125px_50px] gap-4 tablet2:hidden ${cssClasses}`}
+      >
+        <h2 className="text-heading text-center self-center">{heading}</h2>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={650}
+          height={500}
+          className="h-auto w-[400px] -translate-x-[10px] tablet2:-translate-x-0 justify-self-center self-center phoneLarge:w-[550px] tablet:w-[650px]"
+          priority
+          quality={50}
+        ></Image>
+        <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[400px] justify-self-center self-center">
           {subheading}
         </h3>
-        <Button url="/portfolio" cssClasses="hidden slides:flex" pinkBackground>
-          View our portfolio
-        </Button>
       </div>
-      <Image
-        src={slideImage}
-        alt="Computer screen showing a quality website"
-        className="h-full max-w-[250px] slides:min-w-[350px]"
-        priority
-        quality={50}
-      ></Image>
-      <h3 className="text-subheading text-center font-quicksand slides:hidden">
-        {subheading}
-      </h3>
-      <Button url="/portfolio" cssClasses="slides:hidden" pinkBackground>
-        View our portfolio
-      </Button>
-    </div>
+
+      {/* desktop view */}
+
+      <div
+        className={`hidden tablet2:grid tablet2:grid-cols-[400px_1fr] tablet3:grid-cols-[450px_1fr] px-[100px] ${cssClasses}`}
+      >
+        <div className="grid tablet2:grid-rows-[150px_20px_180px_50px]">
+          <h2 className="text-[2.75rem]">{heading}</h2>
+          <div className="h-px bg-gradient-to-r from-blue via-blue to-beige self-center"></div>
+          <h3 className="text-[1.75rem] font-quicksand self-center">
+            {subheading}
+          </h3>
+          <Button url={button.url} pinkBackground>
+            {button.text}
+          </Button>
+        </div>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={650}
+          height={400}
+          className="h-auto w-[650px] self-center"
+          priority
+          quality={50}
+        ></Image>
+      </div>
+    </>
   );
 };
 

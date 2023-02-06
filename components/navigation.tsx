@@ -143,7 +143,7 @@ const Navigation = () => {
                 <>
                   <li
                     key={index}
-                    className={`text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] flex items-center ${
+                    className={`text-beige flex items-center ${
                       currentRoute === item.url ? "font-normal" : null
                     }`}
                   >
@@ -162,11 +162,20 @@ const Navigation = () => {
                       />
                     )}
                   </li>
-                  {index < menuList.length - 1 && (
-                    <div key={index} className="h-px bg-beige"></div>
-                  )}
+                  <li key={index} className="h-px bg-beige"></li>
                 </>
               ))}
+              <li>
+                <li className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] flex items-center">
+                  <Link
+                    href="https://github.com/chadwright101/the-wright-designs.git"
+                    target="_blank"
+                    className="py-2 px-3 -my-2 -mx-3 text-pink"
+                  >
+                    view repository
+                  </Link>
+                </li>
+              </li>
             </animated.ul>
           </nav>
         )}

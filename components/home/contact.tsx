@@ -26,10 +26,10 @@ const Contact = ({ cssClasses }: Props) => {
             </p>
           ) : (
             <Link
-              href="mailto:info@thewrightdesigns.co.za"
-              className="text-[1.25rem] font-extralight tablet:hover:text-pink"
+              href="mailto:chad@thewrightdesigns.co.za"
+              className="text-[1.2rem] font-extralight tablet:hover:text-pink"
             >
-              info@thewrightdesigns.co.za
+              chad@thewrightdesigns.co.za
             </Link>
           )}
         </div>
@@ -45,7 +45,7 @@ const Contact = ({ cssClasses }: Props) => {
           ) : (
             <Link
               href="tel:+27833905238"
-              className="text-[1.25rem] font-extralight tablet:hover:text-pink"
+              className="text-[1.2rem] font-extralight tablet:hover:text-pink"
             >
               +27 83 390 5238
             </Link>

@@ -2,9 +2,7 @@ import Image from "next/image";
 
 import Button from "@/components/button";
 
-import slideImage from "../../../public/img/Laptop-2.png";
-
-import heroSlide2 from "../../../data/home/hero-slides/hero-slide2.json";
+import heroSlides from "../../../data/home/hero-slides.json";
 
 interface Props {
   cssClasses?: string;
@@ -12,55 +10,63 @@ interface Props {
 
 const HeroSlide1 = ({ cssClasses }: Props) => {
   const {
-    text: { heading, subheading },
-    buttonText,
-  } = heroSlide2;
+    text: { heading, list },
+    button,
+    image,
+  } = heroSlides.slide2;
 
   return (
-    <div
-      className={`flex flex-col gap-6 items-center slides:flex-row slides:justify-between slides:px-[100px] slides:mb-[10px] ${cssClasses}`}
-    >
-      <div className="slides:flex flex-col items-start gap-6">
-        <h2 className="text-heading text-center slides:text-[2.75rem] slides:text-left">
-          {heading}
-        </h2>
-        <div className="hidden slides:block h-px w-full bg-gradient-to-r from-blue via-blue to-beige"></div>
-        <ul className="hidden text-subheading list-disc list-inside font-light slides:block">
-          {heroSlide2.text.list.map((item, index) => (
+    <>
+      {/* mobile view */}
+
+      <div
+        className={`grid grid-rows-[105px_250px_125px_50px] phoneLarge:grid-rows-[100px_300px_125px_50px] tablet:grid-rows-[100px_350px_125px_50px] gap-4 tablet2:hidden ${cssClasses}`}
+      >
+        <h2 className="text-heading text-center self-center">{heading}</h2>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={550}
+          height={700}
+          className="h-auto w-[375px] justify-self-center self-center drop-shadow-md phoneLarge:w-[450px] tablet:w-[525px]"
+          quality={50}
+        ></Image>
+        <ul className="list-disc text-subheading font-quicksand text-center list-inside self-center">
+          {list.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <Button
-          url="/portfolio"
-          cssClasses="hidden slides:flex"
-          blueBackground
-          beigeArrows
-          beigeText
-        >
-          View our portfolio
-        </Button>
       </div>
-      <Image
-        src={slideImage}
-        alt="Computer screen showing a quality website"
-        className="h-full max-w-[250px] slides:min-w-[350px]"
-        quality={50}
-      ></Image>
-      <ul className="text-center text-subheading list-disc list-inside font-light slides:hidden">
-        {heroSlide2.text.list.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <Button
-        url="/portfolio"
-        cssClasses="slides:hidden"
-        blueBackground
-        beigeArrows
-        beigeText
+
+      {/* desktop view */}
+
+      <div
+        className={`hidden tablet2:grid tablet2:grid-cols-[400px_1fr] tablet3:grid-cols-[450px_1fr] px-[100px] ${cssClasses}`}
       >
-        View our portfolio
-      </Button>
-    </div>
+        <div className="grid grid-rows-[150px_20px_180px_50px]">
+          <h2 className="text-[2.75rem]">{heading}</h2>
+          <div className="h-px bg-gradient-to-r from-blue via-blue to-beige self-center"></div>
+          <ul className="list-disc text-[1.75rem] font-quicksand ml-4 self-center">
+            {list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <Button url={button.url} blueBackground beigeArrows beigeText>
+            {button.text}
+          </Button>
+        </div>
+        <div className="translate-y-4 justify-self-end slides2:justify-self-center flex items-center">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={700}
+            height={600}
+            className="h-auto w-[550px] self-center"
+            quality={50}
+          ></Image>
+        </div>
+      </div>
+    </>
   );
 };
 

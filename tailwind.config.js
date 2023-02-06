@@ -10,6 +10,7 @@ module.exports = {
       pink: "#C86B7B",
       grey: "#9F9797",
       white: "#fff",
+      linkBlue: "#3366CC",
     },
     fontSize: {
       paragraph: "1.125rem",
@@ -21,8 +22,11 @@ module.exports = {
       quicksand: "quicksand",
     },
     screens: {
+      phoneSmall: "425px",
+      phoneLarge: "650px",
       tablet: "900px",
-      slides: "1000px",
+      tablet2: "1100px",
+      tablet3: "1200px",
       desktop: "1400px",
     },
     extend: {},

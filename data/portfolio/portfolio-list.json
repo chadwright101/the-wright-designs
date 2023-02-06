@@ -1,5 +1,27 @@
 [
   {
+    "title": "Neon Productions",
+    "image": {
+      "mobile": {
+        "src": "/img/screenshots/neon-productions-mobile.png",
+        "alt": "Neon Productions mobile website"
+      },
+      "desktop": {
+        "src": "/img/screenshots/neon-productions-desktop.png",
+        "alt": "Neon Productions desktop website"
+      },
+      "scrollImage": {
+        "src": "/img/screenshots/neon-productions-mobile-long.png"
+      }
+    },
+    "scrollImage": {
+      "src": "/img/screenshots/neon-productions-mobile-long.png"
+    },
+    "blankPhone": "/img/phone-grey.png",
+    "buttonUrl": "https://www.neonproductions.co.za/photography-portfolio",
+    "fromLeft": true
+  },
+  {
     "title": "Sileta Engineers",
     "image": {
       "mobile": {
@@ -21,28 +43,6 @@
     "buttonUrl": "http://www.sileta.co.za/",
     "loading": true,
     "swipeMeAnimation": true
-  },
-  {
-    "title": "Neon Productions",
-    "image": {
-      "mobile": {
-        "src": "/img/screenshots/neon-productions-mobile.png",
-        "alt": "Neon Productions mobile website"
-      },
-      "desktop": {
-        "src": "/img/screenshots/neon-productions-desktop.png",
-        "alt": "Neon Productions desktop website"
-      },
-      "scrollImage": {
-        "src": "/img/screenshots/neon-productions-mobile-long.png"
-      }
-    },
-    "scrollImage": {
-      "src": "/img/screenshots/neon-productions-mobile-long.png"
-    },
-    "blankPhone": "/img/phone-grey.png",
-    "buttonUrl": "https://www.neonproductions.co.za/",
-    "fromLeft": true
   },
   {
     "title": "Garden Route Botox",

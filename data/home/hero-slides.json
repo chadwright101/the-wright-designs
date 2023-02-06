@@ -1,0 +1,35 @@
+{
+  "slide1": {
+    "text": {
+      "heading": "Elevate your online presence",
+      "subheading": "Clean, functional & Custom-made website development at an affordable price point"
+    },
+    "button": {
+      "text": "Get in touch",
+      "url": "/#contact"
+    },
+    "image": {
+      "src": "/img/screenshots/hero-slide-1-devices.png",
+      "alt": "Websites being displayed on a variety of devices"
+    }
+  },
+
+  "slide2": {
+    "text": {
+      "heading": "Our work speaks for itself",
+      "list": [
+        "quality tailor-made development",
+        "quick turnaround time",
+        "SEO experts"
+      ]
+    },
+    "button": {
+      "text": "view our portfolio",
+      "url": "/portfolio"
+    },
+    "image": {
+      "src": "/img/screenshots/all-mobile-phones.png",
+      "alt": "Portfolio websites displayed on iPhones"
+    }
+  }
+}
