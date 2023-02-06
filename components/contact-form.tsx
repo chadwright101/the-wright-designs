@@ -19,7 +19,7 @@ const ContactForm = ({
     >
       <p className="text-beige mb-6">{formTitle}</p>
       <form
-        action="https://formsubmit.co/info@thewrightdesigns.co.za"
+        action="https://formsubmit.co/chad@thewrightdesigns.co.za"
         method="POST"
         className="flex flex-col gap-8"
       >
