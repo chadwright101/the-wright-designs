@@ -23,6 +23,10 @@ export default function Home() {
           property="og:image"
           content="/img/screenshots/all-mobile-phones.png"
         />
+        <meta
+          name="google-site-verification"
+          content="UTqm5UapFYhMabm4zaqxVdl5K8L1yyF9ScSaoaQeo2Y"
+        />
       </Head>
       <HeroComponent />
       <WhyUs cssClasses="mb-20 mt-4 tablet:mt-0 tablet:mb-16 tablet2:my-16" />
