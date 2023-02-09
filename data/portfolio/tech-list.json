@@ -2,19 +2,19 @@
   "neonProductions": {
     "repo": "https://github.com/chadwright101/neon-productions.git",
     "languages": ["NextJS", "Tailwindcss", "Typescript"],
-    "developmentHours": "17.5hrs",
-    "designHours": "5hrs"
+    "developmentHours": "24.5hrs",
+    "designHours": "6hrs"
   },
   "siletaEngineers": {
     "repo": "https://github.com/chadwright101/sileta-engineers.git",
     "languages": ["Pug", "Sass", "Javascript"],
-    "developmentHours": "12hrs",
-    "designHours": "3hrs"
+    "developmentHours": "18hrs",
+    "designHours": "4hrs"
   },
   "gardenRouteBotox": {
     "repo": "https://github.com/chadwright101/grace.git",
     "languages": ["NextJS", "Tailwindcss", "Typescript"],
-    "developmentHours": "8hrs",
-    "designHours": "2hrs"
+    "developmentHours": "12hrs",
+    "designHours": "3hrs"
   }
 }
