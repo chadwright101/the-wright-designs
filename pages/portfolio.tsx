@@ -20,6 +20,16 @@ const Portfolio = () => {
           property="og:image"
           content="/img/screenshots/hero-slide-1-devices.png"
         />
+        <meta property="og:title" content="Portfolio" />
+        <meta
+          property="og:url"
+          content="https://www.thewrightdesigns.co.za/portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Quality tailor-made development, quick turnaround time, SEO experts"
+        />
+        <meta property="og:site_name" content="The Wright Designs" />
       </Head>
       <main>
         <h1 className="text-heading text-center mt-10 mb-16">Portfolio</h1>
