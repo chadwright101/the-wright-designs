@@ -21,10 +21,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.thewrightdesigns.co.za/_next/image?url=%2Fimg%2Fscreenshots%2Fhero-slide-1-devices.png&w=1920&q=50"
+          content="https://www.thewrightdesigns.co.za/_next/image?url=%2Fimg%2Fscreenshots%2Fhero-slide-1-devices.png&w=1080&q=75"
         />
         <meta property="og:title" content="The Wright Designs" />
         <meta property="og:url" content="https://www.thewrightdesigns.co.za" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="Clean, functional & Custom-made website development at an affordable price point"
