@@ -60,9 +60,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           index
         ) => (
           <div key={index} className="flex flex-col gap-10 tablet2:hidden">
-            <h2 key={index} className="text-subheading text-center">
-              {title}
-            </h2>
+            <h2 className="text-subheading text-center">{title}</h2>
 
             <div>
               {fromLeft ? (

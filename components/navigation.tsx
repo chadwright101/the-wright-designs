@@ -140,41 +140,36 @@ const Navigation = () => {
               className="flex flex-col gap-3.5 font-thin text-subheading text mt-8"
             >
               {menuList.map((item, index) => (
-                <>
-                  <li
-                    key={index}
-                    className={`text-beige flex items-center ${
-                      currentRoute === item.url ? "font-normal" : null
-                    }`}
-                  >
-                    <Link
-                      href={item.url}
-                      className="py-2 px-3 -my-2 -mx-3"
-                      onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                      {item.title}
-                    </Link>
-                    {currentRoute === item.url && (
-                      <Image
-                        src={arrow}
-                        alt="Double arrow icon"
-                        className="rotate-180 h-[30px] w-[40px] mt-[3px] ml-4 object-cover"
-                      />
-                    )}
-                  </li>
-                  <li key={index} className="h-px bg-beige"></li>
-                </>
-              ))}
-              <li>
-                <li className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] flex items-center">
+                <li
+                  key={index}
+                  className={`text-beige flex items-center border-b border-beige pb-3.5 ${
+                    currentRoute === item.url ? "font-normal" : null
+                  }`}
+                >
                   <Link
-                    href="https://github.com/chadwright101/the-wright-designs.git"
-                    target="_blank"
-                    className="py-2 px-3 -my-2 -mx-3 text-pink"
+                    href={item.url}
+                    className="py-2 px-3 -my-2 -mx-3"
+                    onClick={() => setMenuOpen(!menuOpen)}
                   >
-                    view repository
+                    {item.title}
                   </Link>
+                  {currentRoute === item.url && (
+                    <Image
+                      src={arrow}
+                      alt="Double arrow icon"
+                      className="rotate-180 h-[30px] w-[40px] mt-[3px] ml-4 object-cover"
+                    />
+                  )}
                 </li>
+              ))}
+              <li className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] flex items-center">
+                <Link
+                  href="https://github.com/chadwright101/the-wright-designs.git"
+                  target="_blank"
+                  className="py-2 px-3 -my-2 -mx-3 text-pink"
+                >
+                  view repository
+                </Link>
               </li>
             </animated.ul>
           </nav>
@@ -186,66 +181,62 @@ const Navigation = () => {
       <nav className="hidden tablet:block">
         <ul className="flex gap-6 font-thin text-[1.25rem] mt-[28px]">
           {menuList.map((item, index) => (
-            <>
-              <li
-                key={index}
-                className={`text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px] hover:cursor-pointer ${
-                  index === 1 && "hover:no-underline px-3 -mx-3"
-                }`}
-                onMouseEnter={
-                  item.submenu &&
-                  (() => {
-                    setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: -5, scale: 1 });
-                  })
-                }
-                onMouseLeave={
-                  item.submenu &&
-                  (() => {
-                    setSubmenuOpen(!submenuOpen);
-                    setSubmenuImageMove({ y: -15, scale: 1.65 });
-                  })
-                }
+            <li
+              key={index}
+              className={`text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px] hover:cursor-pointer ${
+                index === 1 && "hover:no-underline px-3 -mx-3"
+              }`}
+              onMouseEnter={
+                item.submenu &&
+                (() => {
+                  setSubmenuOpen(!submenuOpen);
+                  setSubmenuImageMove({ y: -5, scale: 1 });
+                })
+              }
+              onMouseLeave={
+                item.submenu &&
+                (() => {
+                  setSubmenuOpen(!submenuOpen);
+                  setSubmenuImageMove({ y: -15, scale: 1.65 });
+                })
+              }
+            >
+              <Link
+                href={item.url}
+                className={`${currentRoute === item.url ? "font-light" : null}`}
               >
-                <Link
-                  href={item.url}
-                  className={`${
-                    currentRoute === item.url ? "font-light" : null
-                  }`}
-                >
-                  {item.title}
-                </Link>
+                {item.title}
+              </Link>
 
-                {/* portfolio submenu */}
+              {/* portfolio submenu */}
 
-                {item.submenu && submenuOpen && (
-                  <div className="absolute -translate-x-[68px]">
-                    <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
-                      <animated.div style={submenuImageMove}>
-                        <Image
-                          src={arrow}
-                          alt="Double arrow icon"
-                          className=" rotate-90 w-8 h-8 mt-1.5"
-                          priority
-                        />
-                      </animated.div>
-                    </div>
-                    <ul className="bg-blue px-5 pt-10 pb-4 rounded-b-xl border-[3px] border-beige flex flex-col items-center gap-2 lowercase drop-shadow-md">
-                      {item.submenu.map((item, index) => (
-                        <li
-                          key={index}
-                          className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px]"
-                        >
-                          <Link href={item.url} target="_blank">
-                            {item.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+              {item.submenu && submenuOpen && (
+                <div className="absolute -translate-x-[68px]">
+                  <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
+                    <animated.div style={submenuImageMove}>
+                      <Image
+                        src={arrow}
+                        alt="Double arrow icon"
+                        className=" rotate-90 w-8 h-8 mt-1.5"
+                        priority
+                      />
+                    </animated.div>
                   </div>
-                )}
-              </li>
-            </>
+                  <ul className="bg-blue px-5 pt-10 pb-4 rounded-b-xl border-[3px] border-beige flex flex-col items-center gap-2 lowercase drop-shadow-md">
+                    {item.submenu.map((item, index) => (
+                      <li
+                        key={index}
+                        className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px]"
+                      >
+                        <Link href={item.url} target="_blank">
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </li>
           ))}
         </ul>
       </nav>
