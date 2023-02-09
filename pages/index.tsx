@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home - The Wright Designs</title>
+        <title>The Wright Designs</title>
         <meta
           name="description"
           content="Clean, functional & Custom-made website development at an affordable price point - The Wright Designs"
@@ -23,6 +23,13 @@ export default function Home() {
           property="og:image"
           content="/img/screenshots/all-mobile-phones.png"
         />
+        <meta property="og:title" content="The Wright Designs" />
+        <meta property="og:url" content="https://www.thewrightdesigns.co.za" />
+        <meta
+          property="og:description"
+          content="Clean, functional & Custom-made website development at an affordable price point"
+        />
+        <meta property="og:site_name" content="The Wright Designs" />
         <meta
           name="google-site-verification"
           content="UTqm5UapFYhMabm4zaqxVdl5K8L1yyF9ScSaoaQeo2Y"
