@@ -13,7 +13,7 @@ export default function Home() {
         <title>The Wright Designs</title>
         <meta
           name="description"
-          content="Clean, functional & Custom-made website development at an affordable price point - The Wright Designs"
+          content="Clean, functional & custom-made website development at an affordable price point"
         />
         <meta
           name="keywords"
@@ -21,7 +21,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/img/screenshots/all-mobile-phones.png"
+          content="https://www.thewrightdesigns.co.za/_next/image?url=%2Fimg%2Fscreenshots%2Fhero-slide-1-devices.png&w=1920&q=50"
         />
         <meta property="og:title" content="The Wright Designs" />
         <meta property="og:url" content="https://www.thewrightdesigns.co.za" />

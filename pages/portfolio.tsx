@@ -18,16 +18,16 @@ const Portfolio = () => {
         />
         <meta
           property="og:image"
-          content="/img/screenshots/hero-slide-1-devices.png"
+          content="https://www.thewrightdesigns.co.za/_next/image?url=%2Fimg%2Fscreenshots%2Fall-mobile-phones.png&w=1920&q=50"
         />
-        <meta property="og:title" content="Portfolio" />
+        <meta property="og:title" content="Portfolio - The Wright Designs" />
         <meta
           property="og:url"
           content="https://www.thewrightdesigns.co.za/portfolio"
         />
         <meta
           property="og:description"
-          content="Quality tailor-made development, quick turnaround time, SEO experts"
+          content="Tailor-made website development, SEO experts with quick turnaround times"
         />
         <meta property="og:site_name" content="The Wright Designs" />
       </Head>
