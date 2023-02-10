@@ -23,6 +23,7 @@ const ContactForm = ({
         method="POST"
         className="flex flex-col gap-8"
       >
+        <input type="hidden" name="_gotcha" className="hidden" />
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <label
