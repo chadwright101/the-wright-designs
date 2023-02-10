@@ -9,10 +9,15 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script
-        data-ad-client="pub-8532173938299859"
+        id="Adsense-id"
+        data-ad-client="ca-pub-8532173938299859"
         async
+        strategy="afterInteractive"
+        onError={(e) => {
+          console.error("Script failed to load", e);
+        }}
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      ></Script>
+      />
       <Layout>
         <Component {...pageProps} />
       </Layout>
