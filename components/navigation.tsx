@@ -8,7 +8,7 @@ import { useSpring, animated } from "@react-spring/web";
 import menuList from "../data/menu-list.json";
 
 import logo from "../public/the-wright-designs-logo.png";
-import logo2 from "../public/the-wright-designs-logo-2.jpg";
+import logo2 from "../public/the-wright-designs-logo-square.jpg";
 import arrow from "../public/icons/double-arrow-pink.svg";
 import menuIcon from "../public/icons/menu-icon.svg";
 import closeIcon from "../public/icons/close-icon.svg";
