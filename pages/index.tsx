@@ -1,10 +1,14 @@
 import Head from "next/head";
 
+import Image from "next/image";
+
 import About from "@/components/home/about";
 import Contact from "@/components/home/contact";
 import Services from "@/components/home/services";
 import WhyUs from "@/components/home/why-us";
 import HeroComponent from "../components/home/hero-component";
+
+import image1 from "../public/the-wright-designs-logo-2.jpg";
 
 export default function Home() {
   return (
@@ -44,6 +48,7 @@ export default function Home() {
       <About cssClasses="my-20 tablet:my-16" />
       <div id="contact" className=" -translate-y-32"></div>
       <Contact cssClasses="mt-20 tablet:mt-16 tablet:mb-10" />
+      <Image src={image1} width={200} height={400} alt="the wright designs" />
     </>
   );
 }
