@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Wright Designs</title>
+        <title>The Wright Designs - Quality web design</title>
         <meta
           name="description"
           content="Clean, functional & custom-made website development at an affordable price point"

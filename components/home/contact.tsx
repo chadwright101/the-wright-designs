@@ -15,7 +15,7 @@ const Contact = ({ cssClasses }: Props) => {
     <section className={` drop-shadow-md ${cssClasses}`}>
       <h2 className="text-heading text-center mb-10">Contact</h2>
       <div className="flex flex-col gap-4">
-        <div className="flex gap-4 items-center">
+        <div className="grid grid-cols-[78px_1fr] items-center">
           <h3 className="text-subheading">Email:</h3>
           {!showEmail ? (
             <p
@@ -27,13 +27,13 @@ const Contact = ({ cssClasses }: Props) => {
           ) : (
             <Link
               href="mailto:chad@thewrightdesigns.co.za"
-              className="text-[1.2rem] font-extralight tablet:hover:text-pink"
+              className="text-[1.15rem] font-extralight tablet:hover:text-pink"
             >
               chad@thewrightdesigns.co.za
             </Link>
           )}
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="grid grid-cols-[78px_1fr] items-center">
           <h3 className="text-subheading">Phone:</h3>
           {!showPhone ? (
             <p
@@ -45,7 +45,7 @@ const Contact = ({ cssClasses }: Props) => {
           ) : (
             <Link
               href="tel:+27833905238"
-              className="text-[1.2rem] font-extralight tablet:hover:text-pink"
+              className="text-[1.15rem] font-extralight tablet:hover:text-pink"
             >
               +27 83 390 5238
             </Link>
