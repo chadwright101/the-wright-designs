@@ -79,7 +79,7 @@ const Navigation = () => {
     <div className="desktop:max-w-[1300px] desktop:m-auto tablet:flex tablet:justify-between">
       <div>
         {!menuOpen && (
-          <div className="flex justify-between">
+          <div className="flex gap-2 justify-between items-center">
             <animated.div style={logoLoadAnimate}>
               <animated.div
                 onMouseEnter={() =>
@@ -92,7 +92,7 @@ const Navigation = () => {
                   <Image
                     src={logo}
                     alt="The Wright Designs logo"
-                    className="h-[52px] w-[273.3px] translate-y-1 tablet:w-[302px] tablet:h-[58px] rotate-1"
+                    className="h-auto w-[273.3px] translate-y-1 tablet:w-[302px] rotate-1"
                   />
                 </Link>
               </animated.div>
