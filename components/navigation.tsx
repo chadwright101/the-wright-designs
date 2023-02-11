@@ -8,6 +8,7 @@ import { useSpring, animated } from "@react-spring/web";
 import menuList from "../data/menu-list.json";
 
 import logo from "../public/the-wright-designs-logo.png";
+import logo2 from "../public/the-wright-designs-logo-2.jpg";
 import arrow from "../public/icons/double-arrow-pink.svg";
 import menuIcon from "../public/icons/menu-icon.svg";
 import closeIcon from "../public/icons/close-icon.svg";
@@ -93,6 +94,11 @@ const Navigation = () => {
                     src={logo}
                     alt="The Wright Designs logo"
                     className="h-auto w-[273.3px] translate-y-1 tablet:w-[302px] rotate-1"
+                  />
+                  <Image
+                    src={logo2}
+                    alt="The Wright Designs logo"
+                    className="hidden"
                   />
                 </Link>
               </animated.div>
