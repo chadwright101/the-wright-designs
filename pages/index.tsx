@@ -21,7 +21,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.thewrightdesigns.co.za/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthe-wright-designs-logo-square.f1cd0cc8.jpg&w=1080&q=75"
+          content="https://www.thewrightdesigns.co.za/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthe-wright-designs-logo-square.39dc2b90.jpg&w=1080&q=75"
         />
         <meta property="og:title" content="The Wright Designs" />
         <meta property="og:url" content="https://www.thewrightdesigns.co.za" />

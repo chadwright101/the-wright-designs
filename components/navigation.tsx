@@ -98,7 +98,7 @@ const Navigation = () => {
                   <Image
                     src={logo2}
                     alt="The Wright Designs logo"
-                    className=""
+                    className="hidden"
                   />
                 </Link>
               </animated.div>
