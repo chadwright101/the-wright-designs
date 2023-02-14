@@ -1,5 +1,6 @@
 import HeroSlide1 from "./home/hero-slides/hero-slide-1";
 import HeroSlide2 from "./home/hero-slides/hero-slide-2";
+import HeroSlide3 from "./home/hero-slides/hero-slide-3";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -14,7 +15,7 @@ const Slideshow = () => {
           type: "loop",
           speed: 1500,
           pauseOnHover: true,
-          interval: 4500,
+          interval: 5500,
           breakpoints: {
             1100: {
               pagination: false,
@@ -29,6 +30,9 @@ const Slideshow = () => {
         </SplideSlide>
         <SplideSlide>
           <HeroSlide2 />
+        </SplideSlide>
+        <SplideSlide>
+          <HeroSlide3 />
         </SplideSlide>
       </Splide>
     </>

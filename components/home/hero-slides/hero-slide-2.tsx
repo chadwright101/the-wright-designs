@@ -8,7 +8,7 @@ interface Props {
   cssClasses?: string;
 }
 
-const HeroSlide1 = ({ cssClasses }: Props) => {
+const HeroSlide2 = ({ cssClasses }: Props) => {
   const {
     text: { heading, list },
     button,
@@ -20,7 +20,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
       {/* mobile view */}
 
       <div
-        className={`grid grid-rows-[105px_250px_125px_50px] phoneLarge:grid-rows-[100px_300px_125px_50px] tablet:grid-rows-[100px_350px_125px_50px] gap-4 tablet2:hidden ${cssClasses}`}
+        className={`grid grid-rows-[105px_250px_125px] phoneLarge:grid-rows-[100px_300px_125px] tablet:grid-rows-[100px_350px_125px] gap-4 tablet2:hidden ${cssClasses}`}
       >
         <h2 className="text-heading text-center self-center">{heading}</h2>
         <Image
@@ -46,7 +46,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
         <div className="grid grid-rows-[150px_20px_180px_50px]">
           <h2 className="text-[2.75rem]">{heading}</h2>
           <div className="h-px bg-gradient-to-r from-blue via-blue to-beige self-center"></div>
-          <ul className="list-disc text-[1.75rem] font-quicksand ml-4 self-center">
+          <ul className="list-disc text-[1.65rem] font-quicksand ml-4 self-center">
             {list.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -70,4 +70,4 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
   );
 };
 
-export default HeroSlide1;
+export default HeroSlide2;

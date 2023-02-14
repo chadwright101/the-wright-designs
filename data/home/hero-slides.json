@@ -31,5 +31,33 @@
       "src": "/img/screenshots/all-mobile-phones.png",
       "alt": "Portfolio websites displayed on iPhones"
     }
+  },
+  "slide3": {
+    "text": {
+      "heading": "Open & transparent communication",
+      "subheading": "Collaborating with clients, to deliver exactly what is required, is our speciality"
+    },
+    "button": {
+      "text": "chat to us",
+      "url": "/#contact"
+    },
+    "svg": {
+      "client": {
+        "src": "/icons/client.svg",
+        "alt": "Client icon"
+      },
+      "team": {
+        "src": "/icons/team.svg",
+        "alt": "Team icon"
+      },
+      "chatSupport": {
+        "src": "/icons/chat-support.svg",
+        "alt": "Support chat icon"
+      },
+      "chat": {
+        "src": "/icons/chat.svg",
+        "alt": "Chat icon"
+      }
+    }
   }
 }
