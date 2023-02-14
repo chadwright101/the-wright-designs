@@ -15,7 +15,7 @@ const Slideshow = () => {
           type: "loop",
           speed: 1500,
           pauseOnHover: true,
-          interval: 4500,
+          interval: 5500,
           breakpoints: {
             1100: {
               pagination: false,
