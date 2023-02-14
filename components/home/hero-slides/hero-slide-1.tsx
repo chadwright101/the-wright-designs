@@ -19,7 +19,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
     <>
       {/* mobile view */}
       <div
-        className={`grid grid-rows-[105px_250px_125px_50px] phoneLarge:grid-rows-[100px_300px_125px_50px] tablet:grid-rows-[100px_350px_125px_50px] gap-4 tablet2:hidden ${cssClasses}`}
+        className={`grid grid-rows-[105px_250px_125px] phoneLarge:grid-rows-[100px_300px_125px] tablet:grid-rows-[100px_350px_125px] gap-4 tablet2:hidden ${cssClasses}`}
       >
         <h2 className="text-heading text-center self-center">{heading}</h2>
         <Image
@@ -31,7 +31,7 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           priority
           quality={50}
         ></Image>
-        <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[400px] justify-self-center self-center">
+        <h3 className="text-subheading text-center font-quicksand max-w-[400px] justify-self-center self-center">
           {subheading}
         </h3>
       </div>
