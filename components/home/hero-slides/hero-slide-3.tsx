@@ -50,7 +50,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
       >
         <h2 className="text-heading text-center self-center">{heading}</h2>
         <div className="flex justify-center">
-          <div className="flex -mr-3">
+          <div className="flex -mr-5 phoneLarge:-mr-3">
             <Image
               src={client.src}
               alt={client.alt}
@@ -70,7 +70,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
               />
             </animated.div>
           </div>
-          <div className="flex -ml-3">
+          <div className="flex -ml-5 phoneLarge:-ml-3">
             <animated.div style={teamAnimate}>
               <Image
                 src={chat.src}
