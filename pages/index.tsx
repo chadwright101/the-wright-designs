@@ -37,7 +37,7 @@ export default function Home() {
         />
       </Head>
       <HeroComponent />
-      <WhyUs cssClasses="mb-20 mt-4 tablet:mt-0 tablet:mb-16 tablet2:my-16" />
+      <WhyUs cssClasses="mb-20 mt-16 tablet:mt-0 tablet:mb-16 tablet2:my-16" />
       <div id="services" className="-translate-y-32"></div>
       <Services />
       <div id="about" className=" -translate-y-16"></div>
