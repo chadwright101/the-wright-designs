@@ -11,7 +11,7 @@ const Slideshow = () => {
       <Splide
         options={{
           pagination: true,
-          autoplay: false,
+          autoplay: true,
           type: "loop",
           speed: 1500,
           pauseOnHover: true,
