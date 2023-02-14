@@ -54,18 +54,18 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
             <Image
               src={client.src}
               alt={client.alt}
-              width={135}
-              height={135}
-              className="tablet:w-[190px] tablet:h-auto"
+              width={110}
+              height={110}
+              className="phoneSmall:w-[135px] tablet:w-[190px] tablet:h-auto"
               quality={50}
             />
             <animated.div style={clientAnimate}>
               <Image
                 src={chatSupport.src}
                 alt={chatSupport.alt}
-                width={75}
-                height={75}
-                className="tablet:w-[100px] tablet:h-auto"
+                width={65}
+                height={65}
+                className="phoneSmall:w-[75px] tablet:w-[100px] tablet:h-auto translate-y-6 translate-x-2 phoneSmall:-translate-y-1 phoneLarge:translate-y-3 tablet:translate-y-0"
                 quality={50}
               />
             </animated.div>
@@ -75,18 +75,18 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
               <Image
                 src={chat.src}
                 alt={chat.alt}
-                width={75}
-                height={75}
-                className="tablet:w-[100px] tablet:h-auto"
+                width={65}
+                height={65}
+                className="phoneSmall:w-[75px] tablet:w-[100px] tablet:h-auto translate-y-5 phoneSmall:-translate-y-3 phoneLarge:translate-y-2 tablet:translate-y-0"
                 quality={50}
               />
             </animated.div>
             <Image
               src={team.src}
               alt={team.alt}
-              width={135}
-              height={135}
-              className="tablet:w-[190px] tablet:h-auto"
+              width={110}
+              height={110}
+              className="phoneSmall:w-[135px] tablet:w-[190px] tablet:h-auto"
               quality={50}
             />
           </div>
