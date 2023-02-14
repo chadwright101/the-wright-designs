@@ -49,8 +49,8 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
         className={`grid grid-rows-[105px_250px_125px] phoneLarge:grid-rows-[100px_300px_125px] tablet:grid-rows-[100px_350px_125px] gap-4 tablet2:hidden ${cssClasses}`}
       >
         <h2 className="text-heading text-center self-center">{heading}</h2>
-        <div className="flex justify-center">
-          <div className="flex -mr-5 phoneLarge:-mr-3">
+        <div className="flex justify-center mt-3">
+          <div className="flex -mr-6 phoneLarge:-mr-4">
             <Image
               src={client.src}
               alt={client.alt}
@@ -70,7 +70,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
               />
             </animated.div>
           </div>
-          <div className="flex -ml-5 phoneLarge:-ml-3">
+          <div className="flex -ml-6 phoneLarge:-ml-4">
             <animated.div style={teamAnimate}>
               <Image
                 src={chat.src}
@@ -111,14 +111,14 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
             {button.text}
           </Button>
         </div>
-        <div className="flex justify-center tablet2:justify-around tablet2:mt-10 desktop:mt-20">
-          <div className="flex -mr-3">
+        <div className="flex justify-center tablet2:mt-10 desktop:mt-20 desktop:ml-8">
+          <div className="flex -mr-5">
             <Image
               src={client.src}
               alt={client.alt}
               width={200}
               height={200}
-              className="w-[140px] h-auto tablet3:w-[150px] desktop:w-[210px]"
+              className="w-[140px] h-auto tablet3:w-[150px] desktop:w-[190px]"
               quality={50}
             />
             <animated.div style={clientAnimate}>
@@ -127,19 +127,19 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
                 alt={chatSupport.alt}
                 width={150}
                 height={150}
-                className="w-[80px] h-auto tablet3:w-[90px] desktop:w-[115px] translate-y-6 desktop:-translate-y-8 desktop:-translate-x-2"
+                className="w-[80px] h-auto tablet3:w-[90px] desktop:w-[100px] translate-y-6 desktop:-translate-y-8 desktop:-translate-x-2"
                 quality={50}
               />
             </animated.div>
           </div>
-          <div className="flex -ml-3">
+          <div className="flex -ml-5">
             <animated.div style={teamAnimate}>
               <Image
                 src={chat.src}
                 alt={chat.alt}
                 width={150}
                 height={150}
-                className="w-[80px] h-auto tablet3:w-[90px] desktop:w-[115px] translate-y-4 desktop:-translate-y-6"
+                className="w-[80px] h-auto tablet3:w-[90px] desktop:w-[100px] translate-y-4 desktop:-translate-y-6"
                 quality={50}
               />
             </animated.div>
@@ -148,7 +148,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
               alt={team.alt}
               width={200}
               height={200}
-              className="w-[140px] h-auto tablet3:w-[150px] desktop:w-[210px]"
+              className="w-[140px] h-auto tablet3:w-[150px] desktop:w-[190px]"
               quality={50}
             />
           </div>
