@@ -91,7 +91,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
             />
           </div>
         </div>
-        <h3 className="text-subheading text-center font-quicksand max-w-[400px] justify-self-center self-center">
+        <h3 className="text-subheading text-center font-quicksand max-w-[400px] tablet:max-w-[550px] justify-self-center self-center">
           {subheading}
         </h3>
       </div>
@@ -104,7 +104,7 @@ const HeroSlide3 = ({ cssClasses }: Props) => {
         <div className="grid tablet2:grid-rows-[150px_20px_180px_50px]">
           <h2 className="text-[2.75rem]">{heading}</h2>
           <div className="h-px bg-gradient-to-r from-blue via-blue to-beige self-center"></div>
-          <h3 className="text-[1.75rem] font-quicksand self-center">
+          <h3 className="text-subheading font-quicksand self-center">
             {subheading}
           </h3>
           <Button url={button.url} pinkBackground>
