@@ -24,11 +24,11 @@ const About = ({ cssClasses }: Props) => {
         <p>
           We&apos;re all about fundamentals, which is why our measured &
           communication-based approach allows you, our client, to be as hands-on
-          as you&apos;d like. Whether you've got a lot on your plate and need a
-          experienced team to take the wheel, or would like to be involved in
-          every step of the way, we can facilitate your needs. Our team is
-          flexible and willing to adapt to whatever is needed to get the job
-          done correctly by deadline day, without cutting corners.
+          as you&apos;d like. Whether you&apos;ve got a lot on your plate and
+          need a experienced team to take the wheel, or would like to be
+          involved in every step of the way, we can facilitate your needs. Our
+          team is flexible and willing to adapt to whatever is needed to get the
+          job done correctly by deadline day, without cutting corners.
         </p>
         <p>
           Our guarantee is and has always been a hassle-free design &
