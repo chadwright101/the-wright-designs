@@ -20,7 +20,7 @@ const Contact = ({ cssClasses }: Props) => {
           {!showEmail ? (
             <p
               onClick={() => setShowEmail(!showEmail)}
-              className="text-[1.3rem] tablet:hover:text-pink py-3 px-2 -my-3 -mx-2 hover:cursor-pointer tablet:p-0 tablet:m-0 italic"
+              className="text-[1.3rem] tablet:hover:underline underline-offset-8 py-3 px-2 -my-3 -mx-2 hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue"
             >
               Show email
             </p>
@@ -38,7 +38,7 @@ const Contact = ({ cssClasses }: Props) => {
           {!showPhone ? (
             <p
               onClick={() => setShowPhone(!showPhone)}
-              className="text-[1.3rem] tablet:hover:text-pink py-3 px-2 -my-3 -mx-2 hover:cursor-pointer tablet:p-0 tablet:m-0 italic"
+              className="text-[1.3rem] tablet:hover:underline underline-offset-8 py-3 px-2 -my-3 -mx-2 hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue"
             >
               Show phone number
             </p>

@@ -20,7 +20,7 @@ const WhyUs = ({ cssClasses }: Props) => {
           <li key={index} className="max-w-[550px] tablet:max-w-[330px]">
             {index % 2 ? (
               <SwipeLeftToRight delay={delay} key={index}>
-                <ul className="flex flex-col gap-4 items-center text-center">
+                <ul className="flex flex-col gap-4 items-center text-justify">
                   <li key={index} className="flex flex-col items-center gap-4">
                     <FadeIn delay={delay} bounce>
                       <Image
@@ -45,7 +45,7 @@ const WhyUs = ({ cssClasses }: Props) => {
               </SwipeLeftToRight>
             ) : (
               <SwipeRightToLeft delay={delay} key={index}>
-                <ul className="flex flex-col gap-4 items-center text-center">
+                <ul className="flex flex-col gap-4 items-center text-justify">
                   <li key={index} className="flex flex-col items-center gap-4">
                     <FadeIn delay={delay} bounce>
                       <Image
