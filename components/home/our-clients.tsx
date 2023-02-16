@@ -21,13 +21,13 @@ const OurClients = ({ cssClasses }: Props) => {
           interval: 2500,
           speed: 1500,
           perPage: 3,
+          drag: false,
           pagination: false,
           arrows: false,
           lazyLoad: "nearby",
           breakpoints: {
             425: {
               perPage: 1,
-              pagination: true,
             },
             725: {
               perPage: 2,
@@ -42,7 +42,7 @@ const OurClients = ({ cssClasses }: Props) => {
       >
         {ourClients.map(({ src, alt, url }, index) => (
           <SplideSlide key={index} className="grid place-items-center">
-            <Link href={url}>
+            <Link href={url} target="_blank">
               <Image
                 src={src}
                 alt={alt}
