@@ -16,7 +16,7 @@ const OurClients = ({ cssClasses }: Props) => {
   return (
     <section className={`${cssClasses}`}>
       <h2 className="text-heading text-center mb-10">Our Clients</h2>
-      <div className="flex flex-col items-center gap-16">
+      <div className="flex flex-col items-center gap-12">
         <Splide
           options={{
             autoplay: true,
