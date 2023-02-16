@@ -25,6 +25,10 @@ const OurClients = ({ cssClasses }: Props) => {
           arrows: false,
           lazyLoad: "nearby",
           breakpoints: {
+            425: {
+              perPage: 1,
+              pagination: true,
+            },
             725: {
               perPage: 2,
               gap: "1.5rem",
@@ -44,7 +48,7 @@ const OurClients = ({ cssClasses }: Props) => {
                 alt={alt}
                 width={350}
                 height={350}
-                className="drop-shadow-md w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px]"
+                className="drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px]"
               />
             </Link>
           </SplideSlide>
