@@ -5,6 +5,7 @@ import Contact from "@/components/home/contact";
 import Services from "@/components/home/services";
 import WhyUs from "@/components/home/why-us";
 import HeroComponent from "../components/home/hero-component";
+import OurClients from "@/components/home/our-clients";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
       <Services />
       <div id="about" className=" -translate-y-16"></div>
       <About cssClasses="my-20 tablet:my-16" />
+      <OurClients />
       <div id="contact" className=" -translate-y-32"></div>
       <Contact cssClasses="mt-20 tablet:mt-16 tablet:mb-10" />
     </>
