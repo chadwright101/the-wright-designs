@@ -1,5 +1,26 @@
 [
   {
+    "title": "Simone Snoyman Physiotherapy",
+    "image": {
+      "mobile": {
+        "src": "/img/screenshots/simone-snoyman-physio-mobile.png",
+        "alt": "Neon Productions mobile website"
+      },
+      "desktop": {
+        "src": "/img/screenshots/simone-snoyman-physio-desktop.png",
+        "alt": "Neon Productions desktop website"
+      },
+      "scrollImage": {
+        "src": "/img/screenshots/simone-snoyman-physio-mobile-long.png"
+      }
+    },
+    "blankPhone": "/img/phone-rose-gold.png",
+    "buttonUrl": "https://www.simonesnoymanphysiotherapy.co.za",
+    "loading": true,
+    "swipeMeAnimation": true,
+    "fromLeft": true
+  },
+  {
     "title": "Neon Productions",
     "image": {
       "mobile": {
@@ -14,13 +35,8 @@
         "src": "/img/screenshots/neon-productions-mobile-long.png"
       }
     },
-    "scrollImage": {
-      "src": "/img/screenshots/neon-productions-mobile-long.png"
-    },
     "blankPhone": "/img/phone-grey.png",
-    "buttonUrl": "https://www.neonproductions.co.za/photography-portfolio",
-    "loading": true,
-    "swipeMeAnimation": true
+    "buttonUrl": "https://www.neonproductions.co.za/photography-portfolio"
   },
   {
     "title": "Sileta Engineers",
@@ -36,9 +52,6 @@
       "scrollImage": {
         "src": "/img/screenshots/sileta-engineers-mobile-long.png"
       }
-    },
-    "scrollImage": {
-      "src": "/img/screenshots/sileta-engineers-mobile-long.png"
     },
     "blankPhone": "/img/phone-silver.png",
     "buttonUrl": "http://www.sileta.co.za/",
@@ -58,9 +71,6 @@
       "scrollImage": {
         "src": "/img/screenshots/garden-route-botox-mobile-long.png"
       }
-    },
-    "scrollImage": {
-      "src": "/img/screenshots/garden-route-botox-mobile-long.png"
     },
     "blankPhone": "/img/phone-rose-gold.png",
     "buttonUrl": "https://www.gardenroutebotox.com/"
