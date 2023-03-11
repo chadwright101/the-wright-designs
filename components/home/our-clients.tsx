@@ -51,7 +51,7 @@ const OurClients = ({ cssClasses }: Props) => {
                   alt={alt}
                   width={350}
                   height={350}
-                  className="drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px]"
+                  className="drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] bg-white"
                 />
               </Link>
             </SplideSlide>
