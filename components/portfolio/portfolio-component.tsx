@@ -42,7 +42,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
 
   return (
     <section
-      className={`flex flex-wrap gap-[70px] items-start justify-center overflow-hidden ${cssClasses}`}
+      className={`flex flex-wrap gap-[50px] items-start justify-center overflow-hidden ${cssClasses}`}
     >
       {/* mobile viewport */}
 
@@ -59,12 +59,26 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
           },
           index
         ) => (
-          <div key={index} className="flex flex-col gap-10 tablet2:hidden">
+          <div
+            key={index}
+            className="flex flex-col gap-10 items-center tablet2:hidden w-[330px]"
+          >
             <h2 className="text-subheading text-center">{title}</h2>
 
             <div>
               {fromLeft ? (
                 <SwipeRightToLeft>
+                  {swipeMeAnimation && (
+                    <animated.div style={swipeMeFadeAway} className="absolute">
+                      <animated.div style={swipeMe}>
+                        <Image
+                          src={swipeMeIcon}
+                          alt="Arrow icon"
+                          className="translate-x-[235px] translate-y-[320px]"
+                        />
+                      </animated.div>
+                    </animated.div>
+                  )}
                   <PortfolioScroller
                     src={image.scrollImage.src}
                     alt={image.mobile.alt}
@@ -112,16 +126,22 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 2 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
                 list={techList.gardenRouteBotox}
@@ -239,16 +259,22 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 2 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
                 list={techList.gardenRouteBotox}

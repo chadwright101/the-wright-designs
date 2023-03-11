@@ -1,19 +1,30 @@
 {
+  "simoneSnoymanPhysio": {
+    "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
+    "languages": [
+      "NextJS",
+      "Typescript",
+      "Tailwindcss",
+      "Headless Wordpress CMS"
+    ],
+    "developmentHours": "21hrs",
+    "designHours": "5hrs"
+  },
   "neonProductions": {
     "repo": "https://github.com/chadwright101/neon-productions.git",
-    "languages": ["NextJS", "Tailwindcss", "Typescript"],
+    "languages": ["NextJS", "Typescript", "Tailwindcss"],
     "developmentHours": "24.5hrs",
     "designHours": "6hrs"
   },
   "siletaEngineers": {
     "repo": "https://github.com/chadwright101/sileta-engineers.git",
-    "languages": ["Pug", "Sass", "Javascript"],
+    "languages": ["Pug", "Javascript", "Sass"],
     "developmentHours": "18hrs",
     "designHours": "4hrs"
   },
   "gardenRouteBotox": {
     "repo": "https://github.com/chadwright101/grace.git",
-    "languages": ["NextJS", "Tailwindcss", "Typescript"],
+    "languages": ["NextJS", "Typescript", "Tailwindcss"],
     "developmentHours": "12hrs",
     "designHours": "3hrs"
   }

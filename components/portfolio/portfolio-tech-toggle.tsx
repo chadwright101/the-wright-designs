@@ -47,16 +47,11 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
           <h4 className="text-[1.1rem]">What&#39;s under the hood</h4>
         </button>
         {techToggle && (
-          <ul className="text-center font-light -mt-4 border-y-2 border-pink py-4 flex flex-col gap-2">
+          <ul className="text-center font-light -mt-4 border-y-2 border-pink py-4 flex flex-col gap-3.5">
             <li>
-              <ul className="flex justify-center">
+              <ul className="flex flex-col justify-center font-normal gap-0.5">
                 {list.languages.map((item, index) => (
-                  <li key={index}>
-                    {item}
-                    {index < list.languages.length - 1 && (
-                      <span className="mx-2.5">/</span>
-                    )}
-                  </li>
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </li>
