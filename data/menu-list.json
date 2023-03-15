@@ -8,8 +8,8 @@
     "url": "/portfolio",
     "submenu": [
       {
-        "title": "Sileta Engineers",
-        "url": "http://www.sileta.co.za/"
+        "title": "Simone Snoyman Physiotherapy",
+        "url": "https://www.simonesnoymanphysiotherapy.co.za"
       },
       {
         "title": "Neon Productions",
@@ -18,6 +18,10 @@
       {
         "title": "Garden Route Botox",
         "url": "https://www.gardenroutebotox.com/"
+      },
+      {
+        "title": "Sileta Engineers",
+        "url": "http://www.sileta.co.za/"
       }
     ]
   },

@@ -189,7 +189,7 @@ const Navigation = () => {
           {menuList.map((item, index) => (
             <li
               key={index}
-              className={`text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px] hover:cursor-pointer ${
+              className={`text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px]  ${
                 index === 1 && "hover:no-underline px-3 -mx-3"
               }`}
               onMouseEnter={
@@ -209,7 +209,9 @@ const Navigation = () => {
             >
               <Link
                 href={item.url}
-                className={`${currentRoute === item.url ? "font-light" : null}`}
+                className={`hover:cursor-pointer ${
+                  currentRoute === item.url ? "font-light" : null
+                }`}
               >
                 {item.title}
               </Link>
@@ -217,7 +219,7 @@ const Navigation = () => {
               {/* portfolio submenu */}
 
               {item.submenu && submenuOpen && (
-                <div className="absolute -translate-x-[68px]">
+                <div className="absolute -translate-x-[75px] translate-y-[0.5px] w-[220px]">
                   <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
                     <animated.div style={submenuImageMove}>
                       <Image
@@ -228,11 +230,11 @@ const Navigation = () => {
                       />
                     </animated.div>
                   </div>
-                  <ul className="bg-blue px-5 pt-10 pb-4 rounded-b-xl border-[3px] border-beige flex flex-col items-center gap-2 lowercase drop-shadow-md">
+                  <ul className="bg-blue px-5 pt-10 pb-4 rounded-b-xl border-[3px] border-beige flex flex-col items-center gap-3 lowercase drop-shadow-md">
                     {item.submenu.map((item, index) => (
                       <li
                         key={index}
-                        className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px]"
+                        className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] text-center"
                       >
                         <Link href={item.url} target="_blank">
                           {item.title}
