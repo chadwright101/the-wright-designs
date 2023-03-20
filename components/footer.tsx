@@ -3,6 +3,9 @@ import Image from "next/image";
 import logo from "../public/the-wright-designs-logo.png";
 import menuList from "../data/menu-list.json";
 
+import facebookMobile from "public/icons/facebook-logo-blue.svg";
+import facebookDesktop from "public/icons/facebook-logo-beige.svg";
+
 interface Props {
   cssClasses?: string;
 }
@@ -29,14 +32,37 @@ const Footer = ({ cssClasses }: Props) => {
                 </Link>
               </li>
             </ul>
-          </nav>
-
-          <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
-            © The Wright Designs |{" "}
-            <Link href="/" className="tablet:hover:text-pink">
-              www.thewrightdesigns.co.za
+            <Link
+              href="https://www.facebook.com/thewrightdesignsSA"
+              target="_blank"
+              className="opacity-90"
+            >
+              <Image
+                src={facebookDesktop}
+                alt="Facebook logo"
+                className="hidden w-7 mt-1.5 tablet:block hover:opacity-75"
+              />
             </Link>
-          </h4>
+          </nav>
+          <div className="flex flex-col items-center gap-4">
+            <Link
+              href="https://www.facebook.com/thewrightdesignsSA"
+              target="_blank"
+              className="p-4 opacity-90"
+            >
+              <Image
+                src={facebookMobile}
+                alt="Facebook logo"
+                className="tablet:hidden"
+              />
+            </Link>
+            <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
+              © The Wright Designs |{" "}
+              <Link href="/" className="tablet:hover:text-pink">
+                www.thewrightdesigns.co.za
+              </Link>
+            </h4>
+          </div>
         </div>
         <Link href="/" className="h-[50px]">
           <Image
