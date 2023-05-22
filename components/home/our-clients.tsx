@@ -19,7 +19,7 @@ const OurClients = ({ cssClasses }: Props) => {
       <div className="flex flex-col items-center gap-12">
         <Splide
           options={{
-            autoplay: false,
+            autoplay: true,
             type: "loop",
             interval: 3500,
             speed: 1500,
