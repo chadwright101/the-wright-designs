@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../public/the-wright-designs-logo.png";
 import menuList from "../data/menu-list.json";
-
-import facebookMobile from "public/icons/facebook-logo-blue.svg";
-import facebookDesktop from "public/icons/facebook-logo-beige.svg";
 
 interface Props {
   cssClasses?: string;
@@ -38,9 +34,11 @@ const Footer = ({ cssClasses }: Props) => {
               className="opacity-90"
             >
               <Image
-                src={facebookDesktop}
+                src="/icons/facebook-logo-beige.svg"
                 alt="Facebook logo"
                 className="hidden w-7 mt-1.5 tablet:block hover:opacity-75"
+                width={28}
+                height={28}
               />
             </Link>
           </nav>
@@ -51,9 +49,11 @@ const Footer = ({ cssClasses }: Props) => {
               className="p-4 opacity-90"
             >
               <Image
-                src={facebookMobile}
+                src="icons/facebook-logo-blue.svg"
                 alt="Facebook logo"
                 className="tablet:hidden"
+                width={50}
+                height={50}
               />
             </Link>
             <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
@@ -66,9 +66,11 @@ const Footer = ({ cssClasses }: Props) => {
         </div>
         <Link href="/" className="h-[50px]">
           <Image
-            src={logo}
+            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo.png"
             alt="The Wright Designs logo"
-            className="hidden w-[249px] h-[48px] tablet:block tablet:self-end rotate-1"
+            className="hidden w-[249px] h-auto tablet:block tablet:self-end rotate-1"
+            width={250}
+            height={52}
           />
         </Link>
       </div>

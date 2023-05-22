@@ -9,7 +9,7 @@
       "url": "/#contact"
     },
     "image": {
-      "src": "/img/screenshots/hero-slide-1-devices.png",
+      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/hero-slide-1-devices.png",
       "alt": "Websites being displayed on a variety of devices"
     }
   },
@@ -28,7 +28,7 @@
       "url": "/portfolio"
     },
     "image": {
-      "src": "/img/screenshots/all-mobile-phones.png",
+      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/all-mobile-phones.png",
       "alt": "Portfolio websites displayed on iPhones"
     }
   },

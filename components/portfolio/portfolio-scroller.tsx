@@ -14,8 +14,9 @@ const PortfolioScroller = ({ src, alt, loading }: Props) => {
         width={244}
         height={1000}
         alt={alt}
-        quality={15}
+        quality={25}
         loading={loading ? "eager" : "lazy"}
+        sizes="(max-width:425px) 35vw, 25vw"
       ></Image>
     </div>
   );

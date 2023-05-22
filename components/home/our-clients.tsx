@@ -19,12 +19,12 @@ const OurClients = ({ cssClasses }: Props) => {
       <div className="flex flex-col items-center gap-12">
         <Splide
           options={{
-            autoplay: true,
+            autoplay: false,
             type: "loop",
-            interval: 2500,
+            interval: 3500,
             speed: 1500,
             perPage: 3,
-            drag: false,
+            dragMinThreshold: 10,
             pagination: false,
             arrows: false,
             lazyLoad: "nearby",
@@ -50,8 +50,9 @@ const OurClients = ({ cssClasses }: Props) => {
                   src={src}
                   alt={alt}
                   width={350}
-                  height={350}
+                  height={210}
                   className="drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] bg-white"
+                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 25px"
                 />
               </Link>
             </SplideSlide>

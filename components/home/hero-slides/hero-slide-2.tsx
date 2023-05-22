@@ -26,10 +26,11 @@ const HeroSlide2 = ({ cssClasses }: Props) => {
         <Image
           src={image.src}
           alt={image.alt}
-          width={550}
-          height={700}
+          width={525}
+          height={352}
           className="h-auto w-[375px] justify-self-center self-center drop-shadow-md phoneLarge:w-[450px] tablet:w-[525px]"
           quality={50}
+          sizes="(max-width: 425px) 25vw, (max-width: 900px) 50vw, 25vw"
         ></Image>
         <ul className="list-disc text-subheading font-quicksand text-center list-inside self-center">
           {list.map((item, index) => (

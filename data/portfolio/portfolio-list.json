@@ -3,18 +3,18 @@
     "title": "Simone Snoyman Physiotherapy",
     "image": {
       "mobile": {
-        "src": "/img/screenshots/simone-snoyman-physio-mobile.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile.png",
         "alt": "Neon Productions mobile website"
       },
       "desktop": {
-        "src": "/img/screenshots/simone-snoyman-physio-desktop.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-desktop.png",
         "alt": "Neon Productions desktop website"
       },
       "scrollImage": {
-        "src": "/img/screenshots/simone-snoyman-physio-mobile-long.png"
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile-long.png"
       }
     },
-    "blankPhone": "/img/phone-rose-gold.png",
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
     "buttonUrl": "https://www.simonesnoymanphysiotherapy.co.za",
     "loading": true,
     "swipeMeAnimation": true,
@@ -24,36 +24,36 @@
     "title": "Neon Productions",
     "image": {
       "mobile": {
-        "src": "/img/screenshots/neon-productions-mobile.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile.png",
         "alt": "Neon Productions mobile website"
       },
       "desktop": {
-        "src": "/img/screenshots/neon-productions-desktop.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-desktop.png",
         "alt": "Neon Productions desktop website"
       },
       "scrollImage": {
-        "src": "/img/screenshots/neon-productions-mobile-long.png"
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile-long.png"
       }
     },
-    "blankPhone": "/img/phone-grey.png",
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
     "buttonUrl": "https://www.neonproductions.co.za/photography-portfolio"
   },
   {
     "title": "Sileta Engineers",
     "image": {
       "mobile": {
-        "src": "/img/screenshots/sileta-engineers-mobile.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile.png",
         "alt": "Sileta Engineers mobile website"
       },
       "desktop": {
-        "src": "/img/screenshots/sileta-engineers-desktop.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-desktop.png",
         "alt": "Sileta Engineers desktop website"
       },
       "scrollImage": {
-        "src": "/img/screenshots/sileta-engineers-mobile-long.png"
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile-long.png"
       }
     },
-    "blankPhone": "/img/phone-silver.png",
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
     "buttonUrl": "http://www.sileta.co.za/",
     "fromLeft": true
   },
@@ -61,18 +61,18 @@
     "title": "Garden Route Botox",
     "image": {
       "mobile": {
-        "src": "/img/screenshots/garden-route-botox-mobile.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-mobile.png",
         "alt": "Garden Route Botox mobile website"
       },
       "desktop": {
-        "src": "/img/screenshots/garden-route-botox-desktop.png",
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-desktop.png",
         "alt": "Garden Route Botox desktop website"
       },
       "scrollImage": {
-        "src": "/img/screenshots/garden-route-botox-mobile-long.png"
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-mobile-long.png"
       }
     },
-    "blankPhone": "/img/phone-rose-gold.png",
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
     "buttonUrl": "https://www.gardenroutebotox.com/"
   }
 ]

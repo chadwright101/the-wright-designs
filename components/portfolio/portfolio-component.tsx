@@ -91,6 +91,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
                     quality={50}
+                    sizes="(max-width:425px) 50vw,(max-width:900px) 20vw, 5vw"
                   />
                 </SwipeRightToLeft>
               ) : (
@@ -119,6 +120,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
                     quality={50}
+                    sizes="(max-width:425px) 50vw, (max-width:900px) 20vw, 20vw,"
                   />
                 </SwipeLeftToRight>
               )}
@@ -193,8 +195,8 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                   <Image
                     src={image.desktop.src}
                     alt={image.desktop.alt}
-                    width={950}
-                    height={400}
+                    width={1100}
+                    height={580}
                     className={classnames(
                       "object-contain drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                       {
@@ -203,13 +205,14 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     )}
                     loading={loading ? "eager" : "lazy"}
                     quality={50}
+                    sizes="(max-width:1400px) 25vw, 48vw,"
                   />
                   <SwipeRightToLeft delay={125}>
                     <Image
                       src={image.mobile.src}
                       alt={image.mobile.alt}
-                      width={350}
-                      height={800}
+                      width={300}
+                      height={600}
                       className={classnames(
                         "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] -translate-x-5 ease-in-out desktop:translate-y-[18px]",
                         {
@@ -218,6 +221,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       )}
                       loading={loading ? "eager" : "lazy"}
                       quality={50}
+                      sizes="(max-width:1400px) 15vw, 15vw,"
                     />
                   </SwipeRightToLeft>
                 </>
@@ -227,8 +231,8 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     <Image
                       src={image.mobile.src}
                       alt={image.mobile.alt}
-                      width={350}
-                      height={800}
+                      width={300}
+                      height={600}
                       className={classnames(
                         "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
                         {
@@ -237,13 +241,14 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       )}
                       loading={loading ? "eager" : "lazy"}
                       quality={50}
+                      sizes="(max-width:1400px) 15vw, 15vw,"
                     />
                   </SwipeLeftToRight>
                   <Image
                     src={image.desktop.src}
                     alt={image.desktop.alt}
-                    width={950}
-                    height={400}
+                    width={1100}
+                    height={580}
                     className={classnames(
                       "object-contain -translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                       {
@@ -252,6 +257,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     )}
                     loading={loading ? "eager" : "lazy"}
                     quality={50}
+                    sizes="(max-width:1400px) 25vw, 48vw,"
                   />
                 </>
               )}

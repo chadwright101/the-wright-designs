@@ -26,10 +26,11 @@ const HeroSlide1 = ({ cssClasses }: Props) => {
           src={image.src}
           alt={image.alt}
           width={650}
-          height={500}
+          height={390}
           className="h-auto w-[400px] -translate-x-[10px] tablet2:-translate-x-0 justify-self-center self-center phoneLarge:w-[550px] tablet:w-[650px]"
           priority
           quality={50}
+          sizes="(max-width: 425px) 25vw, (max-width: 900px) 50vw, 25vw"
         ></Image>
         <h3 className="text-subheading text-center font-quicksand max-w-[400px] justify-self-center self-center">
           {subheading}

@@ -21,7 +21,7 @@ const Slideshow = () => {
               pagination: false,
             },
           },
-          drag: false,
+          dragMinThreshold: 10,
         }}
         className="mt-8"
       >

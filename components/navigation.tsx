@@ -7,12 +7,6 @@ import { useSpring, animated } from "@react-spring/web";
 
 import menuList from "../data/menu-list.json";
 
-import logo from "../public/the-wright-designs-logo.png";
-import logo2 from "../public/the-wright-designs-logo-square.jpg";
-import arrow from "../public/icons/double-arrow-pink.svg";
-import menuIcon from "../public/icons/menu-icon.svg";
-import closeIcon from "../public/icons/close-icon.svg";
-
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -91,14 +85,19 @@ const Navigation = () => {
               >
                 <Link href="/">
                   <Image
-                    src={logo}
+                    src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo.png"
                     alt="The Wright Designs logo"
                     className="h-auto w-[273.3px] translate-y-1 tablet:w-[302px] rotate-1"
+                    width={274}
+                    height={60}
+                    sizes="(max-width: 425px) 50vw, (max-width: 900px) 25vw, 15vw"
                   />
                   <Image
-                    src={logo2}
+                    src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo-square.jpg"
                     alt="The Wright Designs logo"
                     className="hidden"
+                    width={500}
+                    height={500}
                   />
                 </Link>
               </animated.div>
@@ -115,9 +114,11 @@ const Navigation = () => {
             >
               <animated.div style={menuIconAnimate}>
                 <Image
-                  src={menuIcon}
+                  src="/icons/menu-icon.svg"
                   alt="Menu icon"
                   className="h-[42px] w-[42px] mt-1 tablet:hidden"
+                  width={42}
+                  height={42}
                 />
               </animated.div>
             </div>
@@ -135,9 +136,11 @@ const Navigation = () => {
               className="fixed right-[30px] h-[50px] w-[50px] grid place-items-center -mt-1.5"
             >
               <Image
-                src={closeIcon}
+                src="/icons/close-icon.svg"
                 alt="Menu icon"
                 className="h-[42px] w-[42px] tablet:hidden"
+                width={42}
+                height={42}
               />
             </div>
 
@@ -161,9 +164,11 @@ const Navigation = () => {
                   </Link>
                   {currentRoute === item.url && (
                     <Image
-                      src={arrow}
+                      src="/icons/double-arrow-pink.svg"
                       alt="Double arrow icon"
                       className="rotate-180 h-[30px] w-[40px] mt-[3px] ml-4 object-cover"
+                      width={40}
+                      height={30}
                     />
                   )}
                 </li>
@@ -223,10 +228,12 @@ const Navigation = () => {
                   <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
                     <animated.div style={submenuImageMove}>
                       <Image
-                        src={arrow}
+                        src="/icons/double-arrow-pink.svg"
                         alt="Double arrow icon"
                         className=" rotate-90 w-8 h-8 mt-1.5"
                         priority
+                        width={32}
+                        height={32}
                       />
                     </animated.div>
                   </div>
