@@ -90,7 +90,7 @@ const Navigation = () => {
                     className="h-auto w-[273.3px] translate-y-1 tablet:w-[302px] rotate-1"
                     width={274}
                     height={60}
-                    sizes="(max-width: 425px) 50vw, (max-width: 900px) 25vw, 15vw"
+                    sizes="(max-width: 425px) 50vw, (max-width: 900px) 25vw, 20vw"
                   />
                   <Image
                     src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo-square.jpg"
