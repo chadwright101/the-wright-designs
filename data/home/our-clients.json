@@ -1,5 +1,11 @@
 [
   {
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/Luna-Blue-Logo.jpg",
+    "alt": "Luna Blue Off-grid Guesthouse logo",
+    "url": "https://www.lunarblue.co.za",
+    "iconSizes": "h-[200px] w-auto"
+  },
+  {
     "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/simone-snoyman-physiotherapy-logo.jpg",
     "alt": "Simone Snoyman Physiotherapy logo",
     "url": "https://www.simonesnoymanphysiotherapy.co.za"
