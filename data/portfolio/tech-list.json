@@ -1,9 +1,10 @@
 {
   "lunaBlue": {
-    "repo": "",
+    "repo": "https://github.com/chadwright101/luna-blue.git",
     "languages": ["NextJS", "Typescript", "Tailwindcss"],
-    "developmentHours": "36hrs",
-    "designHours": "Provided by client"
+    "developmentHours": "44hrs",
+    "designHours": "Provided by client",
+    "translation": ["English", "Deutsch"]
   },
   "carevita": {
     "repo": "",
@@ -13,17 +14,12 @@
       "Tailwindcss",
       "Headless Wordpress CMS"
     ],
-    "developmentHours": "38hrs",
+    "developmentHours": "39hrs",
     "designHours": "8hrs"
   },
   "simoneSnoymanPhysio": {
     "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
-    "languages": [
-      "NextJS",
-      "Typescript",
-      "Tailwindcss",
-      "Headless Wordpress CMS"
-    ],
+    "languages": ["NextJS", "Typescript", "Tailwindcss", "Headless CMS"],
     "developmentHours": "21hrs",
     "designHours": "5hrs"
   },

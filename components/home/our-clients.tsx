@@ -43,16 +43,18 @@ const OurClients = ({ cssClasses }: Props) => {
           }}
           className="mt-8"
         >
-          {ourClients.map(({ src, alt, url }, index) => (
+          {ourClients.map(({ src, alt, url, noWhiteBackground }, index) => (
             <SplideSlide key={index} className="grid place-items-center">
               <Link href={url} target="_blank">
                 <Image
                   src={src}
                   alt={alt}
                   width={350}
-                  height={210}
-                  className="drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] bg-white"
-                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 25px"
+                  height={350}
+                  className={`drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] ${
+                    noWhiteBackground ? "" : "bg-white"
+                  }`}
+                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 25vw"
                 />
               </Link>
             </SplideSlide>

@@ -13,6 +13,7 @@ interface Props {
     developmentHours: string;
     designHours: string;
     languages: Array<string>;
+    translation?: Array<string>;
   };
   variant?: TechToggleVariant;
 }
@@ -57,6 +58,11 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
             </li>
             <li>Development: {list.developmentHours}</li>
             <li>Design: {list.designHours}</li>
+            {list.translation && (
+              <li className="flex gap-1">
+                Languages: {list.translation[0]} & {list.translation[1]}
+              </li>
+            )}
             <li>
               <Link
                 href={list.repo}
@@ -110,6 +116,19 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
             </li>
             <li>Development: {list.developmentHours}</li>
             <li>Design: {list.designHours}</li>
+            {list.translation && (
+              <ul className="flex justify-center">
+                {list.translation.map((item, index) => (
+                  <li key={index}>
+                    {item}
+                    {list.translation &&
+                      index < list.translation.length - 1 && (
+                        <span className="mx-2.5">/</span>
+                      )}
+                  </li>
+                ))}
+              </ul>
+            )}
             <li>
               <Link
                 href={list.repo}
