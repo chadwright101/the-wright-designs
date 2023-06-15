@@ -1,4 +1,17 @@
 {
+  "aiSheeting": {
+    "repo": "",
+    "languages": ["NextJS", "Typescript", "Tailwindcss"],
+    "developmentHours": "5hrs",
+    "designHours": "5hrs"
+  },
+  "lunaBlue2": {
+    "repo": "https://github.com/chadwright101/luna-blue.git",
+    "languages": ["NextJS", "Typescript", "Tailwindcss"],
+    "developmentHours": "10hrs",
+    "designHours": "Provided by client",
+    "translation": ["English", "Deutsch"]
+  },
   "lunaBlue": {
     "repo": "https://github.com/chadwright101/luna-blue.git",
     "languages": ["NextJS", "Typescript", "Tailwindcss"],
