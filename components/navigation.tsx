@@ -225,7 +225,7 @@ const Navigation = () => {
 
               {item.submenu && submenuOpen && (
                 <div className="absolute -translate-x-[75px] translate-y-[0.5px] w-[220px]">
-                  <div className="absolute z-10 bg-blue h-[20px] w-full grid place-items-center">
+                  <div className="absolute z-10 bg-blue h-[21.5px] -translate-y-[2px] w-full grid place-items-center">
                     <animated.div style={submenuImageMove}>
                       <Image
                         src="/icons/double-arrow-pink.svg"
