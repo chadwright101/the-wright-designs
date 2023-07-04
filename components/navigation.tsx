@@ -223,7 +223,7 @@ const Navigation = () => {
 
               {/* portfolio submenu */}
 
-              {item.submenu && submenuOpen && (
+              {item.submenu && submenuOpen && currentRoute !== "/portfolio" && (
                 <div className="absolute -translate-x-[75px] translate-y-[0.5px] w-[220px]">
                   <div className="absolute z-10 bg-blue h-[21.5px] -translate-y-[2px] w-full grid place-items-center">
                     <animated.div style={submenuImageMove}>
@@ -243,7 +243,10 @@ const Navigation = () => {
                         key={index}
                         className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] text-center"
                       >
-                        <Link href={item.url} target="_blank">
+                        <Link
+                          href={item.url}
+                          target={item.title === "View More" ? "" : "_blank"}
+                        >
                           {item.title}
                         </Link>
                       </li>

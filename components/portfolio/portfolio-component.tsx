@@ -90,7 +90,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     height={900}
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
-                    quality={50}
+                    quality={60}
                     sizes="(max-width:425px) 50vw,(max-width:900px) 20vw, 5vw"
                   />
                 </SwipeRightToLeft>
@@ -119,7 +119,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     height={900}
                     className="drop-shadow-md"
                     loading={loading ? "eager" : "lazy"}
-                    quality={50}
+                    quality={60}
                     sizes="(max-width:425px) 50vw, (max-width:900px) 20vw, 20vw,"
                   />
                 </SwipeLeftToRight>
@@ -128,28 +128,34 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 4 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
                 list={techList.gardenRouteBotox}
@@ -210,7 +216,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}
-                    quality={50}
+                    quality={60}
                     sizes="(max-width:1400px) 25vw, 48vw,"
                   />
                   <SwipeRightToLeft delay={125}>
@@ -226,7 +232,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
-                      quality={50}
+                      quality={60}
                       sizes="(max-width:1400px) 15vw, 15vw,"
                     />
                   </SwipeRightToLeft>
@@ -246,7 +252,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
-                      quality={50}
+                      quality={60}
                       sizes="(max-width:1400px) 15vw, 15vw,"
                     />
                   </SwipeLeftToRight>
@@ -262,7 +268,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}
-                    quality={50}
+                    quality={60}
                     sizes="(max-width:1400px) 25vw, 48vw,"
                   />
                 </>
@@ -271,28 +277,34 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 4 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
                 list={techList.gardenRouteBotox}
