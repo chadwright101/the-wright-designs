@@ -1,34 +1,53 @@
 [
   {
+    "title": "A&I Sheeting",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile.png",
+        "alt": "Neon Productions mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-desktop.png",
+        "alt": "Neon Productions desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile-long.png"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
+    "buttonUrl": "https://www.roofrefurb.co.za",
+    "loading": true,
+    "swipeMeAnimation": true,
+    "fromLeft": true
+  },
+  {
     "title": "Luna Blue Off-grid Guesthouse",
     "image": {
       "mobile": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-1-mobile.png",
-        "alt": "Neon Productions mobile website"
+        "alt": "Luna Blue Off-grid Guesthouse mobile website"
       },
       "desktop": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-1-desktop.png",
-        "alt": "Neon Productions desktop website"
+        "alt": "Luna Blue Off-grid Guesthouse desktop website"
       },
       "scrollImage": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-1-mobile-long.png"
       }
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
-    "buttonUrl": "https://www.lunarblue.co.za",
-    "loading": true,
-    "swipeMeAnimation": true
+    "buttonUrl": "https://www.lunarblue.co.za"
   },
   {
     "title": "Simone Snoyman Physiotherapy",
     "image": {
       "mobile": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile.png",
-        "alt": "Neon Productions mobile website"
+        "alt": "Simone Snoyman Physiotherapy mobile website"
       },
       "desktop": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-desktop.png",
-        "alt": "Neon Productions desktop website"
+        "alt": "Simone Snoyman Physiotherapy desktop website"
       },
       "scrollImage": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile-long.png"

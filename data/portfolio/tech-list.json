@@ -1,8 +1,8 @@
 {
   "aiSheeting": {
-    "repo": "",
+    "repo": "https://github.com/chadwright101/ai-sheeting.git",
     "languages": ["NextJS", "Typescript", "Tailwindcss"],
-    "developmentHours": "5hrs",
+    "developmentHours": "24hrs",
     "designHours": "5hrs"
   },
   "lunaBlue2": {

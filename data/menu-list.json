@@ -8,7 +8,11 @@
     "url": "/portfolio",
     "submenu": [
       {
-        "title": "Luna BLue Off-grid Guesthouse",
+        "title": "A&I Sheeting",
+        "url": "https://www.lunarbroofrefurblue.co.za"
+      },
+      {
+        "title": "Luna Blue Off-grid Guesthouse",
         "url": "https://www.lunarblue.co.za"
       },
       {
@@ -16,16 +20,8 @@
         "url": "https://www.simonesnoymanphysiotherapy.co.za"
       },
       {
-        "title": "Neon Productions",
-        "url": "https://www.neonproductions.co.za/photography-portfolio"
-      },
-      {
-        "title": "Garden Route Botox",
-        "url": "https://www.gardenroutebotox.com/"
-      },
-      {
-        "title": "Sileta Engineers",
-        "url": "http://www.sileta.co.za/"
+        "title": "View More",
+        "url": "/portfolio"
       }
     ]
   },
