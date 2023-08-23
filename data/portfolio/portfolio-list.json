@@ -1,14 +1,34 @@
 [
   {
+    "title": "Xorbtec Computer Services",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile.png",
+        "alt": "Xorbtec Computer Services mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-desktop.png",
+        "alt": "Xorbtec Computer Services desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile-long.png"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
+    "buttonUrl": "https://www.xorbtec.co.za",
+    "loading": true,
+    "swipeMeAnimation": true
+  },
+  {
     "title": "A&I Sheeting",
     "image": {
       "mobile": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile.png",
-        "alt": "Neon Productions mobile website"
+        "alt": "A&I Sheeting mobile website"
       },
       "desktop": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-desktop.png",
-        "alt": "Neon Productions desktop website"
+        "alt": "A&I Sheeting desktop website"
       },
       "scrollImage": {
         "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile-long.png"
@@ -16,8 +36,6 @@
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
     "buttonUrl": "https://www.roofrefurb.co.za",
-    "loading": true,
-    "swipeMeAnimation": true,
     "fromLeft": true
   },
   {
