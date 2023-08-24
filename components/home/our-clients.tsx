@@ -54,7 +54,7 @@ const OurClients = ({ cssClasses }: Props) => {
                   className={`drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] ${
                     noWhiteBackground ? "" : "bg-white"
                   }`}
-                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 25vw"
+                  sizes="(max-width: 425px) 60vw, (max-width:900px) 35vw, 35vw"
                 />
               </Link>
             </SplideSlide>

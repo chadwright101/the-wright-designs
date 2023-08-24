@@ -13,7 +13,7 @@ module.exports = {
         hostname:
           "the-wright-designs-website-images.s3.af-south-1.amazonaws.com",
         port: "",
-        pathname: "/the-wright-designs/**",
+        pathname: "/*/**",
       },
     ],
   },
