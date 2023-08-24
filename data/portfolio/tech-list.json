@@ -2,7 +2,7 @@
   "xorbtec": {
     "repo": "https://github.com/chadwright101/xorbtec.git",
     "languages": ["RemixJS", "Typescript", "Tailwind"],
-    "developmentHours": "32hrs",
+    "developmentHours": "18hrs",
     "designHours": "3hrs"
   },
   "aiSheeting": {
@@ -10,13 +10,6 @@
     "languages": ["NextJS", "Typescript", "Tailwind"],
     "developmentHours": "24hrs",
     "designHours": "5hrs"
-  },
-  "lunaBlue2": {
-    "repo": "https://github.com/chadwright101/luna-blue.git",
-    "languages": ["NextJS", "Typescript", "Tailwind"],
-    "developmentHours": "10hrs",
-    "designHours": "Provided by client",
-    "translation": ["English", "Deutsch"]
   },
   "lunaBlue": {
     "repo": "https://github.com/chadwright101/luna-blue.git",

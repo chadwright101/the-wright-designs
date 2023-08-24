@@ -246,6 +246,11 @@ const Navigation = () => {
                         <Link
                           href={item.url}
                           target={item.title === "View More" ? "" : "_blank"}
+                          className={
+                            item.url === "https://www.roofrefurb.co.za"
+                              ? "normal-case"
+                              : ""
+                          }
                         >
                           {item.title}
                         </Link>
