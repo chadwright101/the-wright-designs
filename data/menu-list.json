@@ -8,7 +8,11 @@
     "url": "/portfolio",
     "submenu": [
       {
-        "title": "Xorbtec Computer Services",
+        "title": "Carevita",
+        "url": "https://www.carevita.co.za"
+      },
+      {
+        "title": "Xorbtec",
         "url": "https://www.xorbtec.co.za"
       },
       {
@@ -16,7 +20,7 @@
         "url": "https://www.roofrefurb.co.za"
       },
       {
-        "title": "Luna Blue Off-grid Guesthouse",
+        "title": "Luna Blue",
         "url": "https://www.lunarblue.co.za"
       },
       {

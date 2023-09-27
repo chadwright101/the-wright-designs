@@ -1,5 +1,25 @@
 [
   {
+    "title": "CareVita",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile.png",
+        "alt": "CareVita mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-desktop.png",
+        "alt": "CareVita desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile-long.png"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
+    "buttonUrl": "https://www.carevita.co.za",
+    "loading": true,
+    "swipeMeAnimation": true
+  },
+  {
     "title": "Xorbtec Computer Services",
     "image": {
       "mobile": {
@@ -15,9 +35,7 @@
       }
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
-    "buttonUrl": "https://www.xorbtec.co.za",
-    "loading": true,
-    "swipeMeAnimation": true
+    "buttonUrl": "https://www.xorbtec.co.za"
   },
   {
     "title": "A&I Sheeting",

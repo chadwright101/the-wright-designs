@@ -241,14 +241,14 @@ const Navigation = () => {
                     {item.submenu.map((item, index) => (
                       <li
                         key={index}
-                        className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] text-center"
+                        className="text-beige tablet:hover:underline tablet:hover:underline-offset-8 decoration-pink decoration-[2.5px] text-center normal-case"
                       >
                         <Link
                           href={item.url}
                           target={item.title === "View More" ? "" : "_blank"}
                           className={
-                            item.url === "https://www.roofrefurb.co.za"
-                              ? "normal-case"
+                            item.title === "View More"
+                              ? " italic lowercase"
                               : ""
                           }
                         >

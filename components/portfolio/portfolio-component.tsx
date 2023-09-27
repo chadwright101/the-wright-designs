@@ -128,40 +128,46 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.xorbtec}
+                list={techList.carevita}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.aiSheeting}
+                list={techList.xorbtec}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 4 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 6 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 7 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
                 list={techList.gardenRouteBotox}
@@ -283,40 +289,46 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.xorbtec}
+                list={techList.carevita}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.aiSheeting}
+                list={techList.xorbtec}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 4 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.siletaEngineers}
+                list={techList.neonProductions}
               />
             )}
             {index === 6 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.siletaEngineers}
+              />
+            )}
+            {index === 7 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
                 list={techList.gardenRouteBotox}

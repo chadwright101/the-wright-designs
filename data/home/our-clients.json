@@ -1,5 +1,11 @@
 [
   {
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/carevita-logo.png",
+    "alt": "CareVita logo",
+    "url": "https://www.carevita.co.za",
+    "noWhiteBackground": true
+  },
+  {
     "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/xorbtec-computer-services-logo-a.png",
     "alt": "Xorbtec Computer Services logo",
     "url": "https://www.xorbtec.co.za",

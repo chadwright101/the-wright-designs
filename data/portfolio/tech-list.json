@@ -1,4 +1,10 @@
 {
+  "carevita": {
+    "repo": "https://github.com/chadwright101/carevita.git",
+    "languages": ["NextJS", "Typescript", "Tailwind", "Headless Wordpress CMS"],
+    "developmentHours": "32hrs",
+    "designHours": "5hrs"
+  },
   "xorbtec": {
     "repo": "https://github.com/chadwright101/xorbtec.git",
     "languages": ["RemixJS", "Typescript", "Tailwind"],
@@ -9,43 +15,37 @@
     "repo": "https://github.com/chadwright101/ai-sheeting.git",
     "languages": ["NextJS", "Typescript", "Tailwind"],
     "developmentHours": "24hrs",
-    "designHours": "5hrs"
+    "designHours": "4hrs"
   },
   "lunaBlue": {
     "repo": "https://github.com/chadwright101/luna-blue.git",
     "languages": ["NextJS", "Typescript", "Tailwind"],
-    "developmentHours": "44hrs",
+    "developmentHours": "43.5hrs",
     "designHours": "Provided by client",
     "translation": ["English", "Deutsch"]
-  },
-  "carevita": {
-    "repo": "",
-    "languages": ["NextJS", "Typescript", "Tailwind", "Headless Wordpress CMS"],
-    "developmentHours": "39hrs",
-    "designHours": "8hrs"
   },
   "simoneSnoymanPhysio": {
     "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
     "languages": ["NextJS", "Typescript", "Tailwind", "Headless CMS"],
-    "developmentHours": "21hrs",
-    "designHours": "5hrs"
+    "developmentHours": "17hrs",
+    "designHours": "3hrs"
   },
   "neonProductions": {
     "repo": "https://github.com/chadwright101/neon-productions.git",
     "languages": ["NextJS", "Typescript", "Tailwind"],
-    "developmentHours": "24.5hrs",
-    "designHours": "6hrs"
+    "developmentHours": "19.5hrs",
+    "designHours": "4hrs"
   },
   "siletaEngineers": {
     "repo": "https://github.com/chadwright101/sileta-engineers.git",
     "languages": ["Pug", "Javascript", "Sass"],
-    "developmentHours": "18hrs",
+    "developmentHours": "15hrs",
     "designHours": "Provided by client"
   },
   "gardenRouteBotox": {
     "repo": "https://github.com/chadwright101/grace.git",
     "languages": ["NextJS", "Typescript", "Tailwind"],
     "developmentHours": "12hrs",
-    "designHours": "3hrs"
+    "designHours": "2hrs"
   }
 }
