@@ -1,38 +1,43 @@
 {
   "carevita": {
     "repo": "https://github.com/chadwright101/carevita.git",
-    "languages": ["NextJS", "Typescript", "Tailwind", "Headless Wordpress CMS"],
+    "languages": [
+      "Next.js",
+      "Typescript",
+      "Tailwind",
+      "Headless Wordpress CMS"
+    ],
     "developmentHours": "32hrs",
     "designHours": "5hrs"
   },
   "xorbtec": {
     "repo": "https://github.com/chadwright101/xorbtec.git",
-    "languages": ["RemixJS", "Typescript", "Tailwind"],
+    "languages": ["Next.js", "Javascript", "Tailwind"],
     "developmentHours": "18hrs",
     "designHours": "3hrs"
   },
   "aiSheeting": {
     "repo": "https://github.com/chadwright101/ai-sheeting.git",
-    "languages": ["NextJS", "Typescript", "Tailwind"],
+    "languages": ["Next.js", "Typescript", "Tailwind"],
     "developmentHours": "24hrs",
     "designHours": "4hrs"
   },
   "lunaBlue": {
     "repo": "https://github.com/chadwright101/luna-blue.git",
-    "languages": ["NextJS", "Typescript", "Tailwind"],
+    "languages": ["Next.js", "Typescript", "Tailwind"],
     "developmentHours": "43.5hrs",
     "designHours": "Provided by client",
     "translation": ["English", "Deutsch"]
   },
   "simoneSnoymanPhysio": {
     "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
-    "languages": ["NextJS", "Typescript", "Tailwind", "Headless CMS"],
+    "languages": ["Next.js", "Typescript", "Tailwind", "Headless CMS"],
     "developmentHours": "17hrs",
     "designHours": "3hrs"
   },
   "neonProductions": {
     "repo": "https://github.com/chadwright101/neon-productions.git",
-    "languages": ["NextJS", "Typescript", "Tailwind"],
+    "languages": ["Next.js", "Typescript", "Tailwind"],
     "developmentHours": "19.5hrs",
     "designHours": "4hrs"
   },
@@ -44,7 +49,7 @@
   },
   "gardenRouteBotox": {
     "repo": "https://github.com/chadwright101/grace.git",
-    "languages": ["NextJS", "Typescript", "Tailwind"],
+    "languages": ["Next.js", "Typescript", "Tailwind"],
     "developmentHours": "12hrs",
     "designHours": "2hrs"
   }
