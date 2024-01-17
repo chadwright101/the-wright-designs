@@ -52,11 +52,11 @@ const ContactForm = ({ cssClasses, formTitle }: Props) => {
     >
       {!formSubmitted ? (
         <p className="text-beige mb-6">
-          "Please fill out the form below and we will get back to you ASAP..."
+          Please fill out the form below and we will get back to you ASAP...
         </p>
       ) : (
         <p className="text-beige mb-6 text-subheading">
-          "Thanks for your message! We'll get back to you ASAP..."
+          Thanks for your message! We will get back to you ASAP...
         </p>
       )}
 
