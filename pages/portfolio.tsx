@@ -37,7 +37,7 @@ const Portfolio = () => {
         <PortfolioComponent cssClasses="mb-14" />
         <ContactForm
           cssClasses="tablet:mb-10"
-          formTitle="contact us now to get an obligation free quote!"
+          formTitle="Contact us now to get an obligation free quote!"
         />
       </main>
     </>

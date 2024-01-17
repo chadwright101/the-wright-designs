@@ -4,9 +4,13 @@ import Button from "./button";
 
 interface Props {
   cssClasses?: string;
+  formTitle?: string;
 }
 
-const ContactForm = ({ cssClasses }: Props) => {
+const ContactForm = ({
+  cssClasses,
+  formTitle = "Please fill out the form below and we will get back to you ASAP...",
+}: Props) => {
   const [showName, setShowName] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [name, setName] = useState("");
@@ -55,9 +59,7 @@ const ContactForm = ({ cssClasses }: Props) => {
       className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
     >
       {!formSubmitted ? (
-        <p className="text-beige mb-6">
-          Please fill out the form below and we will get back to you ASAP...
-        </p>
+        <p className="text-beige mb-6">{formTitle}</p>
       ) : (
         <p className="text-beige mb-6 text-subheading">
           Thanks for your message! We will get back to you ASAP...
