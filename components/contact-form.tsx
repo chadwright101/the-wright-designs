@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Button from "./button";
 
 interface Props {
   cssClasses?: string;
-  formTitle?: string;
 }
 
-const ContactForm = ({ cssClasses, formTitle }: Props) => {
+const ContactForm = ({ cssClasses }: Props) => {
   const [showName, setShowName] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [name, setName] = useState("");
@@ -14,6 +14,8 @@ const ContactForm = ({ cssClasses, formTitle }: Props) => {
   const [message, setMessage] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formSubmitting, setFormSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
+  const router = useRouter();
 
   const resetForm = () => {
     setShowName(false);
@@ -38,11 +40,13 @@ const ContactForm = ({ cssClasses, formTitle }: Props) => {
     });
 
     if (response.ok) {
-      console.log("Email sent successfully");
       resetForm();
       setFormSubmitted(true);
+      router.push("/#contact");
     } else {
       console.error("Error sending email");
+      setFormError("Error sending email, please try again");
+      setFormSubmitting(false);
     }
   };
 
@@ -82,7 +86,7 @@ const ContactForm = ({ cssClasses, formTitle }: Props) => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 required
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 placeholder="email address"
                 className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
               />
@@ -152,25 +156,31 @@ const ContactForm = ({ cssClasses, formTitle }: Props) => {
                   required
                   rows={5}
                   value={message}
-                  minLength={30}
                   name="message"
                   placeholder="type your message
         here..."
                   onChange={(e) => setMessage(e.target.value)}
                   className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
-                ></textarea>
+                />
               </div>
               {!formSubmitting ? (
-                <Button
-                  url=""
-                  cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
-                  form
-                  pinkBackground
-                  beigeText
-                  beigeArrows
-                >
-                  Submit
-                </Button>
+                <>
+                  <Button
+                    url=""
+                    cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+                    form
+                    pinkBackground
+                    beigeText
+                    beigeArrows
+                  >
+                    Submit
+                  </Button>
+                  {formError && (
+                    <p className="text-white italic text-center tablet:text-left">
+                      *{formError}*
+                    </p>
+                  )}
+                </>
               ) : (
                 <div className="w-auto h-[50px] flex justify-center items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md bg-pink/75 tablet:hover:bg-pink border-blue tablet:w-[150px] tablet:h-12">
                   <div className="animate-spin h-7 w-7 border-l-[3px] border-b-[3px] border-white rounded-full"></div>
