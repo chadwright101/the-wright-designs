@@ -1,4 +1,10 @@
 {
+  "carevitafit": {
+    "repo": "https://github.com/chadwright101/carevita-fit.git",
+    "languages": ["Next.js", "Javascript", "SASS", "Bespoke CMS"],
+    "developmentHours": "24hrs",
+    "designHours": "2hrs"
+  },
   "carevita": {
     "repo": "https://github.com/chadwright101/carevita.git",
     "languages": [
@@ -46,11 +52,5 @@
     "languages": ["Pug", "Javascript", "Sass"],
     "developmentHours": "15hrs",
     "designHours": "Provided by client"
-  },
-  "gardenRouteBotox": {
-    "repo": "https://github.com/chadwright101/grace.git",
-    "languages": ["Next.js", "Typescript", "Tailwind"],
-    "developmentHours": "12hrs",
-    "designHours": "2hrs"
   }
 }
