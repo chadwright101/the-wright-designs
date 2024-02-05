@@ -1,5 +1,26 @@
 [
   {
+    "title": "CareVita #fit",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile.png",
+        "alt": "CareVita #fit mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-desktop.png",
+        "alt": "CareVita #fit desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile-long.png"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
+    "buttonUrl": "https://www.carevitafit.co.za",
+    "loading": true,
+    "swipeMeAnimation": true,
+    "fromLeft": true
+  },
+  {
     "title": "CareVita",
     "image": {
       "mobile": {
@@ -15,9 +36,7 @@
       }
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
-    "buttonUrl": "https://www.carevita.co.za",
-    "loading": true,
-    "swipeMeAnimation": true
+    "buttonUrl": "https://www.carevita.co.za"
   },
   {
     "title": "Xorbtec Computer Services",
@@ -129,23 +148,5 @@
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
     "buttonUrl": "http://www.sileta.co.za/",
     "fromLeft": true
-  },
-  {
-    "title": "Garden Route Botox",
-    "image": {
-      "mobile": {
-        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-mobile.png",
-        "alt": "Garden Route Botox mobile website"
-      },
-      "desktop": {
-        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-desktop.png",
-        "alt": "Garden Route Botox desktop website"
-      },
-      "scrollImage": {
-        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/garden-route-botox-mobile-long.png"
-      }
-    },
-    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
-    "buttonUrl": "https://www.gardenroutebotox.com/"
   }
 ]
