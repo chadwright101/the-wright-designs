@@ -42,7 +42,6 @@ const ContactForm = ({
       },
       body: JSON.stringify({ name, email, message }),
     });
-    console.log(response.headers.get("api-email-code"));
 
     if (response.ok) {
       resetForm();
@@ -184,9 +183,12 @@ const ContactForm = ({
                   )}
                 </>
               ) : (
-                <div className="w-auto h-[50px] flex justify-center items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md bg-pink/75 tablet:hover:bg-pink border-blue tablet:w-[150px] tablet:h-12">
+                <button
+                  className="w-auto h-[50px] flex justify-center items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md bg-pink/75 tablet:hover:bg-pink border-blue tablet:w-[150px] tablet:h-12 disabled:cursor-not-allowed disabled:bg-grey disabled:hover:bg-grey"
+                  disabled={formSubmitting}
+                >
                   <div className="animate-spin h-7 w-7 border-l-[3px] border-b-[3px] border-white rounded-full"></div>
-                </div>
+                </button>
               )}
             </>
           )}
