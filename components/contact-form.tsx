@@ -42,6 +42,7 @@ const ContactForm = ({
       },
       body: JSON.stringify({ name, email, message }),
     });
+    console.log(response.headers.get("api-email-code"));
 
     if (response.ok) {
       resetForm();
@@ -88,7 +89,6 @@ const ContactForm = ({
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 required
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 placeholder="email address"
                 className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
               />
