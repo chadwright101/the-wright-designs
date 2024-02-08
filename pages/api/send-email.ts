@@ -51,7 +51,7 @@ export default async function handler(
   message = sanitizeInput(message);
 
   const transporter = nodemailer.createTransport({
-    host: "email-smtp.eu-north-1.amazonaws.com",
+    host: process.env.SMTP_HOST,
     port: 587,
     secure: false,
     auth: {
@@ -62,8 +62,8 @@ export default async function handler(
   });
 
   const mailOptions = {
-    from: "chad@thewrightdesigns.co.za",
-    to: "chad@thewrightdesigns.co.za",
+    from: process.env.SEND_TO_EMAIL,
+    to: process.env.SEND_TO_EMAIL,
     subject: "Website - Contact Form",
     text: message,
     html: EmailTemplate({ name, email, message }),
