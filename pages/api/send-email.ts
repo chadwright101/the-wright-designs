@@ -65,6 +65,7 @@ export default async function handler(
     from: process.env.SEND_TO_EMAIL,
     to: process.env.SEND_TO_EMAIL,
     subject: "Website - Contact Form",
+    replyTo: email,
     text: message,
     html: EmailTemplate({ name, email, message }),
   };
