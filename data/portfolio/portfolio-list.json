@@ -1,5 +1,23 @@
 [
   {
+    "title": "Monk's Medical",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile.png",
+        "alt": "Monk's Medical mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-desktop.jpg",
+        "alt": "Monk's Medical desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile-long.jpg"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
+    "buttonUrl": "https://www.monksmedical.com"
+  },
+  {
     "title": "CareVita #fit",
     "image": {
       "mobile": {

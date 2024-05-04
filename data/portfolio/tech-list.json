@@ -1,4 +1,10 @@
 {
+  "monksMedical": {
+    "repo": "https://github.com/chadwright101/monks-medical.git",
+    "languages": ["Next.js", "Typescript", "Tailwind"],
+    "developmentHours": "10.5hrs",
+    "designHours": "3hrs"
+  },
   "carevitafit": {
     "repo": "https://github.com/chadwright101/carevita-fit.git",
     "languages": ["Next.js", "Javascript", "SASS", "Bespoke CMS"],

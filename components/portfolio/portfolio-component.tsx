@@ -128,46 +128,52 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.carevitafit}
+                list={techList.monksMedical}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.carevita}
+                list={techList.carevitafit}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.xorbtec}
+                list={techList.carevita}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.aiSheeting}
+                list={techList.xorbtec}
               />
             )}
             {index === 4 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 6 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 7 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList.neonProductions}
+              />
+            )}
+            {index === 8 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Mobile}
                 list={techList.siletaEngineers}
@@ -289,46 +295,52 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             {index === 0 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.carevitafit}
+                list={techList.monksMedical}
               />
             )}
             {index === 1 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.carevita}
+                list={techList.carevitafit}
               />
             )}
             {index === 2 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.xorbtec}
+                list={techList.carevita}
               />
             )}
             {index === 3 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.aiSheeting}
+                list={techList.xorbtec}
               />
             )}
             {index === 4 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.lunaBlue}
+                list={techList.aiSheeting}
               />
             )}
             {index === 5 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.simoneSnoymanPhysio}
+                list={techList.lunaBlue}
               />
             )}
             {index === 6 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
+                list={techList.simoneSnoymanPhysio}
               />
             )}
             {index === 7 && (
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Desktop}
+                list={techList.neonProductions}
+              />
+            )}
+            {index === 8 && (
               <PortfolioTechToggle
                 variant={TechToggleVariant.Desktop}
                 list={techList.siletaEngineers}
