@@ -51,9 +51,11 @@ const OurClients = ({ cssClasses }: Props) => {
                   alt={alt}
                   width={350}
                   height={350}
-                  className={`drop-shadow-md w-[300px] phoneSmall:w-[200px] h-auto phoneLarge:w-[250px] tablet2:w-[300px] desktop:w-[350px] tablet:hover:opacity-[85%] ${
-                    noWhiteBackground ? "" : "bg-white"
-                  }`}
+                  className={`drop-shadow-md w-[200px] tablet:w-[250px] desktop:w-[300px] aspect-auto tablet:hover:opacity-[85%] ${
+                    alt === "Monk's Medical logo"
+                      ? "w-[150px] tablet:w-[200px] desktop:w-[200px]"
+                      : ""
+                  } ${noWhiteBackground ? "" : "bg-white"}`}
                   sizes="(max-width: 425px) 60vw, (max-width:900px) 35vw, 35vw"
                 />
               </Link>
