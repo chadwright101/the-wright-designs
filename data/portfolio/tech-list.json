@@ -1,4 +1,9 @@
 {
+  "sunnyCoast": {
+    "languages": ["Webflow"],
+    "developmentHours": "7hrs",
+    "designHours": "Provided by client"
+  },
   "monksMedical": {
     "repo": "https://github.com/chadwright101/monks-medical.git",
     "languages": ["Next.js", "Typescript", "Tailwind"],

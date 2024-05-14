@@ -9,7 +9,7 @@ import { useSpring, animated } from "@react-spring/web";
 
 interface Props {
   list: {
-    repo: string;
+    repo?: string;
     developmentHours: string;
     designHours: string;
     languages: Array<string>;
@@ -63,15 +63,17 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 Languages: {list.translation[0]} & {list.translation[1]}
               </li>
             )}
-            <li>
-              <Link
-                href={list.repo}
-                target="_blank"
-                className="py-2 px-3 font-medium text-linkBlue"
-              >
-                View repository
-              </Link>
-            </li>
+            {list.repo && (
+              <li>
+                <Link
+                  href={list.repo}
+                  target="_blank"
+                  className="py-2 px-3 font-medium text-linkBlue"
+                >
+                  View repository
+                </Link>
+              </li>
+            )}
           </ul>
         )}
       </>
@@ -129,15 +131,17 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
                 ))}
               </ul>
             )}
-            <li>
-              <Link
-                href={list.repo}
-                target="_blank"
-                className="font-normal text-linkBlue hover:underline underline-offset-[6px]"
-              >
-                View repository
-              </Link>
-            </li>
+            {list.repo && (
+              <li>
+                <Link
+                  href={list.repo}
+                  target="_blank"
+                  className="font-normal text-linkBlue hover:underline underline-offset-[6px]"
+                >
+                  View repository
+                </Link>
+              </li>
+            )}
             <li>
               <button
                 onClick={() => setTechToggle(!techToggle)}

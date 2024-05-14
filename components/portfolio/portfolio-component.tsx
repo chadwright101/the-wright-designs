@@ -22,6 +22,17 @@ interface Props {
   cssClasses?: string;
 }
 
+interface TechList {
+  [key: string]: {
+    languages: string[];
+    developmentHours: string;
+    designHours: string;
+    repo?: string;
+  };
+}
+
+const techListKeys = Object.keys(techList as TechList);
+
 const PortfolioComponent = ({ cssClasses }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -58,157 +69,116 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
             blankPhone,
           },
           index
-        ) => (
-          <div
-            key={index}
-            className="flex flex-col gap-10 items-center tablet2:hidden w-[330px]"
-          >
-            <h2 className="text-subheading text-center">{title}</h2>
+        ) => {
+          const techKey = techListKeys[index];
+          return (
+            <div
+              key={index}
+              className="flex flex-col gap-10 items-center tablet2:hidden w-[330px]"
+            >
+              <h2 className="text-subheading text-center">{title}</h2>
 
-            <div>
-              {fromLeft ? (
-                <SwipeRightToLeft>
-                  {swipeMeAnimation && (
-                    <animated.div style={swipeMeFadeAway} className="absolute">
-                      <animated.div style={swipeMe}>
-                        <Image
-                          src={swipeMeIcon}
-                          alt="Arrow icon"
-                          className="translate-x-[235px] translate-y-[320px]"
-                        />
+              <div>
+                {fromLeft ? (
+                  <SwipeRightToLeft>
+                    {swipeMeAnimation && (
+                      <animated.div
+                        style={swipeMeFadeAway}
+                        className="absolute"
+                      >
+                        <animated.div style={swipeMe}>
+                          <Image
+                            src={swipeMeIcon}
+                            alt="Arrow icon"
+                            className="translate-x-[235px] translate-y-[320px]"
+                          />
+                        </animated.div>
                       </animated.div>
-                    </animated.div>
-                  )}
-                  <PortfolioScroller
-                    src={image.scrollImage.src}
-                    alt={image.mobile.alt}
-                  />
-                  <Image
-                    src={blankPhone}
-                    alt={image.mobile.alt}
-                    width={280}
-                    height={900}
-                    className="drop-shadow-md"
-                    loading={loading ? "eager" : "lazy"}
-                    quality={60}
-                    sizes="(max-width:425px) 50vw,(max-width:900px) 20vw, 5vw"
-                  />
-                </SwipeRightToLeft>
+                    )}
+                    <PortfolioScroller
+                      src={image.scrollImage.src}
+                      alt={image.mobile.alt}
+                    />
+                    <Image
+                      src={blankPhone}
+                      alt={image.mobile.alt}
+                      width={280}
+                      height={900}
+                      className="drop-shadow-md"
+                      loading={loading ? "eager" : "lazy"}
+                      quality={60}
+                      sizes="(max-width:425px) 50vw,(max-width:900px) 20vw, 5vw"
+                    />
+                  </SwipeRightToLeft>
+                ) : (
+                  <SwipeLeftToRight>
+                    {swipeMeAnimation && (
+                      <animated.div
+                        style={swipeMeFadeAway}
+                        className="absolute"
+                      >
+                        <animated.div style={swipeMe}>
+                          <Image
+                            src={swipeMeIcon}
+                            alt="Arrow icon"
+                            className="translate-x-[235px] translate-y-[320px]"
+                          />
+                        </animated.div>
+                      </animated.div>
+                    )}
+                    <PortfolioScroller
+                      src={image.scrollImage.src}
+                      alt={image.mobile.alt}
+                      loading={loading ? "eager" : "lazy"}
+                    />
+                    <Image
+                      src={blankPhone}
+                      alt={image.mobile.alt}
+                      width={280}
+                      height={900}
+                      className="drop-shadow-md"
+                      loading={loading ? "eager" : "lazy"}
+                      quality={60}
+                      sizes="(max-width:425px) 50vw, (max-width:900px) 20vw, 20vw,"
+                    />
+                  </SwipeLeftToRight>
+                )}
+              </div>
+              <PortfolioTechToggle
+                variant={TechToggleVariant.Mobile}
+                list={techList[techKey]}
+              />
+              {index % 2 ? (
+                <Button
+                  url={buttonUrl}
+                  cssClasses="mx-auto"
+                  target="_blank"
+                  blueBackground
+                  beigeArrows
+                  beigeText
+                >
+                  View Website
+                </Button>
               ) : (
-                <SwipeLeftToRight>
-                  {swipeMeAnimation && (
-                    <animated.div style={swipeMeFadeAway} className="absolute">
-                      <animated.div style={swipeMe}>
-                        <Image
-                          src={swipeMeIcon}
-                          alt="Arrow icon"
-                          className="translate-x-[235px] translate-y-[320px]"
-                        />
-                      </animated.div>
-                    </animated.div>
-                  )}
-                  <PortfolioScroller
-                    src={image.scrollImage.src}
-                    alt={image.mobile.alt}
-                    loading={loading ? "eager" : "lazy"}
-                  />
-                  <Image
-                    src={blankPhone}
-                    alt={image.mobile.alt}
-                    width={280}
-                    height={900}
-                    className="drop-shadow-md"
-                    loading={loading ? "eager" : "lazy"}
-                    quality={60}
-                    sizes="(max-width:425px) 50vw, (max-width:900px) 20vw, 20vw,"
-                  />
-                </SwipeLeftToRight>
+                <Button
+                  url={buttonUrl}
+                  cssClasses="mx-auto"
+                  target="_blank"
+                  pinkBackground
+                >
+                  View Website
+                </Button>
               )}
             </div>
-            {index === 0 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.monksMedical}
-              />
-            )}
-            {index === 1 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.carevitafit}
-              />
-            )}
-            {index === 2 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.carevita}
-              />
-            )}
-            {index === 3 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.xorbtec}
-              />
-            )}
-            {index === 4 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.aiSheeting}
-              />
-            )}
-            {index === 5 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.lunaBlue}
-              />
-            )}
-            {index === 6 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.simoneSnoymanPhysio}
-              />
-            )}
-            {index === 7 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.neonProductions}
-              />
-            )}
-            {index === 8 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList.siletaEngineers}
-              />
-            )}
-            {index % 2 ? (
-              <Button
-                url={buttonUrl}
-                cssClasses="mx-auto"
-                target="_blank"
-                blueBackground
-                beigeArrows
-                beigeText
-              >
-                View Website
-              </Button>
-            ) : (
-              <Button
-                url={buttonUrl}
-                cssClasses="mx-auto"
-                target="_blank"
-                pinkBackground
-              >
-                View Website
-              </Button>
-            )}
-          </div>
-        )
+          );
+        }
       )}
 
       {/* desktop viewport */}
 
       {portfolioList.map(({ title, image, buttonUrl, loading }, index) => {
         const isHovered = hoveredIndex === index;
-
+        const techKey = techListKeys[index];
         return (
           <div key={index} className="hidden flex-col gap-10 tablet2:flex">
             <h2 className="text-subheading text-center">{title}</h2>
@@ -292,60 +262,10 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                 </>
               )}
             </Link>
-            {index === 0 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.monksMedical}
-              />
-            )}
-            {index === 1 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.carevitafit}
-              />
-            )}
-            {index === 2 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.carevita}
-              />
-            )}
-            {index === 3 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.xorbtec}
-              />
-            )}
-            {index === 4 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.aiSheeting}
-              />
-            )}
-            {index === 5 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.lunaBlue}
-              />
-            )}
-            {index === 6 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.simoneSnoymanPhysio}
-              />
-            )}
-            {index === 7 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.neonProductions}
-              />
-            )}
-            {index === 8 && (
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Desktop}
-                list={techList.siletaEngineers}
-              />
-            )}
+            <PortfolioTechToggle
+              variant={TechToggleVariant.Desktop}
+              list={techList[techKey]}
+            />
             <div className="max-w-[225px] mx-auto">
               {index % 2 ? (
                 <Button
