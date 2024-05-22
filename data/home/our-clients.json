@@ -1,6 +1,12 @@
 [
   {
-    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/von-black-studios.jpg",
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/adopt-a-swimmer-logo.png",
+    "alt": "Adopt a Swimmer logo",
+    "url": "https://www.adoptaswimmer.co.za/",
+    "noWhiteBackground": true
+  },
+  {
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/von-black-studios.png",
     "alt": "Von Black Studios logo",
     "url": "https://vonblackstudios.com.au/",
     "noWhiteBackground": true
@@ -23,7 +29,7 @@
     "noWhiteBackground": true
   },
   {
-    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/neon-productions-logo.jpg",
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/neon-productions-logo.png",
     "alt": "Neon Productions logo",
     "url": "https://www.neonproductions.co.za"
   },
@@ -35,17 +41,17 @@
     "noWhiteBackground": true
   },
   {
+    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/simone-snoyman-physiotherapy-logo.png",
+    "alt": "Simone Snoyman Physiotherapy logo",
+    "url": "https://www.simonesnoymanphysiotherapy.co.za"
+  },
+
+  {
     "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/xorbtec-computer-services-logo-a.png",
     "alt": "Xorbtec Computer Services logo",
     "url": "https://www.xorbtec.co.za",
     "noWhiteBackground": true
   },
-  {
-    "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/simone-snoyman-physiotherapy-logo.jpg",
-    "alt": "Simone Snoyman Physiotherapy logo",
-    "url": "https://www.simonesnoymanphysiotherapy.co.za"
-  },
-
   {
     "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/grace-logo.png",
     "alt": "Garden Route Botox logo",

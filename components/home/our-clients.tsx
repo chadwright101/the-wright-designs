@@ -51,15 +51,7 @@ const OurClients = ({ cssClasses }: Props) => {
                   alt={alt}
                   width={350}
                   height={350}
-                  className={` w-auto object-contain drop-shadow-md tablet:hover:opacity-[85%] ${
-                    alt === "Simone Snoyman Physiotherapy logo" ||
-                    alt === "Garden Route Botox logo" ||
-                    alt === "Neon Productions logo" ||
-                    alt === "Sileta Engineers' logo"
-                      ? "w-[265px]"
-                      : "max-h-[200px]"
-                  }
-                  } ${noWhiteBackground ? "" : "bg-white"}`}
+                  className={`object-contain drop-shadow-md tablet:hover:opacity-[85%] w-[150px] h-[75px] tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[300px] desktopSmall:h-[150px]`}
                   sizes="(max-width: 425px) 60vw, (max-width:900px) 35vw, 35vw"
                 />
               </Link>
