@@ -1,4 +1,9 @@
 {
+  "adoptASwimmer": {
+    "languages": ["Next.js", "Typescript", "Tailwind"],
+    "developmentHours": "21hrs",
+    "designHours": "4hrs"
+  },
   "sunnyCoast": {
     "languages": ["Webflow"],
     "developmentHours": "7hrs",

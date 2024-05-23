@@ -21,8 +21,8 @@ const OurClients = ({ cssClasses }: Props) => {
           options={{
             autoplay: true,
             type: "loop",
-            interval: 3500,
-            speed: 1500,
+            interval: 4000,
+            speed: 2500,
             perPage: 3,
             dragMinThreshold: 10,
             pagination: false,

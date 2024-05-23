@@ -1,5 +1,25 @@
 [
   {
+    "title": "Adopt A Swimmer",
+    "image": {
+      "mobile": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile.png",
+        "alt": "Adopt A Swimmer mobile website"
+      },
+      "desktop": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-desktop.png",
+        "alt": "Adopt A Swimmer desktop website"
+      },
+      "scrollImage": {
+        "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile-long.png"
+      }
+    },
+    "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
+    "buttonUrl": "https://www.adoptaswimmer.co.za",
+    "swipeMeAnimation": true,
+    "loading": true
+  },
+  {
     "title": "Sunny Coast Bathroom Renovations",
     "image": {
       "mobile": {
@@ -15,7 +35,8 @@
       }
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
-    "buttonUrl": "https://www.scbr.com.au/"
+    "buttonUrl": "https://www.scbr.com.au/",
+    "fromLeft": true
   },
   {
     "title": "Monk's Medical",
@@ -52,8 +73,6 @@
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
     "buttonUrl": "https://www.carevitafit.co.za",
-    "loading": true,
-    "swipeMeAnimation": true,
     "fromLeft": true
   },
   {
