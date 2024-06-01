@@ -23,7 +23,7 @@
     "react-dom": "18.2.0",
     "react-waypoint": "^10.3.0",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "typescript": "5.3.3"
+    "typescript": "5.4.5"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.14",
