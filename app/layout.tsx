@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-import Layout from "@/app/_components/layout";
+import Footer from "@/app/_components/navigation/footer";
+import Header from "@/app/_components/navigation/header";
 
 import "@/app/_styles/globals.css";
 
@@ -32,7 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <Header />
+        <div className="px-[30px] tablet:px-[50px] desktop:px-0 desktop:max-w-[1300px] desktop:m-auto">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
