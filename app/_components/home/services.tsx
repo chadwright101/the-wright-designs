@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 import services from "@/app/_data/home/services.json";
-import SwipeLeftToRight from "../swipe-left-right";
-import SwipeRightToLeft from "../swipe-right-left";
+import SwipeLeftToRight from "../animations/swipe-left-right";
+import SwipeRightToLeft from "../animations/swipe-right-left";
 
 const Services = () => {
   return (

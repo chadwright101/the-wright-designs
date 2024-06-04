@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-import Button from "./button";
+import Button from "@/app/_components/button";
 import { sendEmail } from "@/app/_actions/actions";
 import classNames from "classnames";
-import Recaptcha from "../_lib/Recaptcha";
+import Recaptcha from "@/app/_lib/Recaptcha";
 
 interface Props {
   cssClasses?: string;
@@ -14,7 +14,7 @@ interface Props {
 
 const ContactForm = ({
   cssClasses,
-  formTitle = "Please fill out the form below and we will get back to you ASAP...",
+  formTitle = "Get in touch and let's discuss how we can enhance your online presence.",
 }: Props) => {
   const [showName, setShowName] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
@@ -52,7 +52,7 @@ const ContactForm = ({
 
   return (
     <section
-      className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:-mx[100px] desktop:px-[50px] py-14 ${cssClasses}`}
+      className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:mx-0 desktop:px-10 py-10 ${cssClasses}`}
     >
       {!formSubmitted ? (
         <p className="text-beige mb-6">{formTitle}</p>

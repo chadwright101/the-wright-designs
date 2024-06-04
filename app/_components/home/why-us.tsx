@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import Button from "@/app/_components/button";
-import FadeIn from "@/app/_components/fade-in";
-import SwipeLeftToRight from "../swipe-left-right";
-import SwipeRightToLeft from "../swipe-right-left";
+import FadeIn from "@/app/_components/animations/fade-in";
+import SwipeLeftToRight from "../animations/swipe-left-right";
+import SwipeRightToLeft from "../animations/swipe-right-left";
 
 import whyUsList from "@/app/_data/home/why-us-list.json";
 

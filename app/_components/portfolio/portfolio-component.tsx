@@ -8,15 +8,15 @@ import classnames from "classnames";
 import { useSpring, animated, easings } from "@react-spring/web";
 
 import Button from "../button";
-import SwipeRightToLeft from "../swipe-right-left";
-import SwipeLeftToRight from "../swipe-left-right";
+import SwipeRightToLeft from "../animations/swipe-right-left";
+import SwipeLeftToRight from "../animations/swipe-left-right";
 import PortfolioScroller from "./portfolio-scroller";
 import PortfolioTechToggle, {
   TechToggleVariant,
 } from "./portfolio-tech-toggle";
 
-import portfolioList from "@/app/_data/portfolio/portfolio-list.json";
-import techList from "@/app/_data/portfolio/tech-list.json";
+import portfolioList from "@/app/_data/recent-projects/projects-list.json";
+import techList from "@/app/_data/recent-projects/tech-list.json";
 
 import swipeMeIcon from "@/public/icons/swipe-me.svg";
 
@@ -202,7 +202,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     className={classnames(
                       "object-contain drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                       {
-                        "scale-[1.04]": isHovered,
+                        "scale-[1.02]": isHovered,
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}
@@ -218,7 +218,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       className={classnames(
                         "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] -translate-x-5 ease-in-out desktop:translate-y-[18px]",
                         {
-                          "scale-[1.075] desktop:scale-[1.155]": isHovered,
+                          "scale-[1.05] desktop:scale-[1.125]": isHovered,
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
@@ -238,7 +238,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                       className={classnames(
                         "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
                         {
-                          "scale-[1.075] desktop:scale-[1.155]": isHovered,
+                          "scale-[1.05] desktop:scale-[1.125]": isHovered,
                         }
                       )}
                       loading={loading ? "eager" : "lazy"}
@@ -254,7 +254,7 @@ const PortfolioComponent = ({ cssClasses }: Props) => {
                     className={classnames(
                       "object-contain -translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                       {
-                        "scale-[1.04]": isHovered,
+                        "scale-[1.02]": isHovered,
                       }
                     )}
                     loading={loading ? "eager" : "lazy"}

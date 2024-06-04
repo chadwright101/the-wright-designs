@@ -13,14 +13,14 @@ const Footer = ({ cssClasses }: Props) => {
     >
       <div className="px-[30px] tablet:px-[50px] desktop:px-0 desktop:max-w-[1300px] tablet:grid grid-cols-2 desktop:mx-auto">
         <div className="flex justify-center tablet:flex-col tablet:gap-6 w-full">
-          <nav className="hidden tablet:block">
+          <nav className="hidden tablet:flex flex-col">
             <ul className="flex flex-col font-light text-paragraph">
               {menuList.map((item, index) => (
-                <li key={index} className="text-beige hover:text-pink">
+                <li key={index} className="text-beige hover:text-pink mr-auto">
                   <Link href={item.url}>{item.title}</Link>
                 </li>
               ))}
-              <li className="text-pink font-extralight hover:text-beige">
+              <li className="text-pink font-extralight hover:text-beige mr-auto">
                 <Link href="https://github.com/chadwright101/the-wright-designs.git">
                   view repository
                 </Link>
@@ -29,7 +29,7 @@ const Footer = ({ cssClasses }: Props) => {
             <Link
               href="https://www.facebook.com/thewrightdesignsSA"
               target="_blank"
-              className="opacity-90"
+              className="opacity-90 mr-auto"
             >
               <Image
                 src="/icons/facebook-logo-beige.svg"
@@ -54,7 +54,7 @@ const Footer = ({ cssClasses }: Props) => {
           <Link
             href="https://www.facebook.com/thewrightdesignsSA"
             target="_blank"
-            className="p-4 opacity-90"
+            className="p-4 opacity-90 tablet:hidden"
           >
             <Image
               src="icons/facebook-logo-blue.svg"
@@ -64,7 +64,7 @@ const Footer = ({ cssClasses }: Props) => {
               height={50}
             />
           </Link>
-          <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max">
+          <h4 className="max-w-[300px] text-center font-quicksand font-light text-[1.275rem] normal-case tablet:text-[1rem] tablet:text-beige tablet:max-w-max tablet:mt-4">
             © The Wright Designs |{" "}
             <Link href="/" className="tablet:hover:text-pink">
               www.thewrightdesigns.co.za

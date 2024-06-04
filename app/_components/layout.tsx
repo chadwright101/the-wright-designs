@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import Footer from "@/app/_components/footer";
-import Header from "@/app/_components/header";
+import Footer from "@/app/_components/navigation/footer";
+import Header from "@/app/_components/navigation/header";
 
 interface Props {
   children: ReactNode;

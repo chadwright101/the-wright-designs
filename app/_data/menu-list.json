@@ -4,38 +4,16 @@
     "url": "/"
   },
   {
-    "title": "portfolio",
-    "url": "/portfolio",
-    "submenu": [
-      {
-        "title": "Monk's Medical",
-        "url": "https://www.monksmedical.com"
-      },
-      {
-        "title": "Carevita",
-        "url": "https://www.carevita.co.za"
-      },
-      {
-        "title": "Xorbtec",
-        "url": "https://www.xorbtec.co.za"
-      },
-      {
-        "title": "Luna Blue",
-        "url": "https://www.lunarblue.co.za"
-      },
-      {
-        "title": "View More",
-        "url": "/portfolio"
-      }
-    ]
+    "title": "about",
+    "url": "/#about"
   },
   {
     "title": "services",
     "url": "/#services"
   },
   {
-    "title": "about",
-    "url": "/#about"
+    "title": "recent projects",
+    "url": "/recent-projects"
   },
   {
     "title": "contact",

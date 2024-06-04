@@ -60,13 +60,13 @@ const Button = ({
       <button
         type="submit"
         className={classNames(
-          `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+          `w-auto flex gap-1 items-center px-5 py-[1px] rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
           {
-            "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
-            "bg-blue/75 tablet:hover:bg-blue border-grey": blueBackground,
+            "bg-pink/75 tablet:hover:bg-pink border-blue/50": pinkBackground,
+            "bg-blue/75 tablet:hover:bg-blue border-grey/50": blueBackground,
           }
         )}
-        onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
+        onMouseEnter={() => setArrowMove({ x: 3, scale: 1.03 })}
         onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
         onClick={onClick}
         disabled={disabled}
@@ -98,14 +98,14 @@ const Button = ({
       <Link href={url!} target={target}>
         <button
           className={classNames(
-            `w-auto flex gap-1 items-center px-5 py-0.5 rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+            `w-auto flex gap-1 items-center px-5 py-[1px] rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
             {
-              "bg-pink/75 tablet:hover:bg-pink border-blue": pinkBackground,
-              "bg-blue/75 tablet:hover:bg-blue border-pink border-x-2":
+              "bg-pink/75 tablet:hover:bg-pink border-blue/50": pinkBackground,
+              "bg-blue/75 tablet:hover:bg-blue border-pink/50 border-x-2":
                 blueBackground,
             }
           )}
-          onMouseEnter={() => setArrowMove({ x: 5, scale: 1.04 })}
+          onMouseEnter={() => setArrowMove({ x: 3, scale: 1.03 })}
           onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
           onClick={onClick}
         >

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import About from "@/app/_components/home/about";
-import Contact from "@/app/_components/home/contact";
+import Contact from "@/app/_components/home/contact/contact";
 import Services from "@/app/_components/home/services";
 import WhyUs from "@/app/_components/home/why-us";
 import HeroComponent from "./_components/home/hero-component";
