@@ -25,7 +25,7 @@ export enum TechToggleVariant {
   Desktop,
 }
 
-const PortfolioTechToggle = ({ list, variant }: Props) => {
+const RecentProjectsTechToggle = ({ list, variant }: Props) => {
   const [techToggle, setTechToggle] = useState(false);
 
   const [techTextHover, setTechTextHover] = useState(false);
@@ -165,4 +165,4 @@ const PortfolioTechToggle = ({ list, variant }: Props) => {
   }
 };
 
-export default PortfolioTechToggle;
+export default RecentProjectsTechToggle;

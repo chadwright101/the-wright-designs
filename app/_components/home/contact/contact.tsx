@@ -40,7 +40,7 @@ const Contact = ({ cssClasses }: Props) => {
   return (
     <section className={`drop-shadow-md ${cssClasses}`}>
       <h2 className="text-heading text-center mb-10">Contact</h2>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid desktop:grid-cols-2 gap-10">
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-[100px_1fr]">
             <h3 className="text-subheading">Email:</h3>
@@ -95,8 +95,8 @@ const Contact = ({ cssClasses }: Props) => {
             </address>
           </div>
         </div>
-        <ContactMap cssClasses=" row-span-2" />
-        <ContactForm cssClasses="mt-8 desktop:mt-0" />
+        <ContactMap cssClasses="h-[300px] desktop:h-full row-span-2" />
+        <ContactForm cssClasses="desktop:mt-0" />
       </div>
     </section>
   );

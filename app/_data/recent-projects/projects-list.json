@@ -15,9 +15,7 @@
       }
     },
     "blankPhone": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
-    "buttonUrl": "https://www.adoptaswimmer.co.za",
-    "swipeMeAnimation": true,
-    "loading": true
+    "buttonUrl": "https://www.adoptaswimmer.co.za"
   },
   {
     "title": "Sunny Coast Bathroom Renovations",

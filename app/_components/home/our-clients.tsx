@@ -17,7 +17,7 @@ interface Props {
 const OurClients = ({ cssClasses }: Props) => {
   return (
     <section className={`${cssClasses}`}>
-      <h2 className="text-heading text-center mb-10">Our Clients</h2>
+      <h2 className="text-heading text-center mb-4">Our Clients</h2>
       <div className="flex flex-col items-center gap-12">
         <Splide
           options={{
@@ -45,7 +45,7 @@ const OurClients = ({ cssClasses }: Props) => {
           }}
           className="mt-8"
         >
-          {ourClients.map(({ src, alt, url, noWhiteBackground }, index) => (
+          {ourClients.map(({ src, alt, url }, index) => (
             <SplideSlide key={index} className="grid place-items-center">
               <Link href={url} target="_blank">
                 <Image
@@ -60,9 +60,6 @@ const OurClients = ({ cssClasses }: Props) => {
             </SplideSlide>
           ))}
         </Splide>
-        <Button url="/portfolio" blueBackground beigeArrows beigeText>
-          View more
-        </Button>
       </div>
     </section>
   );

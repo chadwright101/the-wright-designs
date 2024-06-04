@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 
 import ContactForm from "@/app/_components/home/contact/contact-form";
-import PortfolioComponent from "@/app/_components/portfolio/portfolio-component";
+import RecentProjectsComponent from "@/app/_components/recent-projects/recent-projects-component";
 import Button from "../_components/button";
 
 export const metadata: Metadata = {
   title: "Recent Projects - The Wright Designs",
 };
 
-const Portfolio = () => {
+const RecentProjects = () => {
   return (
     <main>
-      <h1 className="text-heading text-center mt-10 mb-16">Recent Projects</h1>
-      <PortfolioComponent cssClasses="mb-10" />
+      <h1 className="text-heading text-center mt-10 mb-12">Recent Projects</h1>
+      <RecentProjectsComponent cssClasses="mb-12" />
+      <hr className="text-blue/25 w-1/2 mx-auto mb-10" />
       <Button
         url="https://www.chadwright.dev/projects"
         target="_blank"
@@ -26,4 +27,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default RecentProjects;

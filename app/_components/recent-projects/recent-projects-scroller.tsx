@@ -6,7 +6,7 @@ interface Props {
   loading?: string;
 }
 
-const PortfolioScroller = ({ src, alt, loading }: Props) => {
+const RecentProjectsScroller = ({ src, alt, loading }: Props) => {
   return (
     <div className="bg-white absolute w-[244px] h-[431.5px] z-10 translate-x-[18px] translate-y-[68.25px] overflow-y-auto scrollbar-hide">
       <Image
@@ -22,4 +22,4 @@ const PortfolioScroller = ({ src, alt, loading }: Props) => {
   );
 };
 
-export default PortfolioScroller;
+export default RecentProjectsScroller;
