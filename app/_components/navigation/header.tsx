@@ -1,15 +1,77 @@
-import Navigation from "./navigation";
+"use client";
 
-interface Props {
-  cssClasses?: string;
-}
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
-const Header = ({ cssClasses }: Props) => {
+import classNames from "classnames";
+
+import MobileMenuToggle from "./mobile/mobile-menu-toggle";
+import MenuButton from "./mobile/menu-button";
+import DesktopMenu from "./desktop/desktop-menu";
+
+const Header = () => {
+  const [showMenuToggle, setShowMenuToggle] = useState(false);
+
+  useEffect(() => {
+    if (showMenuToggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showMenuToggle]);
+
   return (
-    <header
-      className={`w-full min-h-[95px] bg-blue border-b-[3px] border-b-beige drop-shadow-md py-6 px-[30px] tablet:px-[50px] tablet:py-5 sticky top-0 z-20 ${cssClasses}`}
-    >
-      <Navigation />
+    <header className="w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 sticky top-0 z-20">
+      <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:px-10 tablet:items-end">
+        <div>
+          <div className="flex justify-between items-center px-5 tablet:px-0">
+            <Link href="/" className="tablet:hover:opacity-95">
+              <Image
+                src="/assets/the-wright-designs-logo.png"
+                alt="The Wright Designs logo"
+                className="hidden h-auto translate-y-1 tablet:block tablet:w-[200px] rotate-1"
+                width={274}
+                height={60}
+                sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
+              />
+              <Image
+                src="/assets/the-wright-designs-logo-square.jpg"
+                alt="The Wright Designs logo"
+                className={classNames(
+                  "h-12 w-12 ease-in-out duration-300 tablet:hidden",
+                  {
+                    "-translate-y-20": showMenuToggle,
+                  }
+                )}
+                width={274}
+                height={60}
+                sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
+              />
+            </Link>
+            <MenuButton
+              onClick={() => setShowMenuToggle(!showMenuToggle)}
+              showMenuToggle={showMenuToggle}
+              cssClasses="tablet:hidden"
+            />
+          </div>
+          <MobileMenuToggle
+            onClick={() => setShowMenuToggle(false)}
+            cssClasses={classNames(
+              "fixed z-50 w-full h-screen px-5 bg-blue ease-in-out duration-500 tablet:hidden",
+              {
+                "translate-x-0": showMenuToggle,
+                "translate-x-full": !showMenuToggle,
+              }
+            )}
+          />
+        </div>
+        <DesktopMenu />
+      </div>
     </header>
   );
 };
