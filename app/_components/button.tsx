@@ -1,15 +1,12 @@
 "use client";
 
-import { ReactNode } from "react";
-import Image from "next/image";
+import { ReactNode, useState } from "react";
 import Link from "next/link";
 import { useFormStatus } from "react-dom";
 
-import { useSpring, animated } from "@react-spring/web";
 import classNames from "classnames";
 
-import arrowsBlue from "@/public/icons/double-arrow.svg";
-import arrowsBeige from "@/public/icons/double-arrow-beige.svg";
+import ArrowSvg from "@/app/_lib/arrow-svg";
 
 interface Props {
   url?: string;
@@ -17,13 +14,7 @@ interface Props {
   cssClasses?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   target?: string;
-  pinkBackground?: boolean;
-  blueBackground?: boolean;
-  blueText?: boolean;
-  beigeText?: boolean;
-  pinkText?: boolean;
-  blueArrows?: boolean;
-  beigeArrows?: boolean;
+  buttonColor?: "blue" | "pink" | "beige";
   form?: boolean;
   disabled?: boolean;
 }
@@ -35,62 +26,43 @@ const Button = ({
   form,
   onClick,
   target,
-  pinkBackground,
-  blueBackground,
-  blueText,
-  beigeText,
-  pinkText,
-  blueArrows = true,
-  beigeArrows,
+  buttonColor = "blue",
   disabled,
 }: Props) => {
-  const [arrowMove, setArrowMove] = useSpring(() => ({
-    to: { x: 0, scale: 1 },
-    config: {
-      mass: 5,
-      tension: 225,
-      bounce: 1.5,
-    },
-  }));
-
   const { pending } = useFormStatus();
+
+  const [arrowMove, setArrowMove] = useState(false);
 
   if (form) {
     return (
       <button
         type="submit"
         className={classNames(
-          `w-auto flex gap-1 items-center px-5 py-[1px] rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+          `w-auto flex gap-1 items-center px-5 rounded-xl border drop-shadow-md ${cssClasses}`,
           {
-            "bg-pink/75 tablet:hover:bg-pink border-blue/50": pinkBackground,
-            "bg-blue/75 tablet:hover:bg-blue border-grey/50": blueBackground,
+            "bg-pink tablet:hover:bg-pink/90 text-white":
+              buttonColor === "pink",
+            "bg-blue tablet:hover:bg-blue/90 text-white":
+              buttonColor === "blue",
+            "bg-beige tablet:hover:bg-beige/90 border-grey/50 text-blue":
+              buttonColor === "beige",
           }
         )}
-        onMouseEnter={() => setArrowMove({ x: 3, scale: 1.03 })}
-        onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
         onClick={onClick}
         disabled={disabled}
+        onMouseEnter={() => setArrowMove(true)}
+        onMouseLeave={() => setArrowMove(false)}
       >
-        {pending ? (
-          <div className="spinner"></div>
-        ) : (
-          <p
-            className={classNames("lowercase font-novaSlim text-subheading", {
-              "text-blue": blueText,
-              "text-beige": beigeText,
-              "text-pink": pinkText,
+        {pending ? <div className="spinner"></div> : <>{children}</>}
+        {!pending && (
+          <ArrowSvg
+            buttonColor={buttonColor}
+            cssClasses={classNames("transform ease-in-out duration-200", {
+              "translate-x-2": arrowMove,
+              "translate-x-0": !arrowMove,
             })}
-          >
-            {children}
-          </p>
+          />
         )}
-        <animated.div style={arrowMove}>
-          <Image
-            src={(beigeArrows && arrowsBeige) || (blueArrows && arrowsBlue)}
-            alt="Double arrow icon"
-            className="w-9"
-          ></Image>
-        </animated.div>
       </button>
     );
   } else {
@@ -98,33 +70,26 @@ const Button = ({
       <Link href={url!} target={target}>
         <button
           className={classNames(
-            `w-auto flex gap-1 items-center px-5 py-[1px] rounded-[1.25rem] border drop-shadow-md ${cssClasses}`,
+            `flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl drop-shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ${cssClasses}`,
             {
-              "bg-pink/75 tablet:hover:bg-pink border-blue/50": pinkBackground,
-              "bg-blue/75 tablet:hover:bg-blue border-pink/50 border-x-2":
-                blueBackground,
+              "bg-pink tablet:hover:bg-pink/90 text-white":
+                buttonColor === "pink",
+              "bg-blue tablet:hover:bg-blue/90 text-white":
+                buttonColor === "blue",
+              "bg-beige tablet:hover:bg-beige/90 border-grey/50 text-blue":
+                buttonColor === "beige",
             }
           )}
-          onMouseEnter={() => setArrowMove({ x: 3, scale: 1.03 })}
-          onMouseLeave={() => setArrowMove({ x: 0, scale: 1 })}
           onClick={onClick}
         >
-          <p
-            className={classNames("lowercase font-novaSlim text-subheading", {
-              "text-blue": blueText,
-              "text-beige": beigeText,
-              "text-pink": pinkText,
+          {children}
+          <ArrowSvg
+            buttonColor={buttonColor}
+            cssClasses={classNames("ease-in-out duration-200", {
+              "translate-x-2": arrowMove,
+              "translate-x-0": !arrowMove,
             })}
-          >
-            {children}
-          </p>
-          <animated.div style={arrowMove}>
-            <Image
-              src={(beigeArrows && arrowsBeige) || (blueArrows && arrowsBlue)}
-              alt="Double arrow icon"
-              className="w-9"
-            ></Image>
-          </animated.div>
+          />
         </button>
       </Link>
     );

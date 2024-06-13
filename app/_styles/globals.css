@@ -14,6 +14,10 @@
         color: #353C42;
         font-family: "roboto", sans-serif;
     }
+
+    p {
+        text-align: justify;
+    }
 }
 
 @layer components {
@@ -74,5 +78,11 @@
         to {
             transform: rotate(360deg);
         }
+    }
+}
+
+@layer utilities {
+    .small-caps {
+        font-variant-caps: small-caps
     }
 }

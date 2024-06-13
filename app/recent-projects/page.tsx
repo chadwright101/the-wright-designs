@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const RecentProjects = () => {
   return (
     <main>
-      <h1 className="text-heading text-center mt-10 mb-12">Recent Projects</h1>
+      {/*  <h1 className="text-heading text-center mt-10 mb-12">Recent Projects</h1>
       <RecentProjectsComponent cssClasses="mb-12" />
       <hr className="text-blue/25 w-1/2 mx-auto mb-10" />
       <Button
@@ -22,7 +22,7 @@ const RecentProjects = () => {
       >
         View project archive
       </Button>
-      <ContactForm cssClasses="tablet:mb-10" />
+      <ContactForm cssClasses="tablet:mb-10" /> */}
     </main>
   );
 };

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 import data from "@/app/_data/general-data.json";
 import SocialIcons from "@/app/_lib/social-icons";
+import ArrowSvg from "@/app/_lib/arrow-svg";
 
 const { navigation } = data;
 
@@ -36,15 +37,7 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
             >
               {item.title}
             </Link>
-            {currentRoute === item.url && (
-              <Image
-                src="/assets/icons/double-arrow-pink.svg"
-                alt="Double arrow icon"
-                className="rotate-180 h-[32px] w-auto mt-[1px]"
-                width={40}
-                height={30}
-              />
-            )}
+            {currentRoute === item.url && <ArrowSvg mobileMenu />}
           </li>
         ))}
         <li>

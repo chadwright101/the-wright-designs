@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-
-import About from "@/app/_components/home/about";
-import Contact from "@/app/_components/home/contact/contact";
-import Services from "@/app/_components/home/services";
-import WhyUs from "@/app/_components/home/why-us";
 import HeroComponent from "./_components/home/hero-component";
-import OurClients from "@/app/_components/home/our-clients";
+import AboutComponent from "./_components/home/about-component";
 
 export const metadata: Metadata = {
   title: "The Wright Designs - Quality web design",
@@ -14,7 +9,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <h1>Hello</h1>
+      <HeroComponent />
+      <AboutComponent />
     </>
   );
 }

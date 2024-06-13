@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Button from "@/app/_components/button";
 import { sendEmail } from "@/app/_actions/actions";
 import classNames from "classnames";
-import Recaptcha from "@/app/_lib/Recaptcha";
+import Recaptcha from "@/app/_lib/recaptcha";
 
 interface Props {
   cssClasses?: string;

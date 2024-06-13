@@ -26,8 +26,8 @@ const Header = () => {
   }, [showMenuToggle]);
 
   return (
-    <header className="w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 sticky top-0 z-20">
-      <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:px-10 tablet:items-end">
+    <header className="w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 sticky top-0 z-20 tablet:px-10">
+      <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
           <div className="flex justify-between items-center px-5 tablet:px-0">
             <Link href="/" className="tablet:hover:opacity-95">
