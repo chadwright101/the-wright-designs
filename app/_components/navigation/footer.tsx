@@ -39,7 +39,7 @@ const Footer = ({ cssClasses }: Props) => {
             height={52}
           />
         </Link>
-        <h4 className="text-center font-light text-paragraph tablet:text-[14px] tablet:text-beige col-span-2 place-self-center">
+        <h4 className="text-center font-light text-paragraph tablet:text-[14px] tablet:text-beige col-span-2 place-self-center normal-case">
           © The Wright Designs |{" "}
           <Link href="/" className="tablet:hover:text-pink">
             www.thewrightdesigns.co.za

@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-
-
-
     body {
         background-color: #EAE3CD;
     }
 
     * {
         color: #353C42;
-        font-family: "roboto", sans-serif;
+        font-family: "roboto",
+            Tahoma,
+            sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply uppercase
     }
 
     p {
         text-align: justify;
+        @apply text-paragraph
     }
+
+
 }
 
 @layer components {
@@ -79,10 +92,26 @@
             transform: rotate(360deg);
         }
     }
+
+
+
+
+
 }
 
 @layer utilities {
     .small-caps {
         font-variant-caps: small-caps
     }
+}
+
+/* swiper styles */
+
+.swiper-pagination-v {
+    left: -30px !important;
+}
+
+.swiper,
+.swiper-pagination-bullets-dynamic {
+    overflow: visible !important;
 }

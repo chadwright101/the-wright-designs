@@ -23,54 +23,55 @@
   ],
   "ourClients": [
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/adopt-a-swimmer-logo.png",
+      "src": "/assets/images/our-clients/adopt-a-swimmer-logo.png",
       "alt": "Adopt a Swimmer logo",
       "url": "https://www.adoptaswimmer.co.za/"
     },
+
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/von-black-studios.png",
-      "alt": "Von Black Studios logo",
-      "url": "https://vonblackstudios.com.au/"
-    },
-    {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/sileta-engineers-logo.png",
+      "src": "/assets/images/our-clients/sileta-engineers-logo.png",
       "alt": "Sileta Engineers' logo",
       "url": "http://www.sileta.co.za/"
     },
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/monks-medical-logo.png",
+      "src": "/assets/images/our-clients/monks-medical-logo.png",
       "alt": "Monk's Medical logo",
       "url": "https://www.monksmedical.com"
     },
+
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/carevita-logo.png",
-      "alt": "CareVita logo",
-      "url": "https://www.carevita.co.za"
-    },
-    {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/neon-productions-logo.png",
+      "src": "/assets/images/our-clients/neon-productions-logo.png",
       "alt": "Neon Productions logo",
       "url": "https://www.neonproductions.co.za"
     },
 
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/Luna-Blue-Logo.png",
-      "alt": "Luna Blue Off-grid Guesthouse logo",
+      "src": "/assets/images/our-clients/luna-blue-logo.png",
+      "alt": "Luna Blue Villas logo",
       "url": "https://www.lunarblue.co.za"
     },
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/simone-snoyman-physiotherapy-logo.png",
+      "src": "/assets/images/our-clients/simone-snoyman-physiotherapy-logo.png",
       "alt": "Simone Snoyman Physiotherapy logo",
       "url": "https://www.simonesnoymanphysiotherapy.co.za"
     },
-
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/xorbtec-computer-services-logo-a.png",
+      "src": "/assets/images/our-clients/carevita-logo.png",
+      "alt": "CareVita logo",
+      "url": "https://www.carevita.co.za"
+    },
+    {
+      "src": "/assets/images/our-clients/xorbtec-computer-services-logo-a.png",
       "alt": "Xorbtec Computer Services logo",
       "url": "https://www.xorbtec.co.za"
     },
     {
-      "src": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/our+clients/grace-logo.png",
+      "src": "/assets/images/our-clients/von-black-studios.png",
+      "alt": "Von Black Studios logo",
+      "url": "https://vonblackstudios.com.au/"
+    },
+    {
+      "src": "/assets/images/our-clients/grace-logo.png",
       "alt": "Garden Route Botox logo",
       "url": "https://www.gardenroutebotox.com"
     }

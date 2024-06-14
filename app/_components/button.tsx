@@ -40,11 +40,11 @@ const Button = ({
         className={classNames(
           `w-auto flex gap-1 items-center px-5 rounded-xl border drop-shadow-md ${cssClasses}`,
           {
-            "bg-pink tablet:hover:bg-pink/90 text-white":
+            "bg-pink tablet:hover:bg-pink/95 text-white":
               buttonColor === "pink",
-            "bg-blue tablet:hover:bg-blue/90 text-white":
+            "bg-blue tablet:hover:bg-blue/95 text-white":
               buttonColor === "blue",
-            "bg-beige tablet:hover:bg-beige/90 border-grey/50 text-blue":
+            "bg-beige tablet:hover:bg-beige/95 border-grey/50 text-blue":
               buttonColor === "beige",
           }
         )}
@@ -57,9 +57,10 @@ const Button = ({
         {!pending && (
           <ArrowSvg
             buttonColor={buttonColor}
-            cssClasses={classNames("transform ease-in-out duration-200", {
-              "translate-x-2": arrowMove,
-              "translate-x-0": !arrowMove,
+            cssClasses={classNames("transform ease-in-out duration-[400ms]", {
+              "desktopSmall:translate-x-[2px] desktopSmall:scale-105":
+                arrowMove,
+              "desktopSmall:translate-x-0": !arrowMove,
             })}
           />
         )}
@@ -72,22 +73,25 @@ const Button = ({
           className={classNames(
             `flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl drop-shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ${cssClasses}`,
             {
-              "bg-pink tablet:hover:bg-pink/90 text-white":
+              "bg-pink tablet:hover:bg-pink/95 text-white":
                 buttonColor === "pink",
-              "bg-blue tablet:hover:bg-blue/90 text-white":
+              "bg-blue tablet:hover:bg-blue/95 text-white":
                 buttonColor === "blue",
-              "bg-beige tablet:hover:bg-beige/90 border-grey/50 text-blue":
+              "bg-beige tablet:hover:bg-beige/95 border-grey/50 text-blue":
                 buttonColor === "beige",
             }
           )}
           onClick={onClick}
+          onMouseEnter={() => setArrowMove(true)}
+          onMouseLeave={() => setArrowMove(false)}
         >
           {children}
           <ArrowSvg
             buttonColor={buttonColor}
-            cssClasses={classNames("ease-in-out duration-200", {
-              "translate-x-2": arrowMove,
-              "translate-x-0": !arrowMove,
+            cssClasses={classNames("ease-in-out duration-[400ms]", {
+              "desktopSmall:translate-x-[2px] desktopSmall:scale-105":
+                arrowMove,
+              "desktopSmall:translate-x-0": !arrowMove,
             })}
           />
         </button>

@@ -23,10 +23,10 @@ module.exports = {
         },
       ],
       subheading: [
-        "1.75rem",
+        "2rem",
         {
           lineHeight: "140%",
-          letterSpacing: "0.0525rem",
+          letterSpacing: "0.06rem",
           fontWeight: "500",
         },
       ],
@@ -49,7 +49,14 @@ module.exports = {
       desktopSmall: "1100px",
       desktop: "1400px",
     },
-    extend: {},
+    extend: {
+      margin: {
+        15: "60px",
+      },
+      padding: {
+        15: "60px",
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };

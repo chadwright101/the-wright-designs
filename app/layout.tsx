@@ -3,15 +3,7 @@ import type { Metadata } from "next";
 import Footer from "@/app/_components/navigation/footer";
 import Header from "@/app/_components/navigation/header";
 
-import { Roboto } from "next/font/google";
 import "@/app/_styles/globals.css";
-
-const roboto = Roboto({
-  weight: ["100", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),
@@ -39,13 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en">
       <body>
-        <Header />
-        <div className="px-5 tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
-          {children}
+        <div className="overflow-x-hidden">
+          <Header />
+          <div className="px-5 tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
+            {children}
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </body>
     </html>
   );

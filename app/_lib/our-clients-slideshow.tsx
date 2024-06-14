@@ -1,0 +1,87 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import data from "@/app/_data/general-data.json";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+const { ourClients } = data;
+
+interface Props {
+  cssClasses?: string;
+}
+
+const OurClientsSlideshow = ({ cssClasses }: Props) => {
+  return (
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={10}
+      breakpoints={{
+        360: {
+          slidesPerView: 2,
+        },
+        700: {
+          slidesPerView: 3,
+        },
+        950: {
+          slidesPerView: 4,
+        },
+        1100: {
+          slidesPerView: 6,
+          direction: "vertical",
+        },
+      }}
+      loop={true}
+      speed={1000}
+      autoplay={{
+        disableOnInteraction: true,
+      }}
+      pagination={{
+        clickable: true,
+        dynamicBullets: true,
+        verticalClass: "swiper-pagination-v",
+      }}
+      modules={[Autoplay, Pagination]}
+      className={`desktopSmall:bg-beige desktopSmall:w-[110px] desktopSmall:h-full ${cssClasses}`}
+      style={
+        {
+          "--swiper-pagination-color": "#C86B7B",
+          "--swiper-pagination-bullet-size": "10px",
+          "--swiper-pagination-bullet-inactive-color": "#CD7988",
+        } as React.CSSProperties
+      }
+    >
+      <ul>
+        {ourClients.map(({ src, alt, url }, index) => (
+          <li key={index}>
+            <SwiperSlide className="grid place-items-center pb-12 desktopSmall:pb-0 desktopSmall:h-[90px]">
+              <Link
+                href={url}
+                target="_blank"
+                className="hover:desktopSmall:opacity-90 ease-in-out duration-150"
+                aria-label="Our clients"
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={200}
+                  height={80}
+                  className={`object-contain drop-shadow-md tablet:hover:opacity-90 max-w-[200px] mx-auto h-[80px] tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
+                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 10vw"
+                />
+              </Link>
+            </SwiperSlide>
+          </li>
+        ))}
+      </ul>
+    </Swiper>
+  );
+};
+
+export default OurClientsSlideshow;
