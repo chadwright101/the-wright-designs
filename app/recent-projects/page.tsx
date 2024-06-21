@@ -18,11 +18,11 @@ const RecentProjects = () => {
         url="https://www.chadwright.dev/projects"
         target="_blank"
         buttonColor="pink"
-        cssClasses="mx-auto mb-14"
+        cssClasses="w-full mb-14 tablet:mx-auto tablet:w-auto"
       >
-        View project archive
+        Detailed project archive
       </Button>
-      <div id="contact" className="-translate-y-20"></div>
+      <div id="contact" className="-translate-y-32"></div>
       <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
     </main>
   );

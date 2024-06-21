@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+
+import classNames from "classnames";
 
 import data from "@/app/_data/general-data.json";
 import SocialIcons from "@/app/_lib/social-icons";
 import ArrowSvg from "@/app/_lib/arrow-svg";
+import { scrollIntoView } from "../desktop/desktop-menu";
 
 const { navigation } = data;
 
@@ -24,19 +26,37 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
         {navigation.map((item, index) => (
           <li
             key={index}
-            className={`text-beige flex gap-3 items-center ${
-              index !== navigation.length - 1
-                ? "border-b border-beige pb-5"
-                : ""
-            }`}
+            onClick={() => {
+              if (["About", "Services", "Contact"].includes(item.title)) {
+                scrollIntoView(item.url);
+                onClick();
+              }
+            }}
+            className={classNames(
+              "text-beige flex gap-3 items-center cursor-pointer",
+              {
+                "border-b border-beige pb-5": index !== navigation.length - 1,
+              }
+            )}
           >
-            <Link
-              href={item.url}
-              className="py-2 px-3 -my-2 -mx-3"
-              onClick={onClick}
-            >
-              {item.title}
-            </Link>
+            {(item.title === "About" && currentRoute !== "/recent-projects") ||
+            (item.title === "Services" &&
+              currentRoute !== "/recent-projects") ||
+            item.title === "Contact" ? (
+              item.title
+            ) : (
+              <Link
+                href={
+                  item.title === "About" || item.title === "Services"
+                    ? `/#${item.url}`
+                    : item.url
+                }
+                className="py-2 px-3 -my-2 -mx-3"
+                onClick={onClick}
+              >
+                {item.title}
+              </Link>
+            )}
             {currentRoute === item.url && <ArrowSvg mobileMenu />}
           </li>
         ))}

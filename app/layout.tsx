@@ -32,14 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <div className="overflow-x-hidden">
-          <Header />
-          <div className="px-5 tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
-            {children}
-          </div>
-          <Footer />
+      <body className="">
+        <Header />
+        <div className="px-5 overflow-x-hidden tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
+          {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

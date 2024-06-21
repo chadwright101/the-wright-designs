@@ -48,7 +48,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
         verticalClass: "swiper-pagination-v",
       }}
       modules={[Autoplay, Pagination]}
-      className={`desktopSmall:bg-beige desktopSmall:w-[110px] desktopSmall:h-full ${cssClasses}`}
+      className={`desktopSmall:bg-beige desktopSmall:w-[110px] desktopSmall:h-full desktopSmall:our-clients-gradient ${cssClasses}`}
       style={
         {
           "--swiper-pagination-color": "#C86B7B",

@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HeroComponent />
+      <HeroComponent cssClasses="mt-[100px] tablet:mt-[90px]" />
       <OurClientsComponent cssClasses="desktopSmall:hidden" />
-      <div id="about" className="-translate-y-20"></div>
+      <div id="about" className="-translate-y-32"></div>
       <AboutComponent />
-      <div id="services" className="-translate-y-20"></div>
+      <div id="services" className="-translate-y-32"></div>
       <ServicesComponent />
-      <div id="contact" className="-translate-y-20"></div>
+      <div id="contact" className="-translate-y-32"></div>
       <ContactComponent />
     </>
   );

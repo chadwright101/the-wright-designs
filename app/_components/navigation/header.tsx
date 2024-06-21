@@ -9,9 +9,13 @@ import classNames from "classnames";
 import MobileMenuToggle from "./mobile/mobile-menu-toggle";
 import MenuButton from "./mobile/menu-button";
 import DesktopMenu from "./desktop/desktop-menu";
+import useScrollPosition from "@/app/_utils/scroll-position";
 
 const Header = () => {
   const [showMenuToggle, setShowMenuToggle] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
     if (showMenuToggle) {
@@ -25,8 +29,16 @@ const Header = () => {
     };
   }, [showMenuToggle]);
 
+  useEffect(() => {
+    if (scrollPosition > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }, [scrollPosition]);
+
   return (
-    <header className="w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 sticky top-0 z-20 tablet:px-10">
+    <header className="fixed w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 z-20 tablet:px-10">
       <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
           <div className="flex justify-between items-center px-5 tablet:px-0">
@@ -34,7 +46,13 @@ const Header = () => {
               <Image
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
-                className="hidden h-auto translate-y-1 tablet:block w-[200px] rotate-1"
+                className={classNames(
+                  "hidden h-auto translate-y-1 tablet:block w-[200px] rotate-1 ease-in-out duration-300",
+                  {
+                    "opacity-0": isScrolled,
+                    "opacity-100": !isScrolled,
+                  }
+                )}
                 width={274}
                 height={60}
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"

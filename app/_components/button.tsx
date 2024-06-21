@@ -84,6 +84,7 @@ const Button = ({
           onClick={onClick}
           onMouseEnter={() => setArrowMove(true)}
           onMouseLeave={() => setArrowMove(false)}
+          aria-label={children.toString()}
         >
           {children}
           <ArrowSvg
