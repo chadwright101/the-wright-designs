@@ -31,7 +31,7 @@ const AboutComponent = () => {
             refresh, a custom e-commerce platform, or an engaging app to excite
             your customers,{" "}
             <span className="font-bold text-white">
-              we'll guide you through the entire process via open and clear
+              we&apos;ll guide you through the entire process via open and clear
               communication.
             </span>
           </p>
@@ -55,8 +55,9 @@ const AboutComponent = () => {
               offering turnkey technology solutions to clients without
               compromising on quality
             </span>
-            . In today's digital landscape, experience is the key to success.
-            With years of experience working with a wide range of clients,{" "}
+            . In today&apos;s digital landscape, experience is the key to
+            success. With years of experience working with a wide range of
+            clients,{" "}
             <span className="font-bold text-white">
               we have a proven track record of delivering results that matter
             </span>{" "}

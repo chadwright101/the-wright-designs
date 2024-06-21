@@ -12,7 +12,7 @@ const ServicesComponent = () => {
         <span className="font-bold">
           focusing on clear communication and exceeding expectations
         </span>
-        . Here's how we break down our services into three distinct phases:
+        . Here&apos;s how we break down our services into three distinct phases:
       </p>
       <ul className="grid gap-10 desktopSmall:gap-[60px]">
         <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">

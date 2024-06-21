@@ -38,7 +38,7 @@ const ContactForm = ({ cssClasses }: Props) => {
     <section className={`bg-blue ${cssClasses}`}>
       {!formSubmitted ? (
         <p className="text-beige mb-6">
-          Get in touch and let's discuss how we can enhance your online
+          Get in touch and let&apos;s discuss how we can enhance your online
           presence.
         </p>
       ) : (
