@@ -37,7 +37,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
           direction: "vertical",
         },
       }}
-      loop={true}
+      rewind={true}
       speed={1000}
       autoplay={{
         disableOnInteraction: true,
@@ -72,7 +72,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
                   alt={alt}
                   width={200}
                   height={80}
-                  className={`object-contain drop-shadow-md tablet:hover:opacity-90 max-w-[200px] mx-auto h-[80px] tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
+                  className={`object-contain w-auto drop-shadow-md tablet:hover:opacity-90 max-w-[200px] mx-auto h-[80px] tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
                   sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 10vw"
                 />
               </Link>

@@ -38,7 +38,7 @@ const Button = ({
       <button
         type="submit"
         className={classNames(
-          `w-auto flex gap-1 items-center px-5 rounded-xl border drop-shadow-md ${cssClasses}`,
+          `flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl drop-shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ${cssClasses}`,
           {
             "bg-pink tablet:hover:bg-pink/95 text-white":
               buttonColor === "pink",

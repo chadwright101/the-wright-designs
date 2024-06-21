@@ -14,9 +14,9 @@ const ServicesComponent = () => {
         </span>
         . Here's how we break down our services into three distinct phases:
       </p>
-      <ul className="grid gap-10">
-        <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10">
-          <div className="flex gap-4 mb-7">
+      <ul className="grid gap-10 desktopSmall:gap-[60px]">
+        <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">
+          <div className="flex gap-4 mb-7 desktopSmall:mb-0">
             <div className="pr-2 border-r-2 border-blue/25 flex flex-col items-center justify-between">
               <h3 className="font-light text-pink text-center text-[32px] [writing-mode:vertical-rl] rotate-180">
                 Phase 1
@@ -28,7 +28,7 @@ const ServicesComponent = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_341_129)">
+                <g clipPath="url(#clip0_341_129)">
                   <path
                     d="M0.7 48.345L0 43.145L8.2 20.745C8.8 21.345 9.4 21.845 10.1 22.145C10.8 22.545 11.5 22.745 12.3 23.045L4.5 44.645L0.7 48.345ZM28.6 48.345L24.8 44.745L16.8 23.245C17.5 23.045 18.3 22.745 19 22.345C19.7 21.945 20.4 21.545 20.9 20.945L29.1 43.245L28.6 48.345ZM14.6 22.145C12.3 22.145 10.4 21.345 8.7 19.745C7.1 18.145 6.3 16.145 6.3 13.845C6.3 11.945 6.9 10.245 8 8.74497C9.1 7.24497 10.5 6.34497 12.3 5.94497V0.344971H16.9V5.94497C18.7 6.34497 20.1 7.34497 21.2 8.74497C22.3 10.245 22.9 11.945 22.9 13.845C22.9 16.145 22.1 18.045 20.5 19.745C18.9 21.445 16.9 22.145 14.6 22.145ZM14.6 17.445C15.6 17.445 16.4 17.045 17.1 16.345C17.8 15.645 18.2 14.745 18.2 13.845C18.2 12.945 17.8 12.045 17.1 11.345C16.4 10.545 15.6 10.245 14.6 10.245C13.6 10.245 12.8 10.645 12.1 11.345C11.4 12.045 11 12.945 11 13.845C11 14.745 11.4 15.645 12.1 16.345C12.8 17.045 13.6 17.445 14.6 17.445Z"
                     fill="#C86B7B"
@@ -62,9 +62,9 @@ const ServicesComponent = () => {
                 </span>
               </p>
               <p className="font-light">
+                Not only do{" "}
                 <span className="font-bold">
-                  Not only do we prioritise pixel-perfect design with an eye on
-                  your budget
+                  we prioritise pixel-perfect design with an eye on your budget
                 </span>
                 , but we take pride in keeping our clients in the loop at all
                 times, allowing you to provide feedback and ensure the final
@@ -73,16 +73,16 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="/assets/images/design.jpg"
+            src="/assets/images/design.png"
             alt="Design phase"
             width={800}
             height={450}
             sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md object-cover aspect-video"
+            className="w-full h-auto rounded-lg drop-shadow-md desktopSmall:-mb-[150px]"
           />
         </li>
-        <li className="border-b border-pink/50 pb-10 tablet:pb-3 tablet:grid grid-cols-2 gap-10">
-          <div className="flex gap-4 mb-7 tablet:order-last">
+        <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">
+          <div className="flex gap-4 mb-7 desktopSmall:mb-0 tablet:order-last bg-gradient-to-b from-transparent to-beige/80 from-0% to-[3%] desktopSmall:z-10">
             <div className="pr-2 border-r-2 border-blue/25 flex flex-col items-center justify-between">
               <h3 className="font-light text-pink text-center text-[32px] [writing-mode:vertical-rl] rotate-180">
                 Phase 2
@@ -132,12 +132,12 @@ const ServicesComponent = () => {
             alt="Development phase"
             width={800}
             height={450}
-            sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md object-cover aspect-video"
+            sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
+            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
-        <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10">
-          <div className="flex gap-4 mb-7">
+        <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">
+          <div className="flex gap-4 mb-7 desktopSmall:mb-0">
             <div className="pr-2 border-r-2 border-blue/25 flex flex-col items-center justify-between">
               <h3 className="font-light text-pink text-center text-[32px] [writing-mode:vertical-rl] rotate-180">
                 Phase 3
@@ -183,12 +183,12 @@ const ServicesComponent = () => {
             alt="Maintenance phase"
             width={800}
             height={450}
-            sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md object-cover aspect-video"
+            sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
+            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
         <li className="tablet:grid grid-cols-2 gap-10">
-          <div className="flex gap-4 mb-7 tablet:order-last">
+          <div className="flex gap-4 mb-7 desktopSmall:mb-0 tablet:order-last">
             <div className="pr-2 border-r-2 border-blue/25 flex flex-col items-center justify-between">
               <h3 className="font-light text-pink text-center text-[32px] [writing-mode:vertical-rl] rotate-180">
                 Phase 4
@@ -234,8 +234,8 @@ const ServicesComponent = () => {
             alt="Marketing phase"
             width={800}
             height={450}
-            sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md object-cover aspect-video"
+            sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
+            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
       </ul>

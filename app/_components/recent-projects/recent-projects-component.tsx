@@ -4,239 +4,239 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import classnames from "classnames";
+import classNames from "classnames";
 
 import Button from "../button";
 import SwipeRightToLeft from "../animations/swipe-right-left";
 import SwipeLeftToRight from "../animations/swipe-left-right";
 import PortfolioScroller from "./recent-projects-scroller";
-import PortfolioTechToggle, {
-  TechToggleVariant,
-} from "./recent-projects-tech-toggle";
 
-import portfolioList from "@/app/_data/recent-projects/projects-list.json";
-import techList from "@/app/_data/recent-projects/tech-list.json";
+import portfolioList from "@/app/_data/projects-list.json";
+import ProjectIcons from "@/app/_lib/project-icons";
 
 interface Props {
   cssClasses?: string;
 }
 
-interface TechList {
-  [key: string]: {
-    languages: string[];
-    developmentHours: string;
-    designHours: string;
-    repo?: string;
-  };
-}
-
-const techListKeys = Object.keys(techList as TechList);
+const blankPhones = [
+  "/assets/images/phone-rose-gold.png",
+  "/assets/images/phone-grey.png",
+  "/assets/images/phone-silver.png",
+];
 
 const RecentProjectsComponent = ({ cssClasses }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section
-      className={`flex flex-wrap gap-[50px] items-start justify-center overflow-hidden ${cssClasses}`}
+      className={`grid gap-10 justify-center place-items-center tablet:grid-cols-2 desktopSmall:grid-cols-1 ${cssClasses}`}
     >
       {/* mobile viewport */}
 
-      {portfolioList.map(
-        ({ title, image, buttonUrl, fromLeft, blankPhone }, index) => {
-          const techKey = techListKeys[index];
+      {portfolioList
+        .slice(0, 6)
+        .map(({ title, image, url, figmaLink, repo, year }, index) => {
+          const blankPhone = blankPhones[index % 3];
+
           return (
             <div
               key={index}
-              className="flex flex-col gap-10 items-center tablet2:hidden w-[330px]"
+              className="grid gap-10 items-center max-w-[330px] place-items-center desktopSmall:hidden"
             >
-              <h2 className="text-subheading text-center">{title}</h2>
+              <Link href={url} target="_blank" aria-label={title}>
+                <h2 className="text-[24px] font-light normal-case tracking-wide text-center">
+                  {title}
+                </h2>
+              </Link>
 
               <div>
-                {fromLeft ? (
+                {index % 2 ? (
                   <SwipeRightToLeft>
                     <PortfolioScroller
-                      src={image.scrollImage.src}
-                      alt={image.mobile.alt}
+                      src={image.scrollImage}
+                      alt={`${title} full mobile - ${year}`}
                     />
                     <Image
                       src={blankPhone}
-                      alt={image.mobile.alt}
+                      alt={`${title} mobile preview - ${year}`}
                       width={280}
                       height={900}
-                      className="drop-shadow-md"
-                      loading={index > 0 ? "eager" : "lazy"}
+                      className="drop-shadow-md h-auto"
+                      loading={index === 0 ? "eager" : "lazy"}
                       quality={60}
-                      sizes="(max-width:425px) 50vw,(max-width:900px) 20vw, 5vw"
+                      sizes="(max-width:425px) 75vw, 50vw"
                     />
                   </SwipeRightToLeft>
                 ) : (
                   <SwipeLeftToRight>
                     <PortfolioScroller
-                      src={image.scrollImage.src}
-                      alt={image.mobile.alt}
-                      loading={index > 0 ? "eager" : "lazy"}
+                      src={image.scrollImage}
+                      alt={`${title} full mobile - ${year}`}
+                      loading={index === 0 ? "eager" : "lazy"}
                     />
                     <Image
                       src={blankPhone}
-                      alt={image.mobile.alt}
+                      alt={`${title} mobile preview - ${year}`}
                       width={280}
                       height={900}
-                      className="drop-shadow-md"
-                      loading={index > 0 ? "eager" : "lazy"}
+                      className="drop-shadow-md h-auto"
+                      loading={index === 0 ? "eager" : "lazy"}
                       quality={60}
-                      sizes="(max-width:425px) 50vw, (max-width:900px) 20vw, 20vw,"
+                      sizes="(max-width:425px) 75vw, 50vw,"
                     />
                   </SwipeLeftToRight>
                 )}
               </div>
-              <PortfolioTechToggle
-                variant={TechToggleVariant.Mobile}
-                list={techList[techKey]}
-              />
               {index % 2 ? (
-                <Button
-                  url={buttonUrl}
-                  cssClasses="mx-auto"
-                  target="_blank"
-                  blueBackground
-                  beigeArrows
-                  beigeText
-                >
-                  View Website
-                </Button>
+                <ProjectIcons
+                  websiteUrl={url}
+                  figmaUrl={figmaLink}
+                  repoUrl={repo}
+                  ariaLabel={title}
+                />
               ) : (
-                <Button
-                  url={buttonUrl}
-                  cssClasses="mx-auto"
-                  target="_blank"
-                  pinkBackground
-                >
-                  View Website
-                </Button>
+                <ProjectIcons
+                  websiteUrl={url}
+                  figmaUrl={figmaLink}
+                  repoUrl={repo}
+                  pink
+                  ariaLabel={title}
+                />
+              )}
+              {index !== 5 && (
+                <hr
+                  className={classNames(
+                    "text-blue/25 w-full desktopSmall:hidden",
+                    {
+                      "tablet:hidden": index === 4,
+                    }
+                  )}
+                />
               )}
             </div>
           );
-        }
-      )}
+        })}
 
       {/* desktop viewport */}
 
-      {portfolioList.map(({ title, image, buttonUrl }, index) => {
-        const isHovered = hoveredIndex === index;
-        const techKey = techListKeys[index];
-        return (
-          <div key={index} className="hidden flex-col gap-10 tablet2:flex">
-            <h2 className="text-subheading text-center">{title}</h2>
-
-            <Link
-              href={buttonUrl}
-              target="_blank"
-              className="flex translate-x-2"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+      {portfolioList
+        .slice(0, 6)
+        .map(({ title, image, url, figmaLink, repo, year }, index) => {
+          const isHovered = hoveredIndex === index;
+          return (
+            <div
+              key={index}
+              className="hidden desktopSmall:flex flex-col gap-8"
             >
-              {index % 2 ? (
-                <>
-                  <Image
-                    src={image.desktop.src}
-                    alt={image.desktop.alt}
-                    width={1100}
-                    height={580}
-                    className={classnames(
-                      "object-contain drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
-                      {
-                        "scale-[1.02]": isHovered,
-                      }
-                    )}
-                    loading={index > 0 ? "eager" : "lazy"}
-                    quality={60}
-                    sizes="(max-width:1400px) 25vw, 48vw,"
+              <div className="flex w-full justify-center items-center gap-5">
+                <h2 className="text-[24px] tracking-wide font-light normal-case text-center">
+                  {title}
+                </h2>
+                {index % 2 ? (
+                  <ProjectIcons
+                    websiteUrl={url}
+                    figmaUrl={figmaLink}
+                    repoUrl={repo}
+                    ariaLabel={title}
                   />
-                  <SwipeRightToLeft delay={125}>
+                ) : (
+                  <ProjectIcons
+                    websiteUrl={url}
+                    figmaUrl={figmaLink}
+                    repoUrl={repo}
+                    pink
+                    ariaLabel={title}
+                  />
+                )}
+              </div>
+
+              <Link
+                href={url}
+                target="_blank"
+                className={`flex items-center ${
+                  index % 2 ? "translate-x-2" : ""
+                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {index % 2 ? (
+                  <>
                     <Image
-                      src={image.mobile.src}
-                      alt={image.mobile.alt}
-                      width={300}
-                      height={600}
-                      className={classnames(
-                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] -translate-x-5 ease-in-out desktop:translate-y-[18px]",
+                      src={image.desktop}
+                      alt={image.desktop}
+                      width={1100}
+                      height={580}
+                      className={classNames(
+                        "object-contain drop-shadow-md max-w-[725px] desktop:max-w-[1000px] transform duration-[650ms] ease-in-out",
                         {
-                          "scale-[1.05] desktop:scale-[1.125]": isHovered,
+                          "scale-[1.02]": isHovered,
                         }
                       )}
-                      loading={index > 0 ? "eager" : "lazy"}
+                      loading={index === 0 ? "eager" : "lazy"}
                       quality={60}
-                      sizes="(max-width:1400px) 15vw, 15vw,"
+                      sizes="75vw,"
                     />
-                  </SwipeRightToLeft>
-                </>
-              ) : (
-                <>
-                  <SwipeLeftToRight>
+                    <SwipeRightToLeft delay={125}>
+                      <Image
+                        src={image.mobile}
+                        alt={`${title} - ${year}`}
+                        width={300}
+                        height={600}
+                        className={classNames(
+                          "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform  duration-[550ms] -translate-x-4 ease-in-out",
+                          {
+                            "scale-[1.05] desktop:scale-[1.05]": isHovered,
+                          }
+                        )}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        quality={60}
+                        sizes="35vw,"
+                      />
+                    </SwipeRightToLeft>
+                  </>
+                ) : (
+                  <>
+                    <SwipeLeftToRight>
+                      <Image
+                        src={image.mobile}
+                        alt={`${title} - ${year}`}
+                        width={300}
+                        height={600}
+                        className={classNames(
+                          "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform duration-[550ms] translate-x-4 ease-in-out",
+                          {
+                            "scale-[1.05] desktop:scale-[1.05]": isHovered,
+                          }
+                        )}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        quality={60}
+                        sizes="35vw,"
+                      />
+                    </SwipeLeftToRight>
                     <Image
-                      src={image.mobile.src}
-                      alt={image.mobile.alt}
-                      width={300}
-                      height={600}
-                      className={classnames(
-                        "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[230px] transform  duration-[550ms] ease-in-out desktop:translate-y-[18px]",
+                      src={image.desktop}
+                      alt={image.desktop}
+                      width={1100}
+                      height={580}
+                      className={classNames(
+                        "object-contain -translate-x-4 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
                         {
-                          "scale-[1.05] desktop:scale-[1.125]": isHovered,
+                          "scale-[1.02]": isHovered,
                         }
                       )}
-                      loading={index > 0 ? "eager" : "lazy"}
+                      loading={index === 0 ? "eager" : "lazy"}
                       quality={60}
-                      sizes="(max-width:1400px) 15vw, 15vw,"
+                      sizes="75vw"
                     />
-                  </SwipeLeftToRight>
-                  <Image
-                    src={image.desktop.src}
-                    alt={image.desktop.alt}
-                    width={1100}
-                    height={580}
-                    className={classnames(
-                      "object-contain -translate-x-5 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
-                      {
-                        "scale-[1.02]": isHovered,
-                      }
-                    )}
-                    loading={index > 0 ? "eager" : "lazy"}
-                    quality={60}
-                    sizes="(max-width:1400px) 25vw, 48vw,"
-                  />
-                </>
-              )}
-            </Link>
-            <PortfolioTechToggle
-              variant={TechToggleVariant.Desktop}
-              list={techList[techKey]}
-            />
-            <div className="max-w-[225px] mx-auto">
-              {index % 2 ? (
-                <Button
-                  url={buttonUrl}
-                  target="_blank"
-                  blueBackground
-                  beigeText
-                  beigeArrows
-                >
-                  View Website
-                </Button>
-              ) : (
-                <Button
-                  url={buttonUrl}
-                  target="_blank"
-                  pinkBackground
-                  blueText
-                  blueArrows
-                >
-                  View Website
-                </Button>
+                  </>
+                )}
+              </Link>
+              {index !== 5 && (
+                <hr className="text-blue/25 w-full min-[662px]:hidden" />
               )}
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </section>
   );
 };

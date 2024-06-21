@@ -12,7 +12,7 @@ interface Props {
 
 const Footer = ({ cssClasses }: Props) => {
   return (
-    <footer className={`pt-10 pb-8 tablet:pb-5 tablet:bg-blue ${cssClasses}`}>
+    <footer className={`pt-12 pb-8 tablet:pb-5 tablet:bg-blue ${cssClasses}`}>
       <div className="flex gap-10 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktop:max-w-[1280px] desktop:mx-auto">
         <div>
           <nav className="hidden tablet:block">

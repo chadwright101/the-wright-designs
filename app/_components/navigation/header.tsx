@@ -34,7 +34,7 @@ const Header = () => {
               <Image
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
-                className="hidden h-auto translate-y-1 tablet:block tablet:w-[200px] rotate-1"
+                className="hidden h-auto translate-y-1 tablet:block w-[200px] rotate-1"
                 width={274}
                 height={60}
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"

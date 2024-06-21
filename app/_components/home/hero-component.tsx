@@ -50,7 +50,7 @@ const HeroComponent = () => {
           </div>
         </div>
         <Image
-          src="/assets/graphics/hero-image.png"
+          src="/assets/images/hero-image.png"
           alt=""
           width={624}
           height={496}

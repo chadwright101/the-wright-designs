@@ -9,16 +9,10 @@ import Recaptcha from "@/app/_lib/recaptcha";
 
 interface Props {
   cssClasses?: string;
-  formTitle?: string;
 }
 
-const ContactForm = ({
-  cssClasses,
-  formTitle = "Get in touch and let's discuss how we can enhance your online presence.",
-}: Props) => {
-  const [showName, setShowName] = useState(false);
+const ContactForm = ({ cssClasses }: Props) => {
   const [showMessage, setShowMessage] = useState(false);
-  const [submissionStartTime, setSubmissionStartTime] = useState(0);
   const [validateRecaptcha, setValidateRecaptcha] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -27,21 +21,11 @@ const ContactForm = ({
       setValidateRecaptcha(false);
       console.log("Recaptcha expired");
     } else {
-      const elapsedTime = new Date().getTime() - submissionStartTime;
-      if (elapsedTime < 3000) {
-        console.error("Form submitted too quickly. Possible bot activity.");
-        return;
-      } else {
-        setValidateRecaptcha(!!value);
-      }
+      setValidateRecaptcha(!!value);
     }
   };
 
   useEffect(() => {
-    const startSubmissionTimer = () => {
-      setSubmissionStartTime(new Date().getTime());
-    };
-    startSubmissionTimer();
     if (formSubmitted) {
       const element = document.getElementById("email-submitted");
       if (element) {
@@ -51,15 +35,16 @@ const ContactForm = ({
   }, [formSubmitted]);
 
   return (
-    <section
-      className={`bg-blue -mx-[30px] px-[30px] tablet:-mx-[50px] tablet:px-[50px] desktop:mx-0 desktop:px-10 py-10 ${cssClasses}`}
-    >
+    <section className={`bg-blue ${cssClasses}`}>
       {!formSubmitted ? (
-        <p className="text-beige mb-6">{formTitle}</p>
+        <p className="text-beige mb-6">
+          Get in touch and let's discuss how we can enhance your online
+          presence.
+        </p>
       ) : (
         <>
           <div id="email-submitted"></div>
-          <p className="text-beige mb-6 text-subheading">
+          <p className="text-beige mb-6 text-[18px]">
             Thanks for your message! We will get back to you ASAP...
           </p>
         </>
@@ -75,75 +60,60 @@ const ContactForm = ({
         >
           <input type="hidden" name="_honey" className="hidden" />
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <label
                 htmlFor="email"
-                className="text-paragraph lowercase text-beige"
+                className="text-paragraph font-bold text-beige"
               >
                 Email:
               </label>
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="emailAddress"
                 required
-                placeholder="email address"
+                autoComplete="email"
+                placeholder="Type your email address here..."
                 className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
               />
             </div>
-            {!showMessage && !showName ? (
-              <Button
-                onClick={() => {
-                  setShowName(true);
-                }}
-                cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
-                form
-                pinkBackground
-                beigeText
-                beigeArrows
+            <div className="flex flex-col gap-3">
+              <label
+                htmlFor="name"
+                className="text-paragraph font-bold text-beige"
               >
-                Next
-              </Button>
-            ) : (
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="name"
-                  className="text-paragraph lowercase text-beige"
-                >
-                  Name:
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  minLength={3}
-                  placeholder="full name"
-                  className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
-                />
-              </div>
-            )}
+                Name:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="fullName"
+                autoComplete="name"
+                required
+                minLength={3}
+                placeholder="Type your full name here..."
+                className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
+              />
+            </div>
           </div>
-          {!showMessage && showName && (
+          {!showMessage && (
             <Button
               onClick={() => {
                 setShowMessage(true);
               }}
               cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
               form
-              pinkBackground
-              beigeText
-              beigeArrows
+              buttonColor="pink"
             >
               Next
             </Button>
           )}
           {showMessage && (
             <>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <label
                   htmlFor="message"
-                  className="text-paragraph lowercase text-beige"
+                  className="text-paragraph font-bold text-beige"
                 >
                   Message:
                 </label>
@@ -152,7 +122,7 @@ const ContactForm = ({
                   required
                   rows={5}
                   name="message"
-                  placeholder="type your message
+                  placeholder="Type your message
                   here..."
                   className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
                 />
@@ -170,9 +140,7 @@ const ContactForm = ({
                 )}
                 disabled={!validateRecaptcha}
                 form
-                pinkBackground
-                beigeText
-                beigeArrows
+                buttonColor="pink"
               >
                 Submit
               </Button>

@@ -1,23 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 
-import ContactForm from "./contact-form";
+import ContactForm from "@/app/_components/home/contact/contact-form";
 import { showEmailAddress, showPhoneNumber } from "@/app/_actions/actions";
 
 import data from "@/app/_data/general-data.json";
-import ContactMap from "./contact-map";
 
 interface Props {
   cssClasses?: string;
 }
 
+const LazyContactMap = lazy(() => import("./contact/contact-map"));
+
 const {
   contact: { phone, email, address },
 } = data;
 
-const Contact = ({ cssClasses }: Props) => {
+const ContactComponent = ({ cssClasses }: Props) => {
   const [showPhone, setShowPhone] = useState("Show phone number");
   const [showEmail, setShowEmail] = useState("Show email address");
   const [showSpinnerPhone, setShowSpinnerPhone] = useState(false);
@@ -36,14 +37,15 @@ const Contact = ({ cssClasses }: Props) => {
     setShowEmail(emailAddress);
     setShowSpinnerEmail(false);
   };
-
   return (
-    <section className={`drop-shadow-md ${cssClasses}`}>
-      <h2 className="text-heading text-center mb-10">Contact</h2>
-      <div className="grid desktop:grid-cols-2 gap-10">
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-[100px_1fr]">
-            <h3 className="text-subheading">Email:</h3>
+    <section className={`drop-shadow-md tablet:mb-10 ${cssClasses}`}>
+      <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
+        Contact
+      </h2>
+      <div className="grid desktopSmall:grid-cols-2 gap-10">
+        <div className="flex flex-col gap-5">
+          <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
+            <h5 className="text-paragraph font-bold">Email:</h5>
             {showEmail === "Show email address" ? (
               <button
                 onClick={handleShowEmailAddress}
@@ -59,14 +61,14 @@ const Contact = ({ cssClasses }: Props) => {
             ) : (
               <Link
                 href={`mailto:${email}`}
-                className="text-paragraph self-center font-extralight tablet:hover:text-pink place-self-start text-linkBlue"
+                className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
               >
                 {showEmail}
               </Link>
             )}
           </div>
-          <div className="grid grid-cols-[100px_1fr]">
-            <h3 className="text-subheading">Phone:</h3>
+          <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
+            <h5 className="text-paragraph font-bold">Phone:</h5>
             {showPhone === "Show phone number" ? (
               <button
                 onClick={handleShowPhoneNumber}
@@ -82,24 +84,34 @@ const Contact = ({ cssClasses }: Props) => {
             ) : (
               <Link
                 href={`tel:${phone}`}
-                className="text-paragraph self-center font-extralight tablet:hover:text-pink place-self-start text-linkBlue"
+                className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
               >
                 {phone}
               </Link>
             )}
           </div>
-          <div className="grid grid-cols-[100px_1fr]">
-            <h3 className="text-subheading">Address:</h3>
-            <address className="text-paragraph self-center font-extralight">
-              {address}
-            </address>
+          <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
+            <h5 className="text-paragraph font-bold">Address:</h5>
+            <address className="text-paragraph self-center">{address}</address>
           </div>
         </div>
-        <ContactMap cssClasses="h-[300px] desktop:h-full row-span-2" />
-        <ContactForm cssClasses="desktop:mt-0" />
+        <Suspense
+          fallback={
+            <div
+              className={
+                "border-2 bg-white text-black border-black text-[30px] grid place-items-center py-16 w-full h-full min-[800px]:order-2"
+              }
+            >
+              Map loading...
+            </div>
+          }
+        >
+          <LazyContactMap cssClasses="h-[400px] w-full desktopSmall:row-span-2 desktopSmall:h-full" />
+        </Suspense>
+        <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default ContactComponent;

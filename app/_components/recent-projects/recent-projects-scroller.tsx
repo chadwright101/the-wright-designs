@@ -14,9 +14,10 @@ const RecentProjectsScroller = ({ src, alt, loading }: Props) => {
         width={244}
         height={1000}
         alt={alt}
-        quality={25}
+        quality={35}
         loading={loading ? "eager" : "lazy"}
-        sizes="(max-width:425px) 35vw, 25vw"
+        sizes="(max-width:425px) 75vw, (max-width:800px) 50vw, 50vw"
+        className="h-auto"
       ></Image>
     </div>
   );

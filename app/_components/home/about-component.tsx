@@ -5,12 +5,12 @@ import OurClientsSlideshow from "@/app/_lib/our-clients-slideshow";
 
 const AboutComponent = () => {
   return (
-    <section className="bg-blue px-5 -mx-5 py-10 grid gap-10 tablet:px-10 tablet:-mx-10 relative overflow-hidden mb-15 desktopSmall:h-[710px] desktopSmall:border-y-8 border-blue min-[1140px]:h-[690px] min-[1166px]:h-[640px] min-[1251px]:h-[620px] min-[1380px]:h-[595px] desktop:h-[580px] desktop:mx-0">
+    <section className="bg-blue px-5 -mx-5 py-10 grid gap-10 tablet:px-10 tablet:-mx-10 relative overflow-hidden mb-15  desktopSmall:border-y-8 border-blue desktop:mx-0">
       <div className="grid gap-y-5 gap-x-10 tablet:grid-cols-2 desktopSmall:gap-x-0 desktopSmall:grid-cols-[1fr_280px] desktopSmall:place-content-start">
         <h2 className="text-white text-subheading pb-1 border-b-4 border-white tablet:col-span-2 desktopSmall:col-span-1">
           About
         </h2>
-        <div className="flex flex-col gap-5 desktopSmall:grid grid-cols-[1fr_250px] desktop:grid-cols-[1fr_188px] desktopSmall:gap-x-10 desktopSmall:col-start-1">
+        <div className="flex flex-col gap-5 desktopSmall:grid grid-cols-[1fr_225px] desktop:grid-cols-[1fr_188px] desktopSmall:gap-x-10 desktopSmall:col-start-1 place-items-start">
           <p className="text-white font-light desktopSmall:col-span-2">
             The Wright Designs is a passionate team based in Plettenberg Bay. We
             specialise in{" "}
@@ -35,13 +35,14 @@ const AboutComponent = () => {
               communication.
             </span>
           </p>
-          <figure className="tablet:hidden desktopSmall:block desktopSmall:row-span-2 desktop:max-h-[208px]">
+          <figure className="tablet:hidden desktopSmall:block desktopSmall:row-span-2 desktopSmall:aspect-square desktop:max-h-[208px]">
             <Image
               src="/assets/images/chad-wright-the-wright-designs.jpg"
               alt="Chad Wright - The Wright Designs"
               width={780}
               height={780}
               className="rounded-lg desktopSmall:h-full object-cover"
+              sizes="(max-width: 800px) 90vw, 25vw"
             />
             <figcaption className="text-white small-caps text-center text-paragraph pt-2">
               Chad Wright
@@ -76,8 +77,8 @@ const AboutComponent = () => {
             alt="Chad Wright - The Wright Designs"
             width={780}
             height={780}
-            className="rounded-lg h-full object-cover"
-            sizes="(max-width: 425px) 90vw, (max-width:800px) 50vw, 25vw"
+            className="rounded-lg w-full h-full object-cover"
+            sizes="(max-width:1100px) 75vw, 10vw"
           />
           <figcaption className="text-white small-caps text-center text-paragraph pt-2">
             Chad Wright

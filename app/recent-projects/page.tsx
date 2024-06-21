@@ -10,19 +10,20 @@ export const metadata: Metadata = {
 
 const RecentProjects = () => {
   return (
-    <main>
-      {/*  <h1 className="text-heading text-center mt-10 mb-12">Recent Projects</h1>
+    <main className="tablet:mb-10">
+      <h1 className="text-heading text-center mt-10 mb-15">Recent Projects</h1>
       <RecentProjectsComponent cssClasses="mb-12" />
-      <hr className="text-blue/25 w-1/2 mx-auto mb-10" />
+      <hr className="text-blue/25 mx-auto mb-10" />
       <Button
         url="https://www.chadwright.dev/projects"
         target="_blank"
-        pinkBackground
+        buttonColor="pink"
         cssClasses="mx-auto mb-14"
       >
         View project archive
       </Button>
-      <ContactForm cssClasses="tablet:mb-10" /> */}
+      <div id="contact" className="-translate-y-20"></div>
+      <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
     </main>
   );
 };

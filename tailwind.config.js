@@ -12,6 +12,7 @@ module.exports = {
       grey: "#9F9797",
       white: "#FFFFFF",
       linkBlue: "#0000EE",
+      transparent: "transparent",
     },
     fontSize: {
       paragraph: [
