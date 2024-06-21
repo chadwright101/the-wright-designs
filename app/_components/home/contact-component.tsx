@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
 
-import ContactForm from "@/app/_components/home/contact/contact-form";
+import ContactForm from "@/app/_components/contact-form";
 import { showEmailAddress, showPhoneNumber } from "@/app/_actions/actions";
 
 import data from "@/app/_data/general-data.json";

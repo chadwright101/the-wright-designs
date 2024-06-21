@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import ContactForm from "@/app/_components/home/contact/contact-form";
+import ContactForm from "@/app/_components/contact-form";
 import RecentProjectsComponent from "@/app/_components/recent-projects/recent-projects-component";
 import Button from "../_components/button";
 
