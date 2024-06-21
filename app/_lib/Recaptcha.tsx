@@ -1,10 +1,10 @@
 import ReCAPTCHA from "react-google-recaptcha";
 
-interface Props {
+interface RecaptchaProps {
   onChange: (value: string | null) => void;
 }
 
-const Recaptcha = ({ onChange }: Props) => {
+const Recaptcha = ({ onChange }: RecaptchaProps) => {
   return (
     <ReCAPTCHA
       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}

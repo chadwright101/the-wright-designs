@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+import ReCAPTCHA from "react-google-recaptcha";
+
 import Button from "@/app/_components/button";
 import { sendEmail } from "@/app/_actions/actions";
 import classNames from "classnames";
-import Recaptcha from "@/app/_lib/recaptcha";
 
 interface Props {
   cssClasses?: string;
@@ -154,3 +155,17 @@ const ContactForm = ({ cssClasses }: Props) => {
 };
 
 export default ContactForm;
+
+interface RecaptchaProps {
+  onChange: (value: string | null) => void;
+}
+
+const Recaptcha = ({ onChange }: RecaptchaProps) => {
+  return (
+    <ReCAPTCHA
+      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
+      onChange={onChange}
+      className="recaptcha"
+    />
+  );
+};
