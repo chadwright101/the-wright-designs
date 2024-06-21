@@ -3,9 +3,17 @@ import Button from "../button";
 
 const HeroComponent = () => {
   return (
-    <main className="pt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 bg-[url('/assets/images/hero-background.webp')] bg-cover bg-center desktop:mx-0">
-      <div className="flex flex-col bg-gradient-to-b from-beige/90 from-30% via-45% via-beige/75 to-60% to-beige/95 pt-10 -mt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 gap-10 desktopSmall:grid grid-cols-2 desktopSmall:bg-gradient-to-r desktopSmall:from-40% desktopSmall:from-beige/90 desktopSmall:via-60% desktopSmall:via-beige/40 desktopSmall:to-90% desktopSmall:to-beige/75 desktopSmall:py-10">
+    <main className="pt-[200px] px-5 -mx-5 phone:pt-[250px] bg-gradient-to-t from-beige from-75% via-beige/85 via-85% to-90% to-transparent tablet:px-10 tablet:pt-10 tablet:-mx-10 tablet:bg-[url('/assets/images/hero-background-desktop.webp')] bg-cover bg-center desktop:mx-0 relative">
+      <div className="flex flex-col pt-10 -mt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 gap-10 desktopSmall:grid grid-cols-2 tablet:bg-beige/90 desktopSmall:bg-transparent desktopSmall:bg-gradient-to-r desktopSmall:from-40% desktopSmall:from-beige/90 desktopSmall:to-70% desktopSmall:to-beige/25 desktopSmall:py-10">
         <div className="desktopSmall:w-[476px] desktopSmall:grid gap-5">
+          <Image
+            src={"/assets/images/hero-background-mobile.jpg"}
+            alt="Decretive art image"
+            width={800}
+            height={1100}
+            className="tablet:hidden absolute top-0 left-0 -z-10 h-[400px] min-[380px]:h-[450px] phone::h-[500px] phone:object-top object-cover"
+            sizes="(max-width: 425px) 100vw, 100vw"
+          />
           <h1 className="text-[24px] tracking-[0.48px] leading-[120%] font-extralight uppercase grid gap-y-1.5 pb-3 border-b-4 border-pink min-[320px]:grid-cols-[1fr_0px] phone:grid-cols-1 desktopSmall:grid-cols-[1fr_37px] desktopSmall:text-[21.75px] desktopSmall:gap-x-5 desktopSmall:font-normal desktopSmall:max-h-[231.52px]">
             <span className="min-[320px]:col-span-2 phone:col-span-1">
               Elevate your online presence with
@@ -28,16 +36,15 @@ const HeroComponent = () => {
               online solutions for small to medium sized businesses.
             </h2>
             <ul className="bg-pink p-5 rounded-lg grid gap-3 font-light text-[20px] small-caps">
-              <li className="text-white tracking-[0.15px]">Web & app design</li>
-              <hr className="text-white/25" />
-              <li className="text-white tracking-[0.15px]">
+              <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
+                Web & app design
+              </li>
+              <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Frontend & backend development
               </li>
-              <hr className="text-white/25" />
-              <li className="text-white tracking-[0.15px]">
+              <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Ongoing maintenance
               </li>
-              <hr className="text-white/25" />
               <li className="text-white tracking-[0.15px]">
                 Social media marketing campaigns
               </li>
@@ -63,16 +70,18 @@ const HeroComponent = () => {
             solutions for small to medium sized businesses.
           </h2>
           <ul className="bg-pink -mx-5 px-5 tablet:px-10 tablet:-mx-10 py-10 grid gap-3 font-light text-[20px] small-caps">
-            <li className="text-white tracking-[0.15px]">Web & app design</li>
-            <hr className="text-white/25" />
-            <li className="text-white tracking-[0.15px]">
+            <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
+              Web & app design
+            </li>
+
+            <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
               Frontend & backend development
             </li>
-            <hr className="text-white/25" />
-            <li className="text-white tracking-[0.15px]">
+
+            <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
               Ongoing maintenance
             </li>
-            <hr className="text-white/25" />
+
             <li className="text-white tracking-[0.15px]">
               Social media marketing campaigns
             </li>

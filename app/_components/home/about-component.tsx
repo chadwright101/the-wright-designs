@@ -48,7 +48,7 @@ const AboutComponent = () => {
               Chad Wright
             </figcaption>
           </figure>
-          <p className="text-white font-light">
+          <p className="text-white font-light tablet:mb-5">
             Founded by Chad Wright in 2015, we have never wavered on our most
             fundamental philosophy,{" "}
             <span className="font-bold text-white">
@@ -67,7 +67,7 @@ const AboutComponent = () => {
           <Button
             url="/recent-projects"
             buttonColor="pink"
-            cssClasses="w-full desktopSmall:w-auto tablet:mt-5"
+            cssClasses="w-full desktopSmall:w-auto"
           >
             Recent Projects
           </Button>

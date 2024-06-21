@@ -15,6 +15,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://www.facebook.com/thewrightdesignsSA"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Facebook page"
           >
             <svg
               width="21"
@@ -35,6 +36,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://github.com/chadwright101/the-wright-designs.git"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Github repository"
           >
             <svg
               width="21"
@@ -85,6 +87,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://www.figma.com/design/sFm1wjQ7FrLfNVkRROmZMR/the-wright-designs?node-id=0-1&t=BkZu33xzTsGiZyvE-1"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Figma design"
           >
             <svg
               width="15"
@@ -126,6 +129,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://www.facebook.com/thewrightdesignsSA"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Facebook page"
           >
             <svg
               width="35"
@@ -147,6 +151,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://github.com/chadwright101/the-wright-designs.git"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Github repository"
           >
             <svg
               width="34"
@@ -189,6 +194,7 @@ const SocialIcons = ({ cssClasses, small, pink }: Props) => {
             href="https://www.figma.com/design/sFm1wjQ7FrLfNVkRROmZMR/the-wright-designs?node-id=0-1&t=BkZu33xzTsGiZyvE-1"
             target="_blank"
             className="tablet:hover:opacity-90"
+            aria-label="View our Figma design"
           >
             <svg
               width="26"

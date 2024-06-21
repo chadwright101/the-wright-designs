@@ -45,7 +45,7 @@ const ContactComponent = ({ cssClasses }: Props) => {
       <div className="grid desktopSmall:grid-cols-2 gap-10">
         <div className="flex flex-col gap-5">
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
-            <h5 className="text-paragraph font-bold">Email:</h5>
+            <h3 className="text-paragraph font-bold">Email:</h3>
             {showEmail === "Show email address" ? (
               <button
                 onClick={handleShowEmailAddress}
@@ -68,7 +68,7 @@ const ContactComponent = ({ cssClasses }: Props) => {
             )}
           </div>
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
-            <h5 className="text-paragraph font-bold">Phone:</h5>
+            <h3 className="text-paragraph font-bold">Phone:</h3>
             {showPhone === "Show phone number" ? (
               <button
                 onClick={handleShowPhoneNumber}
@@ -91,7 +91,7 @@ const ContactComponent = ({ cssClasses }: Props) => {
             )}
           </div>
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
-            <h5 className="text-paragraph font-bold">Address:</h5>
+            <h3 className="text-paragraph font-bold">Address:</h3>
             <address className="text-paragraph self-center">{address}</address>
           </div>
         </div>
