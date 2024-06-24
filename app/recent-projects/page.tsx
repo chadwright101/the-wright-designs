@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const RecentProjects = () => {
   return (
-    <main className="tablet:mb-10">
+    <main className="tablet:mb-10 mt-[160px] tablet:mt-[150px]">
       <h1 className="text-heading text-center mt-10 mb-15">Recent Projects</h1>
       <RecentProjectsComponent cssClasses="mb-12" />
       <hr className="text-blue/25 mx-auto mb-10" />

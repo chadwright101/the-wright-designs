@@ -38,7 +38,14 @@ const Header = () => {
   }, [scrollPosition]);
 
   return (
-    <header className="fixed w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 z-20 tablet:px-10">
+    <header
+      className={classNames(
+        "fixed w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 z-20 ease-in-out duration-300 tablet:px-10",
+        {
+          "py-[18px]": isScrolled,
+        }
+      )}
+    >
       <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
           <div className="flex justify-between items-center px-5 tablet:px-0">
@@ -47,10 +54,10 @@ const Header = () => {
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
                 className={classNames(
-                  "hidden h-auto translate-y-1 tablet:block w-[200px] rotate-1 ease-in-out duration-300",
+                  "hidden h-auto translate-y-1 tablet:block rotate-1 ease-in-out duration-300",
                   {
-                    "opacity-0": isScrolled,
-                    "opacity-100": !isScrolled,
+                    "w-[160px]": isScrolled,
+                    "w-[200px]": !isScrolled,
                   }
                 )}
                 width={274}
@@ -64,6 +71,7 @@ const Header = () => {
                   "h-12 w-12 ease-in-out duration-300 tablet:hidden",
                   {
                     "-translate-y-20": showMenuToggle,
+                    "h-9 w-9": isScrolled,
                   }
                 )}
                 width={274}
@@ -88,7 +96,7 @@ const Header = () => {
             )}
           />
         </div>
-        <DesktopMenu />
+        <DesktopMenu cssClasses={isScrolled ? "translate-y-[3px]" : ""} />
       </div>
     </header>
   );

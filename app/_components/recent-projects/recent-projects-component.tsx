@@ -6,9 +6,6 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import Button from "../button";
-import SwipeRightToLeft from "../animations/swipe-right-left";
-import SwipeLeftToRight from "../animations/swipe-left-right";
 import PortfolioScroller from "./recent-projects-scroller";
 
 import portfolioList from "@/app/_data/projects-list.json";
@@ -50,59 +47,28 @@ const RecentProjectsComponent = ({ cssClasses }: Props) => {
               </Link>
 
               <div>
-                {index % 2 ? (
-                  <SwipeRightToLeft>
-                    <PortfolioScroller
-                      src={image.scrollImage}
-                      alt={`${title} full mobile - ${year}`}
-                    />
-                    <Image
-                      src={blankPhone}
-                      alt={`${title} mobile preview - ${year}`}
-                      width={280}
-                      height={900}
-                      className="drop-shadow-md h-auto"
-                      loading={index === 0 ? "eager" : "lazy"}
-                      quality={60}
-                      sizes="(max-width:425px) 75vw, 50vw"
-                    />
-                  </SwipeRightToLeft>
-                ) : (
-                  <SwipeLeftToRight>
-                    <PortfolioScroller
-                      src={image.scrollImage}
-                      alt={`${title} full mobile - ${year}`}
-                      loading={index === 0 ? "eager" : "lazy"}
-                    />
-                    <Image
-                      src={blankPhone}
-                      alt={`${title} mobile preview - ${year}`}
-                      width={280}
-                      height={900}
-                      className="drop-shadow-md h-auto"
-                      loading={index === 0 ? "eager" : "lazy"}
-                      quality={60}
-                      sizes="(max-width:425px) 75vw, 50vw,"
-                    />
-                  </SwipeLeftToRight>
-                )}
+                <PortfolioScroller
+                  src={image.scrollImage}
+                  alt={`${title} full mobile - ${year}`}
+                />
+                <Image
+                  src={blankPhone}
+                  alt={`${title} mobile preview - ${year}`}
+                  width={280}
+                  height={900}
+                  className="drop-shadow-md h-auto"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  quality={60}
+                  sizes="(max-width:425px) 75vw, 50vw"
+                />
               </div>
-              {index % 2 ? (
-                <ProjectIcons
-                  websiteUrl={url}
-                  figmaUrl={figmaLink}
-                  repoUrl={repo}
-                  ariaLabel={title}
-                />
-              ) : (
-                <ProjectIcons
-                  websiteUrl={url}
-                  figmaUrl={figmaLink}
-                  repoUrl={repo}
-                  pink
-                  ariaLabel={title}
-                />
-              )}
+              <ProjectIcons
+                websiteUrl={url}
+                figmaUrl={figmaLink}
+                repoUrl={repo}
+                pink
+                ariaLabel={title}
+              />
               {index !== 5 && (
                 <hr
                   className={classNames(
@@ -129,110 +95,65 @@ const RecentProjectsComponent = ({ cssClasses }: Props) => {
               className="hidden desktopSmall:flex flex-col gap-8"
             >
               <div className="flex w-full justify-center items-center gap-5">
-                <h2 className="text-[24px] tracking-wide font-light normal-case text-center">
-                  {title}
-                </h2>
-                {index % 2 ? (
-                  <ProjectIcons
-                    websiteUrl={url}
-                    figmaUrl={figmaLink}
-                    repoUrl={repo}
-                    ariaLabel={title}
-                  />
-                ) : (
-                  <ProjectIcons
-                    websiteUrl={url}
-                    figmaUrl={figmaLink}
-                    repoUrl={repo}
-                    pink
-                    ariaLabel={title}
-                  />
-                )}
+                <Link href={url} target="_blank" aria-label={title}>
+                  <h2 className="text-[24px] tracking-wide font-light normal-case text-center desktopSmall:hover:text-pink ease-in-out duration-300">
+                    {title}
+                  </h2>
+                </Link>
+                <ProjectIcons
+                  websiteUrl={url}
+                  figmaUrl={figmaLink}
+                  repoUrl={repo}
+                  pink
+                  ariaLabel={title}
+                />
               </div>
 
               <Link
                 href={url}
                 target="_blank"
                 className={`flex items-center ${
-                  index % 2 ? "translate-x-2" : ""
+                  index % 2 ? "-translate-x-2" : "translate-x-2"
                 }`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                {index % 2 ? (
-                  <>
-                    <Image
-                      src={image.desktop}
-                      alt={image.desktop}
-                      width={1100}
-                      height={580}
-                      className={classNames(
-                        "object-contain drop-shadow-md max-w-[725px] desktop:max-w-[1000px] transform duration-[650ms] ease-in-out",
-                        {
-                          "scale-[1.02]": isHovered,
-                        }
-                      )}
-                      loading={index === 0 ? "eager" : "lazy"}
-                      quality={60}
-                      sizes="75vw,"
-                    />
-                    <SwipeRightToLeft delay={125}>
-                      <Image
-                        src={image.mobile}
-                        alt={`${title} - ${year}`}
-                        width={300}
-                        height={600}
-                        className={classNames(
-                          "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform  duration-[550ms] -translate-x-4 ease-in-out",
-                          {
-                            "scale-[1.05] desktop:scale-[1.05]": isHovered,
-                          }
-                        )}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        quality={60}
-                        sizes="35vw,"
-                      />
-                    </SwipeRightToLeft>
-                  </>
-                ) : (
-                  <>
-                    <SwipeLeftToRight>
-                      <Image
-                        src={image.mobile}
-                        alt={`${title} - ${year}`}
-                        width={300}
-                        height={600}
-                        className={classNames(
-                          "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform duration-[550ms] translate-x-4 ease-in-out",
-                          {
-                            "scale-[1.05] desktop:scale-[1.05]": isHovered,
-                          }
-                        )}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        quality={60}
-                        sizes="35vw,"
-                      />
-                    </SwipeLeftToRight>
-                    <Image
-                      src={image.desktop}
-                      alt={image.desktop}
-                      width={1100}
-                      height={580}
-                      className={classNames(
-                        "object-contain -translate-x-4 drop-shadow-md w-[725px] desktop:w-[1000px] transform duration-[650ms] ease-in-out",
-                        {
-                          "scale-[1.02]": isHovered,
-                        }
-                      )}
-                      loading={index === 0 ? "eager" : "lazy"}
-                      quality={60}
-                      sizes="75vw"
-                    />
-                  </>
-                )}
+                <Image
+                  src={image.desktop}
+                  alt={image.desktop}
+                  width={1100}
+                  height={580}
+                  className={classNames(
+                    "object-contain drop-shadow-md max-w-[725px] desktop:max-w-[1000px] transform duration-[650ms] ease-in-out",
+                    {
+                      "scale-[1.02]": isHovered,
+                      "order-2": index % 2,
+                    }
+                  )}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  quality={60}
+                  sizes="75vw,"
+                />
+                <Image
+                  src={image.mobile}
+                  alt={`${title} - ${year}`}
+                  width={300}
+                  height={600}
+                  className={classNames(
+                    `z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform duration-[550ms] ease-in-out ${
+                      index % 2 ? "translate-x-4" : "-translate-x-4"
+                    }`,
+                    {
+                      "scale-[1.05] desktop:scale-[1.05]": isHovered,
+                    }
+                  )}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  quality={60}
+                  sizes="35vw,"
+                />
               </Link>
               {index !== 5 && (
-                <hr className="text-blue/25 w-full min-[662px]:hidden" />
+                <hr className="text-blue/25 mt-2 w-full desktopSmall:block" />
               )}
             </div>
           );

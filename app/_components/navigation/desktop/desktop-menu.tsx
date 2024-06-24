@@ -11,11 +11,17 @@ export const scrollIntoView = (section: string) => {
 
 const { navigation } = data;
 
-const DesktopMenu = () => {
+interface Props {
+  cssClasses?: string;
+}
+
+const DesktopMenu = ({ cssClasses }: Props) => {
   const currentRoute = usePathname();
 
   return (
-    <nav className="hidden tablet:block">
+    <nav
+      className={`hidden tablet:block ease-in-out duration-300 ${cssClasses}`}
+    >
       <ul className="flex gap-4 font-thin text-paragraph">
         {navigation.map((item, index) => (
           <li
