@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../button";
+import HeroSlideshow from "@/app/_lib/hero-slideshow";
 
 interface Props {
   cssClasses?: string;
@@ -10,7 +11,7 @@ const HeroComponent = ({ cssClasses }: Props) => {
     <main
       className={`pt-[200px] px-5 -mx-5 phone:pt-[250px] bg-gradient-to-t from-beige from-75% via-beige/85 via-85% to-90% to-transparent tablet:px-10 tablet:pt-10 tablet:-mx-10 tablet:bg-[url('/assets/images/hero-background-desktop.webp')] bg-cover bg-center desktop:mx-0 relative ${cssClasses}`}
     >
-      <div className="flex flex-col pt-10 -mt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 gap-10 desktopSmall:grid grid-cols-2 tablet:bg-beige/90 desktopSmall:bg-transparent desktopSmall:bg-gradient-to-r desktopSmall:from-40% desktopSmall:from-beige/90 desktopSmall:to-70% desktopSmall:to-beige/25 desktopSmall:py-10">
+      <div className="flex flex-col pt-10 -mt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 gap-10 desktopSmall:grid grid-cols-2 tablet:bg-beige/90 desktopSmall:bg-transparent desktopSmall:bg-gradient-to-r desktopSmall:from-40% desktopSmall:from-beige/90 desktopSmall:to-70% desktopSmall:to-beige/25 desktopSmall:py-10 desktopSmall:items-center">
         <div className="desktopSmall:w-[476px] desktopSmall:grid gap-5">
           <Image
             src={"/assets/images/hero-background-mobile.jpg"}
@@ -19,6 +20,7 @@ const HeroComponent = ({ cssClasses }: Props) => {
             height={1100}
             className="tablet:hidden absolute top-0 left-0 -z-10 h-[400px] min-[380px]:h-[450px] phone::h-[500px] phone:object-top object-cover"
             sizes="(max-width: 425px) 100vw, 100vw"
+            priority
           />
           <h1 className="text-[24px] tracking-[0.48px] leading-[120%] font-extralight uppercase grid gap-y-1.5 pb-3 border-b-4 border-pink min-[320px]:grid-cols-[1fr_0px] phone:grid-cols-1 desktopSmall:grid-cols-[1fr_37px] desktopSmall:text-[21.75px] desktopSmall:gap-x-5 desktopSmall:font-normal desktopSmall:max-h-[231.52px]">
             <span className="min-[320px]:col-span-2 phone:col-span-1">
@@ -62,14 +64,7 @@ const HeroComponent = ({ cssClasses }: Props) => {
             </ul>
           </div>
         </div>
-        <Image
-          src="/assets/images/hero-image.png"
-          alt=""
-          width={624}
-          height={496}
-          className="m-auto"
-          sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-        />
+        <HeroSlideshow cssClasses="w-full min-[1200px]:-translate-x-5 min-[1300px]:-translate-x-10" />
         <div className="grid gap-10 desktopSmall:hidden">
           <h2 className="text-[20px] tracking-[0.6px] font-extralight normal-case">
             A web design & development team dedicated to providing modern online

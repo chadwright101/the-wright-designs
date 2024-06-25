@@ -21,6 +21,36 @@
       "url": "contact"
     }
   ],
+  "heroSlider": [
+    {
+      "src": "/assets/images/hero-slideshow/monks-medical-hero.png",
+      "alt": "Monk's Medical"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/xorbtec-hero.png",
+      "alt": "Xorbtec Computer Services"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/luna-blue-hero.png",
+      "alt": "Luna Blue Villas"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/adopt-a-swimmer-hero.png",
+      "alt": "Adopt a Swimmer logo"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/carevita-hero.png",
+      "alt": "CareVita"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/simone-snoyman-physiotherapy-hero.png",
+      "alt": "Simone Snoyman Physiotherapy"
+    },
+    {
+      "src": "/assets/images/hero-slideshow/ai-sheeting-hero.png",
+      "alt": "A&I Sheeting"
+    }
+  ],
   "ourClients": [
     {
       "src": "/assets/images/our-clients/adopt-a-swimmer-logo.png",
