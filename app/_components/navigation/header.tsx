@@ -63,6 +63,7 @@ const Header = () => {
                 width={274}
                 height={60}
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
+                priority
               />
               <Image
                 src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo-square.jpg"
@@ -77,6 +78,7 @@ const Header = () => {
                 width={274}
                 height={60}
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
+                priority
               />
             </Link>
             <MenuButton
