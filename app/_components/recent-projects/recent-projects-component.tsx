@@ -16,9 +16,9 @@ interface Props {
 }
 
 const blankPhones = [
-  "/assets/images/phone-rose-gold.png",
-  "/assets/images/phone-grey.png",
-  "/assets/images/phone-silver.png",
+  "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-rose-gold.png",
+  "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-grey.png",
+  "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/phone-silver.png",
 ];
 
 const RecentProjectsComponent = ({ cssClasses }: Props) => {

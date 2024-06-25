@@ -51,7 +51,7 @@ const Header = () => {
           <div className="flex justify-between items-center px-5 tablet:px-0">
             <Link href="/" className="tablet:hover:opacity-95">
               <Image
-                src="/assets/the-wright-designs-logo.png"
+                src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
                 className={classNames(
                   "hidden h-auto translate-y-1 tablet:block rotate-1 ease-in-out duration-300",
@@ -65,7 +65,7 @@ const Header = () => {
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
               />
               <Image
-                src="/assets/the-wright-designs-logo-square.jpg"
+                src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo-square.jpg"
                 alt="The Wright Designs logo"
                 className={classNames(
                   "h-12 w-12 ease-in-out duration-300 tablet:hidden",

@@ -37,7 +37,7 @@ const AboutComponent = () => {
           </p>
           <figure className="tablet:hidden desktopSmall:block desktopSmall:row-span-2 desktopSmall:aspect-square desktop:max-h-[208px]">
             <Image
-              src="/assets/images/chad-wright-the-wright-designs.jpg"
+              src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/chad-wright-the-wright-designs.jpg"
               alt="Chad Wright - The Wright Designs"
               width={780}
               height={780}
@@ -74,7 +74,7 @@ const AboutComponent = () => {
         </div>
         <figure className="hidden tablet:block desktopSmall:hidden">
           <Image
-            src="/assets/images/chad-wright-the-wright-designs.jpg"
+            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/chad-wright-the-wright-designs.jpg"
             alt="Chad Wright - The Wright Designs"
             width={780}
             height={780}
