@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import throttle from "lodash/throttle";
+
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -7,9 +9,15 @@ const useScrollPosition = () => {
     const updatePosition = () => {
       setScrollPosition(window.scrollY);
     };
-    window.addEventListener("scroll", updatePosition);
+
+    const throttledUpdatePosition = throttle(updatePosition, 100);
+
+    window.addEventListener("scroll", throttledUpdatePosition, {
+      passive: true,
+    });
     updatePosition();
-    return () => window.removeEventListener("scroll", updatePosition);
+
+    return () => window.removeEventListener("scroll", throttledUpdatePosition);
   }, []);
 
   return scrollPosition;
