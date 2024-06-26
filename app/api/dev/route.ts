@@ -1,7 +1,9 @@
+// app/api/dev/route.ts
+
 import { NextRequest, NextResponse } from "next/server";
 import data from "@/app/_data/projects-list.json";
 
-const verifyBearerToken = (request) => {
+const verifyBearerToken = (request: NextRequest) => {
   const authorizationHeader = request.headers.get("authorization");
   if (!authorizationHeader || !authorizationHeader.startsWith("Bearer ")) {
     return false;
@@ -16,63 +18,34 @@ const allowedOrigins = [
   process.env.NEXT_PUBLIC_DEV_ORIGIN,
 ];
 
-export async function GET(request) {
-  if (!verifyBearerToken(request)) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  return NextResponse.json(data, { status: 200 });
-}
-
-export async function OPTIONS(request) {
-  const origin = request.headers.get("origin");
-  const allowedOrigin = allowedOrigins.includes(origin) ? origin : "";
-
-  return NextResponse.json(
-    {},
-    {
-      status: 200,
-      headers: {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": allowedOrigin,
-        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-        "Access-Control-Allow-Headers":
-          "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
-      },
-    }
-  );
-}
-
-export async function handler(request) {
+export async function GET(request: NextRequest) {
   const origin = request.headers.get("origin");
   const allowedOrigin = allowedOrigins.includes(origin) ? origin : "";
 
   const corsHeaders = {
     "Access-Control-Allow-Credentials": "true",
-    "Access-Control-Allow-Origin": allowedOrigin,
-    "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+    "Access-Control-Allow-Methods": "GET",
     "Access-Control-Allow-Headers":
       "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
   };
 
   if (request.method === "OPTIONS") {
-    return OPTIONS(request);
+    return NextResponse.json({}, { status: 200, headers: corsHeaders });
   }
 
-  let response;
-
-  if (request.method === "GET") {
-    response = await GET(request);
-  } else {
-    response = NextResponse.json(
+  if (request.method !== "GET") {
+    return NextResponse.json(
       { error: "Method Not Allowed" },
-      { status: 405 }
+      { status: 405, headers: corsHeaders }
     );
   }
 
-  Object.keys(corsHeaders).forEach((key) => {
-    response.headers.set(key, corsHeaders[key]);
-  });
+  if (!verifyBearerToken(request)) {
+    return NextResponse.json(
+      { error: "Unauthorized" },
+      { status: 401, headers: corsHeaders }
+    );
+  }
 
-  return response;
+  return NextResponse.json(data, { status: 200, headers: corsHeaders });
 }
