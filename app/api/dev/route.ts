@@ -1,7 +1,7 @@
 // app/api/dev/route.ts
 
 import { NextRequest, NextResponse } from "next/server";
-import data from "@/app/_data/projects-list.json";
+import data from "@/app/_data/technical-data.json";
 
 const verifyBearerToken = (request: NextRequest) => {
   const authorizationHeader = request.headers.get("authorization");
@@ -14,8 +14,6 @@ const verifyBearerToken = (request: NextRequest) => {
 };
 
 export async function GET(request: NextRequest) {
-  const origin = request.headers.get("origin");
-
   const corsHeaders = {
     "Access-Control-Allow-Credentials": "true",
     "Access-Control-Allow-Methods": "GET",

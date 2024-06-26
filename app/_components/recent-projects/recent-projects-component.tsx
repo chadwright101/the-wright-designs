@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 import PortfolioScroller from "./recent-projects-scroller";
 
-import portfolioList from "@/app/_data/projects-list.json";
+import technicalList from "@/app/_data/technical-data.json";
 import ProjectIcons from "@/app/_lib/project-icons";
 
 interface Props {
@@ -30,7 +30,7 @@ const RecentProjectsComponent = ({ cssClasses }: Props) => {
     >
       {/* mobile viewport */}
 
-      {portfolioList
+      {technicalList.projectsList
         .slice(0, 6)
         .map(({ title, image, url, figmaLink, repo, year }, index) => {
           const blankPhone = blankPhones[index % 3];
@@ -85,7 +85,7 @@ const RecentProjectsComponent = ({ cssClasses }: Props) => {
 
       {/* desktop viewport */}
 
-      {portfolioList
+      {technicalList.projectsList
         .slice(0, 6)
         .map(({ title, image, url, figmaLink, repo, year }, index) => {
           const isHovered = hoveredIndex === index;

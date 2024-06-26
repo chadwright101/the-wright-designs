@@ -1,8 +1,3 @@
-const allowedOrigins = [
-  process.env.NEXT_PUBLIC_ALLOWED_ORIGIN,
-  process.env.NEXT_PUBLIC_DEV_ORIGIN,
-];
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

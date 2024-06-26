@@ -1,0 +1,258 @@
+{
+  "techStack": [
+    "Next.js",
+    "React",
+    "Webflow",
+    "Javascript",
+    "Typescript",
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "SASS",
+    "Node.js",
+    "Git",
+    "Github",
+    "Firebase",
+    "AWS",
+    "Vercel",
+    "Wordpress"
+  ],
+  "designStack": ["Figma", "Photoshop", "Premier Pro"],
+  "projectsList": [
+    {
+      "title": "Easy Done Concreting",
+      "url": "https://www.easydoneconcreting.com.au/",
+      "year": 2024,
+      "techSummary": ["Webflow"],
+      "techExtended": ["Webflow"],
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-mobile-long.png"
+      }
+    },
+    {
+      "title": "Adopt A Swimmer",
+      "url": "https://www.adoptaswimmer.co.za",
+      "year": 2024,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma", "Premier Pro"],
+      "repo": "https://github.com/chadwright101/adopt-a-swimmer.git",
+      "figmaLink": "https://www.figma.com/design/sxSGtzYPsy3gTCGGcUHkIN/adopt-a-swimmer?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile-long.png"
+      }
+    },
+    {
+      "title": "Sunny Coast Bathroom Renovations",
+      "url": "https://www.scbr.com.au/",
+      "year": 2024,
+      "techSummary": ["Webflow"],
+      "techExtended": ["Webflow"],
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-desktop.jpg",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-mobile-long.jpg"
+      }
+    },
+    {
+      "title": "Monk's Medical",
+      "url": "https://www.monksmedical.com",
+      "year": 2024,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma"],
+      "repo": "https://github.com/chadwright101/monks-medical.git",
+      "figmaLink": "https://www.figma.com/design/2h8YiqQoRSFKlBGhDDrgiJ/Monk's-Medical?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-desktop.jpg",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile-long.jpg"
+      }
+    },
+    {
+      "title": "CareVita #fit",
+      "url": "https://www.carevitafit.co.za",
+      "year": 2024,
+      "techSummary": ["Next.js", "Node.js", "Firebase"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Firebase",
+        "Javascript",
+        "SASS",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma"],
+      "repo": "https://github.com/chadwright101/carevita-fit.git",
+      "figmaLink": "https://www.figma.com/design/531j5GkgnJ28jbdYT0pzgi/%23fit---carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile-long.png"
+      }
+    },
+    {
+      "title": "CareVita",
+      "url": "https://www.carevita.co.za",
+      "year": 2023,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma", "Premier Pro"],
+      "repo": "https://github.com/chadwright101/carevita.git",
+      "figmaLink": "https://www.figma.com/design/Ds4Y6BbH4jzl069Ic0sqGp/carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile-long.png"
+      }
+    },
+    {
+      "title": "Xorbtec Computer Services",
+      "url": "https://www.xorbtec.co.za",
+      "year": 2023,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Javascript",
+        "Tailwind",
+        "Vercel",
+        "Github"
+      ],
+      "design": ["Figma"],
+      "repo": "https://github.com/chadwright101/xorbtec.git",
+      "figmaLink": "https://www.figma.com/design/UYaWSLgdEwLo0EZC6vmfJL/xorbtec?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile-long.png"
+      }
+    },
+    {
+      "title": "A&I Sheeting",
+      "url": "https://www.roofrefurb.co.za",
+      "year": 2023,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma", "Premier Pro"],
+      "figmaLink": "https://www.figma.com/design/Tr9sgHrHAOKsb9sX2V89Y3/a%26i-roofing?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "repo": "https://github.com/chadwright101/ai-sheeting.git",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile-long.png"
+      }
+    },
+    {
+      "title": "Luna Blue Off-grid Guesthouse",
+      "url": "https://www.lunarblue.co.za",
+      "year": 2023,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "repo": "https://github.com/chadwright101/luna-blue.git",
+      "locale": ["English", "Deutsch"],
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-mobile-long.png"
+      }
+    },
+    {
+      "title": "Simone Snoyman Physiotherapy",
+      "year": 2022,
+      "url": "https://simonesnoymanphysiotherapy.co.za",
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "WordPress",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma"],
+      "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
+      "figmaLink": "https://www.figma.com/design/vC6HhYKYhQPLuGuxANOlMo/simone-snoyman-physiotherapy?m=auto&t=dKJOMBDWEJ4qtCm7-6",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile-long.png"
+      }
+    },
+    {
+      "title": "Neon Productions",
+      "year": 2022,
+      "url": "https://neonproductions.co.za",
+      "techSummary": ["Next.js"],
+      "techExtended": ["Next.js", "Typescript", "Tailwind", "Vercel", "Github"],
+      "design": ["Photoshop"],
+      "repo": "https://github.com/chadwright101/neon-productions.git",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile-long.png"
+      }
+    },
+    {
+      "title": "Sileta Engineers",
+      "year": 2022,
+      "url": "https://sileta.co.za",
+      "techSummary": ["Pug"],
+      "techExtended": ["Pug", "Javascript", "SASS", "Github"],
+      "repo": "https://github.com/chadwright101/sileta-engineers.git",
+      "image": {
+        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-desktop.png",
+        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile-long.png"
+      }
+    }
+  ]
+}
