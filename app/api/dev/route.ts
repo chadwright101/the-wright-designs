@@ -13,18 +13,13 @@ const verifyBearerToken = (request: NextRequest) => {
   return token === process.env.BEARER_TOKEN;
 };
 
-const allowedOrigins = [
-  process.env.NEXT_PUBLIC_ALLOWED_ORIGIN,
-  process.env.NEXT_PUBLIC_DEV_ORIGIN,
-];
-
 export async function GET(request: NextRequest) {
   const origin = request.headers.get("origin");
-  const allowedOrigin = allowedOrigins.includes(origin) ? origin : "";
 
   const corsHeaders = {
     "Access-Control-Allow-Credentials": "true",
     "Access-Control-Allow-Methods": "GET",
+    "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers":
       "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
   };
