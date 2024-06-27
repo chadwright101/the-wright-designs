@@ -6,7 +6,7 @@ import ServicesComponent from "./_components/home/services-component";
 import ContactComponent from "./_components/home/contact-component";
 
 export const metadata: Metadata = {
-  title: "The Wright Designs - Quality web design",
+  title: "The Wright Designs - A web design & development team",
 };
 
 export default function Home() {

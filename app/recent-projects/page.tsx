@@ -5,7 +5,7 @@ import RecentProjectsComponent from "@/app/_components/recent-projects/recent-pr
 import Button from "../_components/button";
 
 export const metadata: Metadata = {
-  title: "Recent Projects - The Wright Designs",
+  title: "The Wright Designs - Recent Projects",
 };
 
 const RecentProjects = () => {

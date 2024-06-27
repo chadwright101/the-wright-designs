@@ -8,18 +8,18 @@ import "@/app/_styles/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),
   description:
-    "Clean, functional & custom-made website development at an affordable price point",
+    "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
   keywords:
-    "website development, website design, website, development, design, portfolio, developer, frontend, frontend developer",
+    "website development, website design, web design, web development, website, development, design, portfolio, developer, frontend, frontend developer",
   openGraph: {
     description:
-      "Clean, functional & custom-made website development at an affordable price point",
+      "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
     type: "website",
     locale: "en_ZA",
     siteName: "The Wright Designs",
     images: [
       {
-        url: "https://www.thewrightdesigns.co.za/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthe-wright-designs-logo-square.39dc2b90.jpg&w=1080&q=75",
+        url: "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/hero-slideshow/monks-medical-hero.png",
       },
     ],
   },
