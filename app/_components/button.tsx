@@ -53,16 +53,20 @@ const Button = ({
         onMouseEnter={() => setArrowMove(true)}
         onMouseLeave={() => setArrowMove(false)}
       >
-        {pending ? <div className="spinner"></div> : <>{children}</>}
-        {!pending && (
-          <ArrowSvg
-            buttonColor={buttonColor}
-            cssClasses={classNames("transform ease-in-out duration-[400ms]", {
-              "desktopSmall:translate-x-[2px] desktopSmall:scale-105":
-                arrowMove,
-              "desktopSmall:translate-x-0": !arrowMove,
-            })}
-          />
+        {pending ? (
+          <div className="spinner"></div>
+        ) : (
+          <>
+            {children}
+            <ArrowSvg
+              buttonColor={buttonColor}
+              cssClasses={classNames("transform ease-in-out duration-[400ms]", {
+                "desktopSmall:translate-x-[2px] desktopSmall:scale-105":
+                  arrowMove,
+                "desktopSmall:translate-x-0": !arrowMove,
+              })}
+            />
+          </>
         )}
       </button>
     );
