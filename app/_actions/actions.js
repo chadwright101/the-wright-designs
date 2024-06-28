@@ -22,8 +22,8 @@ export async function sendEmail(formData) {
 
   try {
     if (honey === null) {
-      const name = sanitize(formData.get("name"));
-      const email = sanitize(formData.get("email"));
+      const name = sanitize(formData.get("fullName"));
+      const email = sanitize(formData.get("emailAddress"));
       const message = sanitize(formData.get("message"));
 
       const emailHtmlContent = emailTemplate({
