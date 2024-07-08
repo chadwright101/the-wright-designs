@@ -70,7 +70,7 @@ const HeroComponent = ({ cssClasses }: Props) => {
         <div className="grid gap-10 desktopSmall:hidden">
           <h2 className="text-[20px] tracking-[0.6px] font-extralight normal-case">
             A web design & development team dedicated to providing modern online
-            solutions for small to medium sized businesses.
+            solutions for small to medium-sized businesses.
           </h2>
           <ul className="bg-pink -mx-5 px-5 tablet:px-10 tablet:-mx-10 py-10 grid gap-3 font-light text-[20px] small-caps">
             <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
