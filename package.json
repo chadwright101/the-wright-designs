@@ -17,7 +17,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.4",
     "express": "^4.19.2",
-    "express-rate-limit": "^7.3.0",
+    "express-rate-limit": "^7.4.0",
     "isomorphic-dompurify": "^2.11.0",
     "lodash": "^4.17.21",
     "next": "14.2.3",
