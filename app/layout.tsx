@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "The Wright Designs",
     images: [
       {
-        url: "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/open-graph-image.png",
+        url: "/assets/open-graph-image.png",
       },
     ],
   },

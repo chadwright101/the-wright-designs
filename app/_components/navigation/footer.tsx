@@ -32,7 +32,7 @@ const Footer = ({ cssClasses }: Props) => {
           className="hidden place-self-end tablet:block tablet:hover:opacity-90"
         >
           <Image
-            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/the-wright-designs-logo.png"
+            src="/assets/the-wright-designs-logo.png"
             alt="The Wright Designs logo"
             className="w-[200px] h-auto tablet:self-end rotate-1"
             width={200}

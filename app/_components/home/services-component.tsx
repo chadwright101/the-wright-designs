@@ -73,7 +73,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/design.png"
+            src="/assets/images/design.png"
             alt="Design phase"
             width={800}
             height={450}
@@ -128,7 +128,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/development.jpg"
+            src="/assets/images/development.jpg"
             alt="Development phase"
             width={800}
             height={450}
@@ -179,7 +179,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/maintenance.jpg"
+            src="/assets/images/maintenance.jpg"
             alt="Maintenance phase"
             width={800}
             height={450}
@@ -230,7 +230,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/marketing.jpg"
+            src="/assets/images/marketing.jpg"
             alt="Marketing phase"
             width={800}
             height={450}

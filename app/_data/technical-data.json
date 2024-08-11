@@ -26,9 +26,9 @@
       "techSummary": ["Webflow"],
       "techExtended": ["Webflow"],
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/edc-mobile-long.png"
+        "mobile": "/assets/images/screenshots/edc-mobile.png",
+        "desktop": "/assets/images/screenshots/edc-desktop.png",
+        "scrollImage": "/assets/images/screenshots/edc-mobile-long.png"
       }
     },
     {
@@ -49,9 +49,9 @@
       "repo": "https://github.com/chadwright101/adopt-a-swimmer.git",
       "figmaLink": "https://www.figma.com/design/sxSGtzYPsy3gTCGGcUHkIN/adopt-a-swimmer?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/adopt-a-swimmer-mobile-long.png"
+        "mobile": "/assets/images/screenshots/adopt-a-swimmer-mobile.png",
+        "desktop": "/assets/images/screenshots/adopt-a-swimmer-desktop.png",
+        "scrollImage": "/assets/images/screenshots/adopt-a-swimmer-mobile-long.png"
       }
     },
     {
@@ -61,9 +61,9 @@
       "techSummary": ["Webflow"],
       "techExtended": ["Webflow"],
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-desktop.jpg",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/scbr-mobile-long.jpg"
+        "mobile": "/assets/images/screenshots/scbr-mobile.png",
+        "desktop": "/assets/images/screenshots/scbr-desktop.jpg",
+        "scrollImage": "/assets/images/screenshots/scbr-mobile-long.jpg"
       }
     },
     {
@@ -84,9 +84,9 @@
       "repo": "https://github.com/chadwright101/monks-medical.git",
       "figmaLink": "https://www.figma.com/design/2h8YiqQoRSFKlBGhDDrgiJ/Monk's-Medical?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-desktop.jpg",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/monks-medical-mobile-long.jpg"
+        "mobile": "/assets/images/screenshots/monks-medical-mobile.png",
+        "desktop": "/assets/images/screenshots/monks-medical-desktop.jpg",
+        "scrollImage": "/assets/images/screenshots/monks-medical-mobile-long.jpg"
       }
     },
     {
@@ -108,9 +108,9 @@
       "repo": "https://github.com/chadwright101/carevita-fit.git",
       "figmaLink": "https://www.figma.com/design/531j5GkgnJ28jbdYT0pzgi/%23fit---carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita%23fit-mobile-long.png"
+        "mobile": "/assets/images/screenshots/carevita%23fit-mobile.png",
+        "desktop": "/assets/images/screenshots/carevita%23fit-desktop.png",
+        "scrollImage": "/assets/images/screenshots/carevita%23fit-mobile-long.png"
       }
     },
     {
@@ -131,9 +131,9 @@
       "repo": "https://github.com/chadwright101/carevita.git",
       "figmaLink": "https://www.figma.com/design/Ds4Y6BbH4jzl069Ic0sqGp/carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/carevita-mobile-long.png"
+        "mobile": "/assets/images/screenshots/carevita-mobile.png",
+        "desktop": "/assets/images/screenshots/carevita-desktop.png",
+        "scrollImage": "/assets/images/screenshots/carevita-mobile-long.png"
       }
     },
     {
@@ -153,9 +153,9 @@
       "repo": "https://github.com/chadwright101/xorbtec.git",
       "figmaLink": "https://www.figma.com/design/UYaWSLgdEwLo0EZC6vmfJL/xorbtec?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/xorbtec-mobile-long.png"
+        "mobile": "/assets/images/screenshots/xorbtec-mobile.png",
+        "desktop": "/assets/images/screenshots/xorbtec-desktop.png",
+        "scrollImage": "/assets/images/screenshots/xorbtec-mobile-long.png"
       }
     },
     {
@@ -176,9 +176,9 @@
       "figmaLink": "https://www.figma.com/design/Tr9sgHrHAOKsb9sX2V89Y3/a%26i-roofing?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "repo": "https://github.com/chadwright101/ai-sheeting.git",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/ai-sheeting-mobile-long.png"
+        "mobile": "/assets/images/screenshots/ai-sheeting-mobile.png",
+        "desktop": "/assets/images/screenshots/ai-sheeting-desktop.png",
+        "scrollImage": "/assets/images/screenshots/ai-sheeting-mobile-long.png"
       }
     },
     {
@@ -198,9 +198,9 @@
       "repo": "https://github.com/chadwright101/luna-blue.git",
       "locale": ["English", "Deutsch"],
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/luna-blue-mobile-long.png"
+        "mobile": "/assets/images/screenshots/luna-blue-mobile.png",
+        "desktop": "/assets/images/screenshots/luna-blue-desktop.png",
+        "scrollImage": "/assets/images/screenshots/luna-blue-mobile-long.png"
       }
     },
     {
@@ -222,9 +222,9 @@
       "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
       "figmaLink": "https://www.figma.com/design/vC6HhYKYhQPLuGuxANOlMo/simone-snoyman-physiotherapy?m=auto&t=dKJOMBDWEJ4qtCm7-6",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/simone-snoyman-physio-mobile-long.png"
+        "mobile": "/assets/images/screenshots/simone-snoyman-physio-mobile.png",
+        "desktop": "/assets/images/screenshots/simone-snoyman-physio-desktop.png",
+        "scrollImage": "/assets/images/screenshots/simone-snoyman-physio-mobile-long.png"
       }
     },
     {
@@ -236,9 +236,9 @@
       "design": ["Photoshop"],
       "repo": "https://github.com/chadwright101/neon-productions.git",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/neon-productions-mobile-long.png"
+        "mobile": "/assets/images/screenshots/neon-productions-mobile.png",
+        "desktop": "/assets/images/screenshots/neon-productions-desktop.png",
+        "scrollImage": "/assets/images/screenshots/neon-productions-mobile-long.png"
       }
     },
     {
@@ -249,9 +249,9 @@
       "techExtended": ["Pug", "Javascript", "SASS", "Github"],
       "repo": "https://github.com/chadwright101/sileta-engineers.git",
       "image": {
-        "mobile": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile.png",
-        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-desktop.png",
-        "scrollImage": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/screenshots/sileta-engineers-mobile-long.png"
+        "mobile": "/assets/images/screenshots/sileta-engineers-mobile.png",
+        "desktop": "/assets/images/screenshots/sileta-engineers-desktop.png",
+        "scrollImage": "/assets/images/screenshots/sileta-engineers-mobile-long.png"
       }
     }
   ]
