@@ -17,7 +17,7 @@ const HeroComponent = ({ cssClasses }: Props) => {
             src={
               "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/images/hero-background-mobile.jpg"
             }
-            alt="Decretive art image"
+            alt="Decorative art image"
             width={800}
             height={1100}
             className="tablet:hidden absolute top-0 left-0 -z-10 h-[400px] min-[380px]:h-[450px] phone::h-[500px] phone:object-top object-cover"
