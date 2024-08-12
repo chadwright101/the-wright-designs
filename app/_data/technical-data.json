@@ -27,7 +27,7 @@
       "techExtended": ["Webflow"],
       "image": {
         "mobile": "/assets/images/screenshots/edc-mobile.png",
-        "desktop": "/assets/images/screenshots/edc-desktop.png",
+        "desktop": "https://the-wright-designs-website-images.s3.af-south-1.amazonaws.com/the-wright-designs/assets/images/screenshots/edc-desktop.png",
         "scrollImage": "/assets/images/screenshots/edc-mobile-long.png"
       }
     },
