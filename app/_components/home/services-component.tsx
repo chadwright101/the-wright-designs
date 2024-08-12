@@ -54,8 +54,7 @@ const ServicesComponent = () => {
                 identity.
               </p>
               <p className="font-light mb-4">
-                The words “WordPress”, “theme” or “template” are taboo in our
-                office.{" "}
+                The words “theme” or “template” are taboo in our office.{" "}
                 <span className="font-bold">
                   All the work we put forward is, and will always be, built from
                   the ground up and one of a kind.
