@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import PortfolioScroller from "./recent-projects-scroller";
+import RecentProjectsScroller from "./recent-projects-scroller";
 
 import technicalList from "@/app/_data/technical-data.json";
 import ProjectIcons from "@/app/_lib/project-icons";
@@ -47,9 +47,11 @@ const RecentProjectsComponent = ({ cssClasses }: Props) => {
               </Link>
 
               <div>
-                <PortfolioScroller
+                <RecentProjectsScroller
                   src={image.scrollImage}
                   alt={`${title} full mobile - ${year}`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  autoScroll={index <= 1}
                 />
                 <Image
                   src={blankPhone}
