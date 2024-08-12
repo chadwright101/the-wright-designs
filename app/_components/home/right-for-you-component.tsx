@@ -24,13 +24,13 @@ const RightForYouComponent = () => {
       </h2>
       <p className="mb-4">
         Our vast experience in the industry means that, although we might not
-        have seen it all just yet, we're pretty close.
+        have seen it all just yet, we&apos;re pretty close.
       </p>
       <p>
         Our team has worked with clients from a wide range of industries, each
-        with a unique set of problems that needed solving. We're proud to say
-        that we always deliver to the highest standard, regardless of the
-        project's size.
+        with a unique set of problems that needed solving. We&apos;re proud to
+        say that we always deliver to the highest standard, regardless of the
+        project&apos;s size.
       </p>
       <ul className="mt-10 grid gap-5">
         {accordionData.map((item, index) => (
@@ -83,7 +83,7 @@ const accordionData = [
   {
     question: "Struggling with a poorly designed/developed WordPress website?",
     answer:
-      "Not a problem! This is one of the most common requests we receive from clients, and it's become our specialty. We'll handle everything from redesign and development to domain and hosting transfer.",
+      "Not a problem! This is one of the most common requests we receive from clients, and its become our specialty. We'll handle everything from redesign and development to domain and hosting transfer.",
   },
   {
     question: "Want to switch web designers or developers but are unsure how?",
