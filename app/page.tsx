@@ -7,7 +7,8 @@ import ContactComponent from "./_components/home/contact-component";
 import RightForYouComponent from "./_components/home/right-for-you-component";
 
 export const metadata: Metadata = {
-  title: "The Wright Designs - A web design & development team",
+  title:
+    "The Wright Designs - A web design & development team | Plettenberg Bay",
 };
 
 export default function Home() {
