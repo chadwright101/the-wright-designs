@@ -40,15 +40,15 @@ const HeroComponent = ({ cssClasses }: Props) => {
           </h1>
           <div className="hidden gap-5 desktopSmall:grid">
             <h2 className="text-[20px] tracking-[0.6px] font-extralight normal-case">
-              A web design & development team dedicated to providing modern
+              A web design & web development team dedicated to providing turnkey
               online solutions for small to medium sized businesses.
             </h2>
             <ul className="bg-pink p-5 rounded-lg grid gap-3 font-light text-[20px] small-caps">
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
-                Web & app design
+                Web design
               </li>
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
-                Frontend & backend development
+                Web development (Frontend & backend)
               </li>
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Ongoing maintenance
