@@ -47,7 +47,7 @@ const ServicesComponent = () => {
               </svg>
             </div>
             <div>
-              <h4 className="text-[28px] font-medium mb-4">Design</h4>
+              <h4 className="text-[28px] font-medium mb-4">Web design</h4>
               <p className="font-light mb-4">
                 At the Wright Designs we meticulously design your website or
                 app, ensuring it aligns perfectly with your vision and brand
@@ -101,7 +101,7 @@ const ServicesComponent = () => {
               </svg>
             </div>
             <div>
-              <h4 className="text-[28px] font-medium mb-4">Development</h4>
+              <h4 className="text-[28px] font-medium mb-4">Web development</h4>
               <p className="font-light mb-4">
                 Our development team is skilled in crafting robust and
                 cutting-edge solutions. We translate your design vision into a
