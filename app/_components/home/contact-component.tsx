@@ -15,7 +15,7 @@ interface Props {
 const LazyContactMap = lazy(() => import("./contact/contact-map"));
 
 const {
-  contact: { phone, email, address },
+  contact: { address },
 } = data;
 
 const ContactComponent = ({ cssClasses }: Props) => {
@@ -60,7 +60,7 @@ const ContactComponent = ({ cssClasses }: Props) => {
               </button>
             ) : (
               <Link
-                href={`mailto:${email}`}
+                href={`mailto:${showEmail}`}
                 className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
               >
                 {showEmail}
@@ -83,10 +83,10 @@ const ContactComponent = ({ cssClasses }: Props) => {
               </button>
             ) : (
               <Link
-                href={`tel:${phone}`}
+                href={`tel:${showPhone}`}
                 className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
               >
-                {phone}
+                {showPhone}
               </Link>
             )}
           </div>
