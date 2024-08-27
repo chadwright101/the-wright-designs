@@ -53,6 +53,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/real-brides-logo.png",
+      "alt": "Real Brides logo",
+      "url": "https://www.realbrides.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/adopt-a-swimmer-logo.png",
       "alt": "Adopt a Swimmer logo",
       "url": "https://www.adoptaswimmer.co.za/"
