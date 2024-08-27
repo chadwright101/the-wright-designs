@@ -13,12 +13,36 @@
     "Git",
     "Github",
     "Firebase",
+    "Cloud Functions",
     "AWS",
     "Vercel",
     "Wordpress"
   ],
   "designStack": ["Figma", "Photoshop", "Premier Pro"],
   "projectsList": [
+    {
+      "title": "Real Brides Magazine",
+      "url": "https://www.realbrides.co.za",
+      "year": 2024,
+      "techSummary": ["Next.js", "Node.js"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "Typescript",
+        "Tailwind",
+        "Vercel",
+        "AWS",
+        "Github"
+      ],
+      "design": ["Figma"],
+      "repo": "https://github.com/chadwright101/real-brides.git",
+      "figmaLink": "https://www.figma.com/design/UDi86xIDimGDUDDwSI4yoa/real-brides?node-id=2-2&t=nujtlxgsceSgOHDf-1",
+      "image": {
+        "mobile": "/assets/images/screenshots/real-brides-mobile.png",
+        "desktop": "/assets/images/screenshots/real-brides-desktop.png",
+        "scrollImage": "/assets/images/screenshots/real-brides-mobile-long.png"
+      }
+    },
     {
       "title": "Easy Done Concreting",
       "url": "https://www.easydoneconcreting.com.au/",
