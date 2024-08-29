@@ -31,8 +31,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "The Wright Designs",
+    url: "https://www.thewrightdesigns.co.za",
+    logo: "/assets/the-wright-designs-logo-square.jpg",
+    description:
+      "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
+    sameAs: ["https://www.facebook.com/thewrightdesignsSA"],
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="">
         <Header />
         <div className="px-5 overflow-x-hidden tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
