@@ -31,6 +31,10 @@
       "alt": "Xorbtec Computer Services"
     },
     {
+      "src": "/assets/images/hero-slideshow/real-brides-magazine-hero.png",
+      "alt": "Real Brides Magazine"
+    },
+    {
       "src": "/assets/images/hero-slideshow/luna-blue-hero.png",
       "alt": "Luna Blue Villas"
     },
@@ -45,10 +49,6 @@
     {
       "src": "/assets/images/hero-slideshow/simone-snoyman-physiotherapy-hero.png",
       "alt": "Simone Snoyman Physiotherapy"
-    },
-    {
-      "src": "/assets/images/hero-slideshow/ai-sheeting-hero.png",
-      "alt": "A&I Sheeting"
     }
   ],
   "ourClients": [
