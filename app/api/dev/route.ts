@@ -20,7 +20,6 @@ export async function GET(request: NextRequest) {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers":
       "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
-    "Cache-Control": "max-age=0, must-revalidate",
   };
 
   if (request.method === "OPTIONS") {
