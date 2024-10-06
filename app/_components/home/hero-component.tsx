@@ -40,8 +40,9 @@ const HeroComponent = ({ cssClasses }: Props) => {
           </h1>
           <div className="hidden gap-5 desktopSmall:grid">
             <h2 className="text-[20px] tracking-[0.6px] font-extralight normal-case">
-              A web design & web development team dedicated to providing turnkey
-              online solutions for small to medium sized businesses.
+              A web design & web development team, based in Plettenberg Bay,
+              dedicated to providing turnkey online solutions for small to
+              medium sized businesses.
             </h2>
             <ul className="bg-pink p-5 rounded-lg grid gap-3 font-light text-[20px] small-caps">
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
@@ -67,8 +68,9 @@ const HeroComponent = ({ cssClasses }: Props) => {
         <HeroSlideshow cssClasses="w-full min-[1200px]:-translate-x-5 min-[1300px]:-translate-x-10" />
         <div className="grid gap-10 desktopSmall:hidden">
           <h2 className="text-[20px] tracking-[0.6px] font-extralight normal-case">
-            A web design & development team dedicated to providing modern online
-            solutions for small to medium-sized businesses.
+            A web design & web development team, based in Plettenberg Bay,
+            dedicated to providing turnkey online solutions for small to medium
+            sized businesses.
           </h2>
           <ul className="bg-pink -mx-5 px-5 tablet:px-10 tablet:-mx-10 py-10 grid gap-3 font-light text-[20px] small-caps">
             <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
