@@ -7,8 +7,9 @@
     "AWS",
     "Vercel",
     "REST",
+    "GraphQL",
     "Webflow",
-    "Wordpress"
+    "WordPress"
   ],
   "designStack": ["Figma", "Adobe XD", "Photoshop", "Premier Pro"],
   "projectsList": [
@@ -86,8 +87,15 @@
       "title": "Monk's Medical",
       "url": "https://www.monksmedical.com",
       "year": 2024,
-      "techSummary": ["Next.js", "Node.js"],
-      "techExtended": ["Next.js", "Node.js", "Vercel", "AWS"],
+      "techSummary": ["Next.js", "Node.js", "WordPress"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "WordPress",
+        "REST",
+        "Vercel",
+        "AWS"
+      ],
       "design": ["Figma"],
       "repo": "https://github.com/chadwright101/monks-medical.git",
       "figmaLink": "https://www.figma.com/design/2h8YiqQoRSFKlBGhDDrgiJ/Monk's-Medical?m=auto&t=dKJOMBDWEJ4qtCm7-6",
@@ -199,8 +207,15 @@
       "title": "Simone Snoyman Physiotherapy",
       "year": 2022,
       "url": "https://simonesnoymanphysiotherapy.co.za",
-      "techSummary": ["Next.js", "Node.js"],
-      "techExtended": ["Next.js", "Node.js", "Vercel", "WordPress", "AWS"],
+      "techSummary": ["Next.js", "Node.js", "WordPress"],
+      "techExtended": [
+        "Next.js",
+        "Node.js",
+        "WordPress",
+        "GraphQL",
+        "Vercel",
+        "AWS"
+      ],
       "design": ["Figma"],
       "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
       "figmaLink": "https://www.figma.com/design/vC6HhYKYhQPLuGuxANOlMo/simone-snoyman-physiotherapy?m=auto&t=dKJOMBDWEJ4qtCm7-6",

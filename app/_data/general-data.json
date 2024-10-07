@@ -53,6 +53,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/louann-waters-photography-logo.png",
+      "alt": "Real Brides logo",
+      "url": "https://louannwatersphotography.com/"
+    },
+    {
       "src": "/assets/images/our-clients/real-brides-logo.png",
       "alt": "Real Brides logo",
       "url": "https://www.realbrides.co.za/"
