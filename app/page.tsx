@@ -20,6 +20,7 @@ export default function Home() {
       <AboutComponent />
       <div id="services" className="-translate-y-32"></div>
       <ServicesComponent />
+      <div id="faq" className="-translate-y-32"></div>
       <RightForYouComponent />
       <div id="contact" className="-translate-y-32"></div>
       <ContactComponent />

@@ -65,7 +65,7 @@ const AboutComponent = () => {
             customers.
           </p>
           <Button
-            url="/recent-projects"
+            url="/recent-projects/websites"
             buttonColor="pink"
             cssClasses="w-full desktopSmall:w-auto"
           >

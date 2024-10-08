@@ -10,7 +10,12 @@ interface Props {
   autoScroll?: boolean;
 }
 
-const RecentProjectsScroller = ({ src, alt, loading, autoScroll }: Props) => {
+const RecentProjectsWebsiteScroller = ({
+  src,
+  alt,
+  loading,
+  autoScroll,
+}: Props) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
 
@@ -89,4 +94,4 @@ const RecentProjectsScroller = ({ src, alt, loading, autoScroll }: Props) => {
   );
 };
 
-export default RecentProjectsScroller;
+export default RecentProjectsWebsiteScroller;

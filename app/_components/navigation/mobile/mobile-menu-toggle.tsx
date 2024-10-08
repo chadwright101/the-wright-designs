@@ -39,9 +39,8 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
               }
             )}
           >
-            {(item.title === "About" && currentRoute !== "/recent-projects") ||
-            (item.title === "Services" &&
-              currentRoute !== "/recent-projects") ||
+            {(item.title === "About" && currentRoute === "/") ||
+            (item.title === "Services" && currentRoute === "/") ||
             item.title === "Contact" ? (
               item.title
             ) : (
@@ -57,7 +56,11 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
                 {item.title}
               </Link>
             )}
-            {currentRoute === item.url && <ArrowSvg mobileMenu />}
+            {(item.url === currentRoute ||
+              (item.title === "Recent Projects" &&
+                currentRoute === "/recent-projects/apps")) && (
+              <ArrowSvg mobileMenu />
+            )}
           </li>
         ))}
         <li>

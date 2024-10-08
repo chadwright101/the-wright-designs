@@ -31,23 +31,29 @@ const DesktopMenu = ({ cssClasses }: Props) => {
               "hover:cursor-pointer text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px]":
                 item.title === "About" ||
                 item.title === "Services" ||
+                item.title === "FAQ" ||
                 item.title === "Contact",
             })}
           >
-            {(item.title === "About" && currentRoute !== "/recent-projects") ||
-            (item.title === "Services" &&
-              currentRoute !== "/recent-projects") ||
+            {(item.title === "About" && currentRoute === "/") ||
+            (item.title === "Services" && currentRoute === "/") ||
+            (item.title === "FAQ" && currentRoute === "/") ||
             item.title === "Contact" ? (
               item.title
             ) : (
               <Link
                 href={
-                  item.title === "About" || item.title === "Services"
+                  item.title === "About" ||
+                  item.title === "Services" ||
+                  item.title === "FAQ"
                     ? `/#${item.url}`
                     : item.url
                 }
                 className={`hover:cursor-pointer text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px] ${
-                  currentRoute === item.url ? "font-normal" : null
+                  (item.url === currentRoute ||
+                    (item.title === "Recent Projects" &&
+                      currentRoute === "/recent-projects/apps")) &&
+                  "font-normal"
                 }`}
               >
                 {item.title}

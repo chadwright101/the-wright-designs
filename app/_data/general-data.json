@@ -14,7 +14,11 @@
     },
     {
       "title": "Recent Projects",
-      "url": "/recent-projects"
+      "url": "/recent-projects/websites"
+    },
+    {
+      "title": "FAQ",
+      "url": "faq"
     },
     {
       "title": "Contact",

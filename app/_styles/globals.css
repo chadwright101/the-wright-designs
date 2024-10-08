@@ -115,3 +115,21 @@
 .swiper-pagination-bullets-dynamic {
     overflow: visible !important;
 }
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scroll-animate {
+    animation: scrollAnimation 2s ease-in-out 1;
+}
