@@ -9,6 +9,8 @@ const RecentProjectsApps = () => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = scrollRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -21,13 +23,13 @@ const RecentProjectsApps = () => {
       { threshold: 0.1 }
     );
 
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (scrollRef.current) {
-        observer.unobserve(scrollRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
