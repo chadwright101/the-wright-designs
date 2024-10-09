@@ -17,7 +17,7 @@
       {
         "client": "Bean Tree Coffee Shop",
         "title": "Coffee shop loyalty program",
-        "description": "This backend app tracks customers' qualifying purchases using their phone numbers. When a customer reaches a reward threshold, the staff will be notified and a discount code will be generated. The customer can then use this code at the POS to receive a free item. After redeeming the code, the system resets, allowing customers to continue earning rewards.",
+        "description": "This database driven system tracks customers' qualifying purchases using their phone numbers. When a customer reaches a reward threshold, the staff will be notified and a discount code will be generated. The customer can then use this code at the POS to receive a free item. After redeeming the code, the system resets, allowing customers to continue earning rewards.",
         "year": 2024,
         "tech": ["Node.js", "Firebase", "Shopify Admin API"],
         "status": "In development",
@@ -26,7 +26,7 @@
       {
         "client": "Personal project",
         "title": "Children's story & image generator app",
-        "description": "This app will use AI to dynamically generate stories and accompanying images based on various prompts. Designed for parents of young children (aged 1-9), the app aims to offer a fun and engaging storytelling experience. Users will have the ability to save favourite stories, create profiles for multiple children, and more.",
+        "description": "This app uses AI to dynamically generate stories and accompanying images based on a variety of user prompts. Designed for parents of young children (aged 1-9), the app aims to offer a fun and engaging storytelling experience. Users will have the ability to save favourite stories, create profiles for multiple children, and more.",
         "year": 2024,
         "tech": ["Next.js", "Node.js", "Firebase", "OpenAI API"],
         "status": "In development",

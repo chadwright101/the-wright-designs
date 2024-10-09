@@ -5,7 +5,7 @@ import classNames from "classnames";
 import ContactForm from "@/app/_components/contact-form";
 import Link from "next/link";
 
-export default function RootLayout({
+export default function RecentProjectsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

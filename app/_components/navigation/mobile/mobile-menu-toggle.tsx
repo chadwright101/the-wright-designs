@@ -27,7 +27,9 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
           <li
             key={index}
             onClick={() => {
-              if (["About", "Services", "Contact"].includes(item.title)) {
+              if (
+                ["About", "Services", "Contact", "FAQ"].includes(item.title)
+              ) {
                 scrollIntoView(item.url);
                 onClick();
               }
@@ -41,12 +43,15 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
           >
             {(item.title === "About" && currentRoute === "/") ||
             (item.title === "Services" && currentRoute === "/") ||
+            (item.title === "FAQ" && currentRoute === "/") ||
             item.title === "Contact" ? (
               item.title
             ) : (
               <Link
                 href={
-                  item.title === "About" || item.title === "Services"
+                  item.title === "About" ||
+                  item.title === "Services" ||
+                  item.title === "FAQ"
                     ? `/#${item.url}`
                     : item.url
                 }
