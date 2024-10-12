@@ -8,9 +8,9 @@ import "@/app/_styles/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),
   description:
-    "A web design & development team, based in Plettenberg Bay, dedicated to providing modern online solutions for small to medium sized businesses",
+    "A web design & web development team, based in Plettenberg Bay, dedicated to providing modern online solutions for small to medium sized businesses",
   keywords:
-    "website development, website design, web design, web development, website, development, design, portfolio, developer, frontend, frontend developer",
+    "website development, website design, web design, app design, app development, web development, website, development, design, portfolio, developer, frontend, frontend developer",
   openGraph: {
     description:
       "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
