@@ -165,7 +165,7 @@ const RecentProjectsWebsiteComponent = ({ cssClasses }: Props) => {
       </section>
       <hr className="text-blue/25 mx-auto my-10" />
       <Button
-        url="https://www.chadwright.dev/projects"
+        url="https://www.chadwright.dev/projects/websites"
         target="_blank"
         buttonColor="pink"
         cssClasses="w-full mb-14 tablet:mx-auto tablet:w-auto"

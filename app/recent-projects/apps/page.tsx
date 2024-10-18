@@ -43,7 +43,7 @@ const RecentProjectsApps = () => {
       </section>
 
       <Button
-        url="https://www.chadwright.dev/projects"
+        url="https://www.chadwright.dev/projects/apps"
         target="_blank"
         buttonColor="blue"
         outline
