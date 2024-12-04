@@ -119,7 +119,7 @@ const ServicesComponent = () => {
               </p>
               <Button
                 buttonColor="pink"
-                url="https://www.chadwright.dev/projects"
+                url="https://www.chadwright.dev/projects/websites"
                 target="_blank"
               >
                 Development Archive
