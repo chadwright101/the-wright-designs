@@ -25,22 +25,22 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "The Wright Designs",
+  url: "https://www.thewrightdesigns.co.za",
+  logo: "/assets/the-wright-designs-logo-square.jpg",
+  description:
+    "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
+  sameAs: ["https://www.facebook.com/thewrightdesignsSA"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "The Wright Designs",
-    url: "https://www.thewrightdesigns.co.za",
-    logo: "/assets/the-wright-designs-logo-square.jpg",
-    description:
-      "A web design & development team dedicated to providing modern online solutions for small to medium sized businesses",
-    sameAs: ["https://www.facebook.com/thewrightdesignsSA"],
-  };
-
   return (
     <html lang="en">
       <head>

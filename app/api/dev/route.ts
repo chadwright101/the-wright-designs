@@ -1,5 +1,3 @@
-// app/api/dev/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import data from "@/app/_data/technical-data.json";
 

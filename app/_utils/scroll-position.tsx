@@ -1,26 +1,35 @@
-import { useState, useEffect } from "react";
-
-import throttle from "lodash/throttle";
+import { useState, useEffect, useRef } from "react";
 
 const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollPosition = useRef(0);
+  const [, forceUpdate] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const updatePosition = () => {
-      setScrollPosition(window.scrollY);
+      const currentScrollY = window.scrollY;
+      if (scrollPosition.current !== currentScrollY) {
+        scrollPosition.current = currentScrollY;
+        forceUpdate((n) => n + 1);
+      }
+      ticking = false;
     };
 
-    const throttledUpdatePosition = throttle(updatePosition, 100);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updatePosition);
+        ticking = true;
+      }
+    };
 
-    window.addEventListener("scroll", throttledUpdatePosition, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     updatePosition();
 
-    return () => window.removeEventListener("scroll", throttledUpdatePosition);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return scrollPosition;
+  return scrollPosition.current;
 };
 
 export default useScrollPosition;
