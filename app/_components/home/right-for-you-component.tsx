@@ -96,6 +96,12 @@ const accordionData = [
       "Not a problem! Client requests to redesign and develop poorly managed WordPress sites are the most common scenarios we face, and they’ve become our specialty as a result. We'll handle everything from the redesign and development to the domain and hosting transfer.",
   },
   {
+    question:
+      "Has your web designer or developer dropped off the face of the earth?",
+    answer:
+      "Don't worry – you're not alone, and we've helped many clients in this exact situation! Our experienced team will step in right away to get your project back on track. We'll recover your existing content and handle everything from domain transfers to development work, keeping you informed every step of the way. Let us assist in turning this setback into an opportunity to make your website the best it can be.",
+  },
+  {
     question: "Can you help me with my painfully slow website?",
     answer:
       "While we prefer not to sift through someone else's half-baked code, we can certainly help you with a fresh start. Our team will build you a new website from scratch, ensuring it's fast, secure, and set on a solid foundation. Speed matters online, and in today's world, you can't afford for your website to be left behind.",
