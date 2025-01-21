@@ -57,6 +57,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/tigo-lee-logo.png",
+      "alt": "Tigo Lee logo",
+      "url": "https://tigolee.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/louann-waters-photography-logo.png",
       "alt": "Real Brides logo",
       "url": "https://louannwatersphotography.com/"

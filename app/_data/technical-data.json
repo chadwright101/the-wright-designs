@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "Tigo-Lee Professional Make-up Artist",
+        "url": "https://tigolee.co.za",
+        "year": 2024,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/tigo-lee.git",
+        "figmaLink": "https://www.figma.com/design/zFtcSwLTr2kryb102pLy5i/tigo-lee?node-id=5-21&t=ivHvcs0OD38F4xfw-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/tigo-lee-mobile.png",
+          "desktop": "/assets/images/screenshots/tigo-lee-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/tigo-lee-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/tigo-lee-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/tigo-lee-mobile-long.png"
+        }
+      },
+      {
         "title": "Real Brides Magazine",
         "url": "https://real-brides.vercel.app/",
         "year": 2024,

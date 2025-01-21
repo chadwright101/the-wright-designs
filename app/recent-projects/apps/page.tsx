@@ -36,7 +36,7 @@ const RecentProjectsApps = () => {
 
   return (
     <>
-      <section className="mb-10 overflow-x-auto">
+      <section className="mb-10 overflow-x-scroll">
         <div ref={scrollRef} className="min-w-[1000px]">
           <RecentProjectsAppsTable />
         </div>
