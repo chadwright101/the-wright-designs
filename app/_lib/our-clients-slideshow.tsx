@@ -57,29 +57,28 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
         } as React.CSSProperties
       }
     >
-      <ul>
-        {ourClients.map(({ src, alt, url }, index) => (
-          <li key={index}>
-            <SwiperSlide className="grid place-items-center pb-12 desktopSmall:pb-0 desktopSmall:h-[90px]">
-              <Link
-                href={url}
-                target="_blank"
-                className="hover:desktopSmall:opacity-90 ease-in-out duration-150"
-                aria-label="Our clients"
-              >
-                <Image
-                  src={src}
-                  alt={alt}
-                  width={200}
-                  height={80}
-                  className={`object-contain w-auto drop-shadow-md mx-auto h-[80px] max-w-[125px] phone:max-w-[200px] tablet:hover:opacity-90 tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
-                  sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 10vw"
-                />
-              </Link>
-            </SwiperSlide>
-          </li>
-        ))}
-      </ul>
+      {ourClients.map(({ src, alt, url }, index) => (
+        <SwiperSlide
+          key={`${src}-${index}`}
+          className="grid place-items-center pb-12 desktopSmall:pb-0 desktopSmall:h-[90px]"
+        >
+          <Link
+            href={url}
+            target="_blank"
+            className="hover:desktopSmall:opacity-90 ease-in-out duration-150"
+            aria-label="Our clients"
+          >
+            <Image
+              src={src}
+              alt={alt}
+              width={200}
+              height={80}
+              className={`object-contain w-auto drop-shadow-md mx-auto h-[80px] max-w-[125px] phone:max-w-[200px] tablet:hover:opacity-90 tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
+              sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 10vw"
+            />
+          </Link>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
