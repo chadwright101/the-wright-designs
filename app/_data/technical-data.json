@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "Laverick Ntuli Communications",
+        "url": "https://laverickntuli.co.za",
+        "year": 2024,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/laverick-ntuli.git",
+        "figmaLink": "https://www.figma.com/design/FqYlbH8oUolZLLmWHjsked/laverick-ntuli?node-id=0-1&t=p3YFB5Bpb4WqwUaq-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/laverick-mobile.png",
+          "desktop": "/assets/images/screenshots/laverick-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/laverick-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/laverick-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/laverick-mobile-long.png"
+        }
+      },
+      {
         "title": "Tigo-Lee Professional Make-up Artist",
         "url": "https://tigolee.co.za",
         "year": 2024,

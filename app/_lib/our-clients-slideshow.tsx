@@ -39,6 +39,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
       }}
       rewind={true}
       speed={1000}
+      loop
       autoplay={{
         disableOnInteraction: true,
       }}
@@ -65,7 +66,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
           <Link
             href={url}
             target="_blank"
-            className="hover:desktopSmall:opacity-90 ease-in-out duration-150"
+            className="hover:desktopSmall:opacity-90 ease-in-out duration-150 hover"
             aria-label="Our clients"
           >
             <Image
