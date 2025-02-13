@@ -27,6 +27,10 @@
   ],
   "heroSlider": [
     {
+      "src": "/assets/images/hero-slideshow/laverick-hero.png",
+      "alt": "Laverick Ntuli Communications"
+    },
+    {
       "src": "/assets/images/hero-slideshow/monks-medical-hero.png",
       "alt": "Monk's Medical"
     },
@@ -49,10 +53,6 @@
     {
       "src": "/assets/images/hero-slideshow/carevita-hero.png",
       "alt": "CareVita"
-    },
-    {
-      "src": "/assets/images/hero-slideshow/simone-snoyman-physiotherapy-hero.png",
-      "alt": "Simone Snoyman Physiotherapy"
     }
   ],
   "ourClients": [
