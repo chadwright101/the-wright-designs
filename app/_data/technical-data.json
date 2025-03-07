@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "Big Day Event",
+        "url": "https://bigdayevent.co.za",
+        "year": 2024,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Firebase"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/big-day-event.git",
+        "figmaLink": "https://www.figma.com/design/cF3B5LkLggiY2tGhXQFXcZ/big-day-event?node-id=193-207&t=kZi11OroYfTxranx-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/big-day-event-mobile.png",
+          "desktop": "/assets/images/screenshots/big-day-event-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/big-day-event-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/big-day-event-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/big-day-event-mobile-long.png"
+        }
+      },
+      {
         "title": "Laverick Ntuli Communications",
         "url": "https://laverickntuli.co.za",
         "year": 2024,
