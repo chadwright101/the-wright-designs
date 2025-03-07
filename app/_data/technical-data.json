@@ -55,8 +55,8 @@
     "websites": [
       {
         "title": "Big Day Event",
-        "url": "https://bigdayevent.co.za",
-        "year": 2024,
+        "url": "https://www.bigdayevent.co.za",
+        "year": 2025,
         "techSummary": ["Next.js", "Node.js"],
         "techExtended": ["Next.js", "Node.js", "Firebase"],
         "design": ["Figma"],
@@ -75,7 +75,7 @@
       {
         "title": "Laverick Ntuli Communications",
         "url": "https://laverickntuli.co.za",
-        "year": 2024,
+        "year": 2025,
         "techSummary": ["Next.js", "Node.js"],
         "techExtended": ["Next.js", "Node.js", "Vercel"],
         "design": ["Figma"],
