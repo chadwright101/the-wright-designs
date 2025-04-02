@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "Arlene's Pool Services",
+        "url": "https://www.arlenespools.co.za",
+        "year": 2025,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Firebase"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/arlenes-pool-services.git",
+        "figmaLink": "https://www.figma.com/design/HaKkvH5dz7orRH0eDMyW1o/arlene's-pool-services?node-id=0-1&t=MHiaTmmZ5iGCXCro-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/arlenes-pool-services-mobile.png",
+          "desktop": "/assets/images/screenshots/arlenes-pool-services-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/arlenes-pool-services-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/arlenes-pool-services-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/arlenes-pool-services-mobile-long.png"
+        }
+      },
+      {
         "title": "Big Day Event",
         "url": "https://www.bigdayevent.co.za",
         "year": 2025,

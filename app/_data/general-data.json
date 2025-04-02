@@ -57,6 +57,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/arlenes-pool-services-logo.png",
+      "alt": "Arlene's Pool services logo",
+      "url": "https://www.arlenespools.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/big-day-event-logo.png",
       "alt": "Big Day Event logo",
       "url": "https://www.bigdayevent.co.za/"
