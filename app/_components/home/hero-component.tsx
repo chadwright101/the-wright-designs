@@ -51,11 +51,11 @@ const HeroComponent = ({ cssClasses }: Props) => {
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Web development (Frontend & backend)
               </li>
+              <li className="text-white tracking-[0.15px]">
+                Domain & hosting solutions
+              </li>
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Ongoing maintenance
-              </li>
-              <li className="text-white tracking-[0.15px]">
-                Social media marketing campaigns
               </li>
               <li className="mt-2">
                 <Button url="#contact" buttonColor="beige" cssClasses="w-full">
@@ -81,13 +81,13 @@ const HeroComponent = ({ cssClasses }: Props) => {
               Frontend & backend development
             </li>
 
+            <li className="text-white tracking-[0.15px]">
+              Domain & hosting solutions
+            </li>
             <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
               Ongoing maintenance
             </li>
 
-            <li className="text-white tracking-[0.15px]">
-              Social media marketing campaigns
-            </li>
             <li className="mt-2">
               <Button url="#contact" buttonColor="beige" cssClasses="w-full">
                 Get in Touch
