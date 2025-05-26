@@ -54,11 +54,30 @@
     ],
     "websites": [
       {
+        "title": "Wild Compass Events",
+        "url": "https://www.wildcompassevents.co.za",
+        "year": 2025,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/wild-compass.git",
+        "figmaLink": "https://www.figma.com/design/FSWB5xwVltXeDsOirykh61/wild-compass-events?node-id=6-2&t=jAMNBiRTcqNZxGEf-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/wild-compass-events-mobile.png",
+          "desktop": "/assets/images/screenshots/wild-compass-events-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/wild-compass-events-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/wild-compass-events-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/wild-compass-events-mobile-long.png"
+        }
+      },
+      {
         "title": "Arlene's Pool Services",
         "url": "https://www.arlenespools.co.za",
         "year": 2025,
         "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Firebase"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
         "design": ["Figma"],
         "repo": "https://github.com/chadwright101/arlenes-pool-services.git",
         "figmaLink": "https://www.figma.com/design/HaKkvH5dz7orRH0eDMyW1o/arlene's-pool-services?node-id=0-1&t=MHiaTmmZ5iGCXCro-1",

@@ -57,8 +57,13 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/wild-compass-events-logo.png",
+      "alt": "Wild Compass Events logo",
+      "url": "https://www.wildcompassevents.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/arlenes-pool-services-logo.png",
-      "alt": "Arlene's Pool services logo",
+      "alt": "Arlene's Pool Services logo",
       "url": "https://www.arlenespools.co.za/"
     },
     {
