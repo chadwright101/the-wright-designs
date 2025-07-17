@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "Swift Tool Hire",
+        "url": "https://www.swifttoolhire.co.za",
+        "year": 2025,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/swift-tool-hire.git",
+        "figmaLink": "https://www.figma.com/design/zz83l5eWzSWwBwRErOFZGw/swift-tool-hire?node-id=5-21&t=FGdCQXikJCJccVyW-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/swift-tool-hire-mobile.png",
+          "desktop": "/assets/images/screenshots/swift-tool-hire-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/swift-tool-hire-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/swift-tool-hire-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/swift-tool-hire-mobile-long.png"
+        }
+      },
+      {
         "title": "Wild Compass Events",
         "url": "https://www.wildcompassevents.co.za",
         "year": 2025,

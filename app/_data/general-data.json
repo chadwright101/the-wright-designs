@@ -57,6 +57,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/swift-tool-hire-logo.png",
+      "alt": "Swift Tool Hire logo",
+      "url": "https://www.swifttoolhire.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/wild-compass-events-logo.png",
       "alt": "Wild Compass Events logo",
       "url": "https://www.wildcompassevents.co.za/"
