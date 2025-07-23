@@ -54,6 +54,25 @@
     ],
     "websites": [
       {
+        "title": "The Lookout Centre",
+        "url": "https://www.lookoutcentre.co.za/",
+        "year": 2025,
+        "techSummary": ["Next.js", "Node.js"],
+        "techExtended": ["Next.js", "Node.js", "Vercel"],
+        "design": ["Figma"],
+        "repo": "https://github.com/chadwright101/lookout.git",
+        "figmaLink": "https://www.figma.com/design/uJa7Mq8U2vPMS8egh21q2r/lookout-centre?node-id=193-207&t=VgQZv44VPycxyDHn-1",
+        "image": {
+          "mobile": "/assets/images/screenshots/lookout-centre-mobile.png",
+          "desktop": "/assets/images/screenshots/lookout-centre-desktop.png",
+          "desktopSmall": {
+            "jpg": "/assets/images/screenshots/chad-dev/lookout-centre-desktop-small.jpg",
+            "webp": "/assets/images/screenshots/chad-dev/lookout-centre-desktop-small.webp"
+          },
+          "scrollImage": "/assets/images/screenshots/lookout-centre-mobile-long.png"
+        }
+      },
+      {
         "title": "Swift Tool Hire",
         "url": "https://www.swifttoolhire.co.za",
         "year": 2025,
