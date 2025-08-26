@@ -27,10 +27,12 @@ const ContactMap = ({ cssClasses }: Props) => {
   return (
     <GoogleMap
       zoom={15}
-      center={{ lat: -34.0530242, lng: 23.3566167 }}
+      center={{ lat: -34.073712234443335, lng: 23.362552963650543 }}
       mapContainerClassName={`${cssClasses}`}
     >
-      <MarkerF position={{ lat: -34.0530242, lng: 23.3566167 }} />
+      <MarkerF
+        position={{ lat: -34.073712234443335, lng: 23.362552963650543 }}
+      />
     </GoogleMap>
   );
 };
