@@ -31,6 +31,11 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/bay-holiday-homes-logo.png",
+      "alt": "Bay Holiday Homes logo",
+      "url": "https://bayholidays.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/bombay-bites-logo.png",
       "alt": "Bombay Bites logo",
       "url": "https://bombaybites.co.za/"

@@ -2,6 +2,15 @@
   "projectsList": {
     "websites": [
       {
+        "title": "Bay Holiday Homes",
+        "url": "https://bayholidays.co.za",
+        "image": {
+          "mobile": "/assets/images/screenshots/bay-holiday-homes-mobile.png",
+          "desktop": "/assets/images/screenshots/bay-holiday-homes-desktop.png",
+          "scrollImage": "/assets/images/screenshots/bay-holiday-homes-mobile-long.png"
+        }
+      },
+      {
         "title": "Bombay Bites",
         "url": "https://bombaybites.co.za",
         "image": {
